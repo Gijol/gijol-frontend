@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ExamplePage from 'pages/examplePage';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Gijol</h1>
+      <ExamplePage />
     </div>
   );
 }
