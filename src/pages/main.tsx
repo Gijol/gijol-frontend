@@ -1,7 +1,12 @@
-import Header from 'common/header';
+import Header from 'common/header/header';
 
 const Main = function Main(): JSX.Element {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <span>This is Main Page</span>
+    </>
+  );
 };
 
 export default Main;
