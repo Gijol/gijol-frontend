@@ -1,33 +1,37 @@
 import { useState } from 'react';
+import styled from 'styled-components';
+
 // import React from 'react';
 
-const Example = function Example(): JSX.Element {
-  // var pressNumber: number;
+const Header = function Header(): JSX.Element {
+  const HeaderContainer = styled.div`
+    max-width: ${(props) => props.theme.basicWidth};
+    height: 64px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+  `;
 
-  const [pressNumber, pressNumberState] = useState(0);
-
-  const add = () => {
-    const tempNum = pressNumber + 1;
-    pressNumberState(tempNum);
-  };
-  const subtract = () => {
-    const tempNum = pressNumber - 1;
-    pressNumberState(tempNum);
-  };
+  const Logo = styled.span`
+    white-space: pre;
+    font-weight: 400;
+    font-style: normal;
+    color: ${(props) => props.theme.color.main};
+    font-size: 48px;
+    letter-spacing: 0px;
+    line-height: 1.2;
+  `;
 
   return (
-    <>
-      <h1>Welcome to Gijol</h1>
-      <button type="button" onClick={add}>
-        add
-      </button>
-      <button type="button" onClick={subtract}>
-        subtract
-      </button>
-      <br />
-      <span>{pressNumber}</span>
-    </>
+    <HeaderContainer>
+      <div>
+        <Logo>Gijol</Logo>
+      </div>
+    </HeaderContainer>
   );
 };
 
-export default Example;
+export default Header;
