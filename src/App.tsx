@@ -1,15 +1,24 @@
 import React from 'react';
-import './App.css';
-import Main from 'pages/main';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles/theme';
+
+import Main from 'pages/main';
+import Qna from 'pages/qna';
+import AboutUs from 'pages/aboutus';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Main />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route path="" element={<Main />} />
+            <Route path="qna" element={<Qna />} />
+            <Route path="aboutus" element={<AboutUs />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
