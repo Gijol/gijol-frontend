@@ -12,7 +12,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/">
+          <Route path="gijol-frontend/">
             <Route path="" element={<Main />} />
             <Route path="qna" element={<Qna />} />
             <Route path="aboutus" element={<AboutUs />} />
