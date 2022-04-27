@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FrameContainer, Blur, Title } from './styles';
 import ButtonContainer from './buttonBox/buttons';
 
-const Frame1 = function Frame1(): JSX.Element {
+const MainFrame = function MainFrame(): JSX.Element {
   return (
     <FrameContainer>
       <Blur />
@@ -16,4 +16,4 @@ const Frame1 = function Frame1(): JSX.Element {
   );
 };
 
-export default Frame1;
+export default MainFrame;
