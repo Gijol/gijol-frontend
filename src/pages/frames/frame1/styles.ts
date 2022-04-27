@@ -7,7 +7,6 @@ const FrameContainer = styled.div`
   flex-direction: column;
   background-color: aqua;
   overflow: hidden;
-  /* justify-content: center; */
   margin-left: auto;
   margin-right: auto;
 `;
@@ -26,8 +25,6 @@ const Title = styled.h1`
 
 const Blur = styled.div`
   position: absolute;
-  /* z-index: 0; */
-  /* top: 0px; */
   left: 0;
   width: 100%;
   height: 500px;
