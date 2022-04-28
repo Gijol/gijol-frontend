@@ -5,7 +5,7 @@ const FrameContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  background-color: #f0f2f9;
   overflow: hidden;
 `;
 const Title = styled.h1`
