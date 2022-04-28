@@ -6,6 +6,7 @@ interface IProps {
   pickNum: number;
   setNum: (e: React.MouseEvent<HTMLDivElement>, thisNum: number) => void;
 }
+
 const Drawer = function Drawer({
   drawerNum,
   pickNum,
