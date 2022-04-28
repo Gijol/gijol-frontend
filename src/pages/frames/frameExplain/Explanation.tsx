@@ -27,6 +27,18 @@ const ExplanationHeader = styled.h2`
   margin-right: auto;
 `;
 
+const DrawerContainer = styled.div`
+  padding-right: 3.5em;
+  padding-left: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const ExplainPicContainer = styled.div`
+  width: 60%;
+  height: 100px;
+`;
+
 const ExplanationFrame = function ExplanationFrame(): JSX.Element {
   return (
     <Explanation>
@@ -35,7 +47,10 @@ const ExplanationFrame = function ExplanationFrame(): JSX.Element {
           졸업 요건 확인에 필요한 파일을 저장하세요
         </ExplanationHeader>
       </ExplanationHeaderContainer>
-      <ExplainDrawer />
+      <DrawerContainer>
+        <ExplainPicContainer />
+        <ExplainDrawer />
+      </DrawerContainer>
     </Explanation>
   );
 };

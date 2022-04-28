@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const DrawerContainer = styled.div`
-  min-width: 600px;
+  min-width: 300px;
 `;
 
 const toggleOn = keyframes`
   0% {
-    height: 10px;
+    height: 0px;
   }
 
   100% {
@@ -21,7 +21,7 @@ const toggleOff = keyframes`
   }
 
   100% {
-    height: 10px;
+    height: 0px;
   }
 `;
 
@@ -30,26 +30,37 @@ const DrawerElement = styled.div`
   transition-duration: 2s;
 
   > .drawer-body-container-on {
-    width: 100%;
+    /* width: 100%; */
+    border-left: 3px solid ${(props) => props.theme.color.sub};
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
     overflow: hidden;
     height: 200px;
-    background-color: blueviolet;
     animation: ${toggleOn} 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   > .drawer-body-container-off {
-    width: 100%;
-    height: 10px;
+    /* width: 100%; */
+    border-left: 3px solid ${(props) => props.theme.color.sub};
+    height: 0px;
     overflow: hidden;
-    background-color: blueviolet;
     animation: ${toggleOff} 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
 `;
 
 const DrawerHeaderContainer = styled.div`
-  width: 100%;
-  height: 30px;
-  background-color: brown;
+  height: 60px;
+  border: 1px solid ${(props) => props.theme.color.main};
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+  color: ${(props) => props.theme.color.main};
 `;
 
 const ExplainDrawer = function ExplainDrawer(): JSX.Element {
@@ -95,6 +106,40 @@ const ExplainDrawer = function ExplainDrawer(): JSX.Element {
             <br />
             설명 어쩌고 저쩌고
             {/* 이 위치에 component 들어가야 함 */}
+          </div>
+        </DrawerElement>
+        <DrawerElement>
+          <DrawerHeaderContainer onClick={(e) => setNum(e, 3)}>
+            Step3
+          </DrawerHeaderContainer>
+          <div
+            className={
+              pickNum === 3
+                ? 'drawer-body-container-on'
+                : 'drawer-body-container-off'
+            }
+            onClick={(e) => setNum(e, 0)}
+            aria-hidden="true"
+          >
+            <br />
+            설명 어쩌고 저쩌고
+          </div>
+        </DrawerElement>
+        <DrawerElement>
+          <DrawerHeaderContainer onClick={(e) => setNum(e, 4)}>
+            Step4
+          </DrawerHeaderContainer>
+          <div
+            className={
+              pickNum === 4
+                ? 'drawer-body-container-on'
+                : 'drawer-body-container-off'
+            }
+            onClick={(e) => setNum(e, 0)}
+            aria-hidden="true"
+          >
+            <br />
+            설명 어쩌고 저쩌고
           </div>
         </DrawerElement>
       </DrawerContainer>
