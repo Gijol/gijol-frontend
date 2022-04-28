@@ -1,5 +1,3 @@
-import React from 'react';
-import styled from 'styled-components';
 import { FrameContainer, Blur, Title } from './styles';
 import ButtonContainer from './buttonBox/buttons';
 
