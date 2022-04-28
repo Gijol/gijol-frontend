@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 const FrameContainer = styled.div`
-  max-width: ${(props) => props.theme.basicWidth};
+  max-width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: aqua;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
 `;
 const Title = styled.h1`
   white-space: pre;
