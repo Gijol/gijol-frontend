@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const HeaderWrapper = styled.div`
   width: 100%;
+  z-index: 100;
+  position: fixed;
   border-bottom: 0.7px solid rgba(0, 0, 0, 0.25);
 `;
 
