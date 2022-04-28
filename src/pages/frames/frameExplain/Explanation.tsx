@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import ExplainDrawer from './explainDrawer/explainDrawer';
 import {
   Explanation,
   ExplanationHeaderContainer,
   ExplanationHeader,
-  ExplainPicContainer,
   DrawerContainer,
 } from './styles';
+import ExplainDrawerPic from './explainPic/explainPic';
 
 const ExplanationFrame = function ExplanationFrame(): JSX.Element {
+  const [stateNum, setStateNum] = useState<number>(1);
+
+  const setStateNumber = (tempNum: number) => {
+    setStateNum(tempNum);
+  };
+
   return (
     <Explanation>
       <ExplanationHeaderContainer>
@@ -16,8 +23,8 @@ const ExplanationFrame = function ExplanationFrame(): JSX.Element {
         </ExplanationHeader>
       </ExplanationHeaderContainer>
       <DrawerContainer>
-        <ExplainPicContainer />
-        <ExplainDrawer />
+        <ExplainDrawerPic stateNum={stateNum} />
+        <ExplainDrawer stateNum={stateNum} setStateNumber={setStateNumber} />
       </DrawerContainer>
     </Explanation>
   );

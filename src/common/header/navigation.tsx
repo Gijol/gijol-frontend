@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { RightNav } from './styles';
 
 const Navi = function Navi(): JSX.Element {

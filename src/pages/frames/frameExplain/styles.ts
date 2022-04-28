@@ -11,7 +11,7 @@ const ExplanationHeaderContainer = styled.div`
   width: 100%;
   display: inline-flex;
   margin-top: 5em;
-  margin-bottom: 2.5em;
+  margin-bottom: 1em;
   flex-direction: column;
 `;
 
@@ -33,13 +33,8 @@ const DrawerContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const ExplainPicContainer = styled.div`
-  width: 60%;
-  height: 100px;
-`;
 
 export {
-  ExplainPicContainer,
   Explanation,
   ExplanationHeader,
   ExplanationHeaderContainer,
