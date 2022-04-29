@@ -29,9 +29,10 @@ const DrawerElement = styled.div`
   transition-duration: 2s;
 
   > .drawer-body-container-on {
+    /* background-color: #c6ffd7; */
     /* width: 100%; */
     border-left: 3px solid ${(props) => props.theme.color.sub};
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-bottom: 10px;
     padding-left: 20px;
     overflow: hidden;
@@ -46,20 +47,35 @@ const DrawerElement = styled.div`
     overflow: hidden;
     animation: ${toggleOff} 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
+  > .drawer-header-on {
+    border-left: 3px solid ${(props) => props.theme.color.sub};
+    color: ${(props) => props.theme.color.sub};
+  }
+  > .drawer-header-off {
+    border-left: 3px solid ${(props) => props.theme.color.main};
+    color: ${(props) => props.theme.color.main};
+  }
+  > .drawer-header-default {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 14px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 700;
+  }
 `;
 
 const DrawerHeaderContainer = styled.div`
   height: 60px;
-  border: 1px solid ${(props) => props.theme.color.main};
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 14px;
-  margin-bottom: 5px;
   margin-top: 5px;
-  font-size: 20px;
-  color: ${(props) => props.theme.color.main};
+  font-size: 25px;
+  font-weight: 700;
 `;
 
 export { DrawerHeaderContainer, DrawerElement, DrawerContainer };
