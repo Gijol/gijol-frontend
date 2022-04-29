@@ -4,14 +4,14 @@ import Drawer from './drawer';
 
 interface IProps {
   setStateNumber: (nowNum: number) => void;
-  stateNum: number;
+  stepNum: number;
 }
 
 const ExplainDrawer = function ExplainDrawer({
   setStateNumber,
-  stateNum,
+  stepNum,
 }: IProps): JSX.Element {
-  const [pickNum, setPickNum] = useState<number>(stateNum);
+  const [pickNum, setPickNum] = useState<number>(stepNum);
 
   // 자식 component에서 num을 조절하게 하는 함수
   const setNum = (e: React.MouseEvent<HTMLDivElement>, thisNum: number) => {

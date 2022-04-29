@@ -9,10 +9,10 @@ import {
 import ExplainDrawerPic from './explainPic/explainPic';
 
 const ExplanationFrame = function ExplanationFrame(): JSX.Element {
-  const [stateNum, setStateNum] = useState<number>(1);
+  const [stepNum, setStepNum] = useState<number>(1);
 
-  const setStateNumber = (tempNum: number) => {
-    setStateNum(tempNum);
+  const setStepNumber = (tempNum: number) => {
+    setStepNum(tempNum);
   };
 
   return (
@@ -23,8 +23,8 @@ const ExplanationFrame = function ExplanationFrame(): JSX.Element {
         </ExplanationHeader>
       </ExplanationHeaderContainer>
       <DrawerContainer>
-        <ExplainDrawerPic stateNum={stateNum} />
-        <ExplainDrawer stateNum={stateNum} setStateNumber={setStateNumber} />
+        <ExplainDrawerPic stepNum={stepNum} />
+        <ExplainDrawer stepNum={stepNum} setStateNumber={setStepNumber} />
       </DrawerContainer>
     </Explanation>
   );

@@ -1,17 +1,17 @@
 import ExplainDrawerPicContainer from './styled';
 
 interface IProps {
-  stateNum: number;
+  stepNum: number;
 }
 
 const ExplainDrawerPic = function ExplainDrawerPic({
-  stateNum,
+  stepNum,
 }: IProps): JSX.Element {
   return (
     <ExplainDrawerPicContainer>
       <div
         className={
-          stateNum === 1
+          stepNum === 1
             ? 'image-fade-in image-default'
             : 'image-fade-out image-default'
         }
@@ -20,7 +20,7 @@ const ExplainDrawerPic = function ExplainDrawerPic({
       </div>
       <div
         className={
-          stateNum === 2
+          stepNum === 2
             ? 'image-fade-in image-default'
             : 'image-fade-out image-default'
         }
@@ -29,7 +29,7 @@ const ExplainDrawerPic = function ExplainDrawerPic({
       </div>
       <div
         className={
-          stateNum === 3
+          stepNum === 3
             ? 'image-fade-in image-default'
             : 'image-fade-out image-default'
         }
@@ -38,7 +38,7 @@ const ExplainDrawerPic = function ExplainDrawerPic({
       </div>
       <div
         className={
-          stateNum === 4
+          stepNum === 4
             ? 'image-fade-in image-default'
             : 'image-fade-out image-default'
         }
