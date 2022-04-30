@@ -1,31 +1,11 @@
-import { useCallback, useRef, useState } from 'react';
+import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-
-const DragDropBox = styled.div`
-  width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  > .dragdrop-default {
-    width: 300px;
-    height: 30%;
-    background-color: #68de8c;
-    padding: 0.5rem;
-    border-radius: 5px;
-  }
-  > .not-dragging {
-    border: 3px dotted ${(props) => props.theme.color.sub};
-  }
-  > .dragging {
-    border: 3px solid ${(props) => props.theme.color.sub};
-  }
-`;
+import DragDropBox from './styles';
 
 const DragDrop = function DragDrop(): JSX.Element {
   const Id = 'fileUpload';
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const fileId = useRef<number>(0);
+  const [file, setFile] = useState<File | null>();
 
   const dragRef = useRef<HTMLLabelElement | null>(null);
 
@@ -52,9 +32,55 @@ const DragDrop = function DragDrop(): JSX.Element {
   const handleDrop = useCallback((event: DragEvent): void => {
     event.preventDefault();
     event.stopPropagation();
-
+    onChangeFile(event);
     setIsDragging(false);
   }, []);
+
+  // 컴포넌트가 마운트 될 때 위의 함수들에 event listener를 달아줌
+  const initDragEvent = useCallback((): void => {
+    if (dragRef.current !== null) {
+      dragRef.current.addEventListener('dragenter', handleDragIn);
+      dragRef.current.addEventListener('dragleave', handleDragOut);
+      dragRef.current.addEventListener('dragover', handleDragOver);
+      dragRef.current.addEventListener('drop', handleDrop);
+    }
+  }, [handleDragIn, handleDragOut, handleDragOver, handleDrop]);
+
+  // 컴포넌트가 언마운트될 때 함수들에 event listener 제거
+  const endDragEvent = useCallback((): void => {
+    if (dragRef.current !== null) {
+      dragRef.current.removeEventListener('dragenter', handleDragIn);
+      dragRef.current.removeEventListener('dragleave', handleDragOut);
+      dragRef.current.removeEventListener('dragover', handleDragOver);
+      dragRef.current.removeEventListener('drop', handleDrop);
+    }
+  }, [handleDragIn, handleDragOut, handleDragOver, handleDrop]);
+
+  useEffect(() => {
+    initDragEvent();
+    return () => {
+      endDragEvent();
+    };
+  }, [initDragEvent, endDragEvent]);
+
+  const onChangeFile = useCallback(
+    (event: ChangeEvent<HTMLInputElement> | any): void => {
+      let selectFile: File;
+
+      if (event.type === 'drop') {
+        selectFile = event.dataTransfer.files.item(0);
+      } else {
+        selectFile = event.target.files.item(0);
+      }
+      console.log(selectFile);
+      setFile(selectFile);
+    },
+    [file],
+  );
+
+  const handleFilterFile = useCallback(() => {
+    setFile(null);
+  }, [file]);
 
   return (
     <DragDropBox>
@@ -72,12 +98,30 @@ const DragDrop = function DragDrop(): JSX.Element {
         <input
           type="file"
           id={Id}
+          // accept=".xlsx"
           style={{ display: 'none' }}
           multiple={false}
         />
 
         <div>파일을 끌어다 추가하세요</div>
       </label>
+      <div className="DragDrop-Files">
+        {file !== null ? (
+          <div>
+            <div>{file?.name}</div>
+            <div
+              aria-hidden="true"
+              role="button"
+              className="DragDrop-Files-Filter"
+              onClick={() => handleFilterFile()}
+            >
+              X
+            </div>
+          </div>
+        ) : (
+          <div>파일을 추가해 주세요</div>
+        )}
+      </div>
     </DragDropBox>
   );
 };
