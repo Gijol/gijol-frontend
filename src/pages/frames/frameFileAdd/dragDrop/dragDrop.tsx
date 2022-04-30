@@ -98,7 +98,7 @@ const DragDrop = function DragDrop(): JSX.Element {
         <input
           type="file"
           id={Id}
-          // accept=".xlsx"
+          accept=".xlsx"
           style={{ display: 'none' }}
           multiple={false}
         />
