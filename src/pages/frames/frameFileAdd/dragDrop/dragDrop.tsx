@@ -5,7 +5,8 @@ import DragDropBox from './styles';
 const DragDrop = function DragDrop(): JSX.Element {
   const Id = 'fileUpload';
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [file, setFile] = useState<File | null>();
+  const [file, setFile] = useState<File | null>(null);
+  const inputElement = document.getElementById(Id);
 
   const dragRef = useRef<HTMLLabelElement | null>(null);
 
@@ -72,7 +73,7 @@ const DragDrop = function DragDrop(): JSX.Element {
       } else {
         selectFile = event.target.files.item(0);
       }
-      console.log(selectFile);
+      // console.log(selectFile);
       setFile(selectFile);
     },
     [file],
@@ -98,9 +99,16 @@ const DragDrop = function DragDrop(): JSX.Element {
         <input
           type="file"
           id={Id}
-          accept=".xlsx"
+          accept=".xls, .xlsx"
           style={{ display: 'none' }}
           multiple={false}
+          onChange={(e) => {
+            console.log('updated');
+            if (e.target.files !== null) {
+              setFile(e.target.files[0]);
+              e.target.value = '';
+            }
+          }}
         />
 
         <div>파일을 끌어다 추가하세요</div>
