@@ -8,7 +8,6 @@ const FileAdd = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: beige;
 `;
 
 const FileAddFrame = function FileAddFrame(): JSX.Element {

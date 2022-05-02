@@ -1,7 +1,14 @@
 import { FrameContainer, Blur, Title } from './styles';
 import ButtonContainer from './buttonBox/buttons';
 
-const MainFrame = function MainFrame(): JSX.Element {
+interface IFace {
+  goToNext: () => void;
+  goToLast: () => void;
+}
+const MainFrame = function MainFrame({
+  goToNext,
+  goToLast,
+}: IFace): JSX.Element {
   return (
     <FrameContainer>
       <Blur />
@@ -9,7 +16,7 @@ const MainFrame = function MainFrame(): JSX.Element {
         졸업요건 <br />
         Gijol에서 간단하게 확인하세요.
       </Title>
-      <ButtonContainer />
+      <ButtonContainer goToLast={goToLast} goToNext={goToNext} />
     </FrameContainer>
   );
 };

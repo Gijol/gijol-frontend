@@ -1,11 +1,19 @@
 import React from 'react';
 import { ButtonsContainer, StandardButton } from './styles';
 
-const ButtonContainer = function ButtonContainer(): JSX.Element {
+interface IFace {
+  goToNext: () => void;
+  goToLast: () => void;
+}
+
+const ButtonContainer = function ButtonContainer({
+  goToNext,
+  goToLast,
+}: IFace): JSX.Element {
   return (
     <ButtonsContainer>
-      <StandardButton>처음 확인해요</StandardButton>
-      <StandardButton>확인한 적 있어요</StandardButton>
+      <StandardButton onClick={goToLast}>처음 확인해요</StandardButton>
+      <StandardButton onClick={goToNext}>확인한 적 있어요</StandardButton>
     </ButtonsContainer>
   );
 };
