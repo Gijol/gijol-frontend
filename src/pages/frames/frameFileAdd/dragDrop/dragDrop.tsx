@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import DragDropBox from './styles';
+import { DragDropBox, InputText } from './styles';
 
 const DragDrop = function DragDrop(): JSX.Element {
   const Id = 'fileUpload';
@@ -111,11 +111,13 @@ const DragDrop = function DragDrop(): JSX.Element {
           }}
         />
 
-        <div>파일을 끌어다 추가하세요</div>
+        <InputText>
+          <div>파일을 끌어다 추가하세요</div>
+        </InputText>
       </label>
-      <div className="DragDrop-Files">
+      <div className="drag-drop">
         {file !== null ? (
-          <div>
+          <div className="file-exist-container">
             <div>{file?.name}</div>
             <div
               aria-hidden="true"
@@ -123,7 +125,7 @@ const DragDrop = function DragDrop(): JSX.Element {
               className="DragDrop-Files-Filter"
               onClick={() => handleFilterFile()}
             >
-              X
+              삭제
             </div>
           </div>
         ) : (
