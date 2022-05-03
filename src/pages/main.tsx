@@ -1,5 +1,3 @@
-import styled from 'styled-components';
-
 import Header from 'common/header/header';
 import MainComponent from './frames/mainPage/mainPageComponent';
 import { MainContainer } from './styles';
