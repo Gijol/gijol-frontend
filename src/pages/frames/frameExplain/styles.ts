@@ -5,7 +5,6 @@ const Explanation = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: beige;
 `;
 const ExplanationHeaderContainer = styled.div`
   width: 100%;

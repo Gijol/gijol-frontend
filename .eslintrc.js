@@ -20,12 +20,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    '@typescript-eslint', 
-    'prettier'
-  ],
+  plugins: ['react', '@typescript-eslint', '@typescript-eslint', 'prettier'],
   rules: {
     'linebreak-style': 0,
     'import/prefer-default-export': 0,

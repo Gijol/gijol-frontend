@@ -1,17 +1,13 @@
 import Header from 'common/header/header';
-import MainFrame from './frames/frame1/frame1';
-import ExplanationFrame from './frames/frameExplain/explanation';
-import FrameContainer from './styles';
+import MainComponent from './frames/mainPage/mainPageComponent';
+import { MainContainer } from './styles';
 
 const Main = function Main(): JSX.Element {
   return (
-    <>
+    <MainContainer>
       <Header />
-      <FrameContainer>
-        <MainFrame />
-        <ExplanationFrame />
-      </FrameContainer>
-    </>
+      <MainComponent />
+    </MainContainer>
   );
 };
 
