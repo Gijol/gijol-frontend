@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import DragDrop from './dragDrop/dragDrop';
+import SelectMajor from './select/selectBox';
 
 const FileAdd = styled.section`
   max-width: ${(props) => props.theme.basicWidth};
@@ -12,9 +13,12 @@ const FileAdd = styled.section`
 
 const FileAddFrame = function FileAddFrame(): JSX.Element {
   return (
-    <FileAdd>
-      <DragDrop />
-    </FileAdd>
+    <>
+      <SelectMajor />
+      <FileAdd>
+        <DragDrop />
+      </FileAdd>
+    </>
   );
 };
 

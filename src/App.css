@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #1DAA47 !important;
+}
+.swiper-pagination{
+  margin-right: 1em !important;
+}
+.swiper-pagination-bullet{
+  width: 10px !important;
+  height: 10px !important;
+  margin-top: 0.6em !important;
+  margin-bottom: 0.6em !important;
+}

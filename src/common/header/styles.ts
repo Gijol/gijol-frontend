@@ -14,7 +14,7 @@ const LogoContainer = styled(Link)`
 
 const HeaderContainer = styled.div`
   max-width: ${(props) => props.theme.basicWidth};
-  height: 64px;
+  height: 48px;
   padding: 0 15px;
   margin: 0 auto;
   display: flex;
