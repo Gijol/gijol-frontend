@@ -4,7 +4,11 @@ import MajorOptionArray from './majorOptions';
 import Major from './major';
 
 export const SelectBox = styled.select`
-  margin: 0;
+  border-radius: 10px;
+  width: 200px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: none;
 `;
 
 export const OptionInner = styled.option`

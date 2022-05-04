@@ -8,9 +8,9 @@ const DragDropBox = styled.div`
   justify-content: center;
   align-items: center;
   > .dragdrop-default {
-    width: 300px;
-    height: 30%;
-    background-color: #68de8c;
+    width: 660px;
+    height: 330px;
+    background-color: #fff;
     padding: 0.5rem;
     border-radius: 5px;
   }
@@ -46,6 +46,7 @@ const InputText = styled.div`
   width: 100%;
   height: 100%;
   font-size: 1rem;
+  opacity: 0.45;
   font-weight: 700;
   text-align: center;
   display: flex;
