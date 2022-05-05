@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Title from 'assets/title';
 import ExplainDrawer from './explainDrawer/explainDrawer';
 import {
   Explanation,
@@ -18,9 +19,7 @@ const ExplanationFrame = function ExplanationFrame(): JSX.Element {
   return (
     <Explanation>
       <ExplanationHeaderContainer>
-        <ExplanationHeader>
-          졸업 요건 확인에 필요한 파일을 저장하세요
-        </ExplanationHeader>
+        <Title>졸업 요건 확인에 필요한 파일을 저장하세요</Title>
       </ExplanationHeaderContainer>
       <DrawerContainer>
         <ExplainDrawerPic stepNum={stepNum} />

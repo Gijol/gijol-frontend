@@ -6,7 +6,7 @@ const MainFrame = function MainFrame(): JSX.Element {
     <FrameContainer>
       <Blur />
       <Title>
-        졸업요건 <br />
+        <span style={{ color: '#1DAA47' }}>졸업요건</span> <br />
         Gijol에서 간단하게 확인하세요.
       </Title>
       <ButtonContainer />

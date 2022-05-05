@@ -1,6 +1,8 @@
-import SwiperCore, { A11y, Mousewheel, Navigation, Pagination } from 'swiper';
+import SwiperCore, { Mousewheel, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import '../../../App.css';
 
 import MainFrame from 'pages/frames/frame1/frame1';
 import ExplanationFrame from 'pages/frames/frameExplain/explanation';
@@ -12,6 +14,10 @@ SwiperCore.use([Mousewheel, Pagination, Navigation]);
 const MainComponent = function MainComponent(): JSX.Element {
   const viewHeigth = window.innerHeight;
 
+  const pagination = {
+    clickable: true,
+  };
+
   return (
     <Swiper
       // controller={{ swiper: swiper }}
@@ -20,9 +26,8 @@ const MainComponent = function MainComponent(): JSX.Element {
       speed={500}
       modules={[Navigation, Pagination]}
       mousewheel
-      pagination
-      touchRatio={0.1}
-      // swipeHandler={swiper}
+      pagination={pagination}
+      touchRatio={0}
     >
       <SwiperSlide>
         <MainFrame />
@@ -37,6 +42,7 @@ const MainComponent = function MainComponent(): JSX.Element {
           <FileAddFrame />
         </FrameContainer>
       </SwiperSlide>
+      ...
     </Swiper>
   );
 };

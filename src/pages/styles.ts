@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const FrameContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
   background-color: #f0f2f9;
   max-width: ${(props) => props.theme.basicWidth};
 `;

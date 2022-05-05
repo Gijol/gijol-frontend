@@ -79,9 +79,14 @@ const DragDrop = function DragDrop(): JSX.Element {
     [file],
   );
 
-  const handleFilterFile = useCallback(() => {
-    setFile(null);
-  }, [file]);
+  const handleFilterFile = useCallback(
+    (event: any) => {
+      event.preventDefault();
+      event.stopPropagation();
+      setFile(null);
+    },
+    [file],
+  );
 
   return (
     <DragDropBox>
@@ -112,26 +117,25 @@ const DragDrop = function DragDrop(): JSX.Element {
         />
 
         <InputText>
-          <div>파일을 끌어다 추가하세요</div>
+          <div className="drag-drop">
+            {file !== null ? (
+              <div className="file-exist-container">
+                <div>{file?.name}</div>
+                <div
+                  aria-hidden="true"
+                  role="button"
+                  className="DragDrop-Files-Filter"
+                  onClick={(e) => handleFilterFile(e)}
+                >
+                  삭제
+                </div>
+              </div>
+            ) : (
+              <div>졸업 요건을 확인할 파일을 끌어다 업로드 해주세요.</div>
+            )}
+          </div>
         </InputText>
       </label>
-      <div className="drag-drop">
-        {file !== null ? (
-          <div className="file-exist-container">
-            <div>{file?.name}</div>
-            <div
-              aria-hidden="true"
-              role="button"
-              className="DragDrop-Files-Filter"
-              onClick={() => handleFilterFile()}
-            >
-              삭제
-            </div>
-          </div>
-        ) : (
-          <div>파일을 추가해 주세요</div>
-        )}
-      </div>
     </DragDropBox>
   );
 };
