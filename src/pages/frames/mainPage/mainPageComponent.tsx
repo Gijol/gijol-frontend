@@ -5,9 +5,9 @@ import 'swiper/css/pagination';
 import '../../../App.css';
 
 import MainFrame from 'pages/frames/frame1/frame1';
-import ExplanationFrame from 'pages/frames/frameExplain/explanation';
 import { FrameContainer } from 'pages/styles';
 import FileAddFrame from 'pages/frames/frameFileAdd/fildAdd';
+import ExplanationFrame from '../frameExplain/Explanation';
 
 SwiperCore.use([Mousewheel, Pagination, Navigation]);
 

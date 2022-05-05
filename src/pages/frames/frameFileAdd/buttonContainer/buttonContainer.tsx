@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import question from 'img/question.png';
+import question from 'assets/img/question.png';
 import SelectMajor from '../select/selectBox';
 
 import RenderHelp from './helpToggle';

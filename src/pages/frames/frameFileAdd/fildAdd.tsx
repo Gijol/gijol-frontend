@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Title from 'assets/title';
+import Title from 'common/title/title';
 
 import DragDrop from './dragDrop/dragDrop';
 import SelectMajor from './select/selectBox';
