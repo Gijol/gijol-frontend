@@ -2,28 +2,8 @@ import { useState } from 'react';
 import question from 'img/question.png';
 import SelectMajor from '../select/selectBox';
 
-import {
-  Help,
-  Image,
-  QuestionContainer,
-  UploadButton,
-  Container,
-} from './style';
-
-interface IProps {
-  isOver: boolean;
-}
-export const RenderHelp = function RenderHelp({ isOver }: IProps): JSX.Element {
-  return (
-    <div>
-      {isOver ? (
-        <Help>만약 기초교육학부 학생이시면 희망 전공를 골라주세요</Help>
-      ) : (
-        <div />
-      )}
-    </div>
-  );
-};
+import RenderHelp from './helpToggle';
+import { Image, QuestionContainer, UploadButton, Container } from './style';
 
 const MajorButtonContainer = function MajorButtonContainer(): JSX.Element {
   const [overState, setOverState] = useState(false);
