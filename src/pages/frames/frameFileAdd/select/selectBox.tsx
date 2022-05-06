@@ -17,6 +17,9 @@ const SelectContainer = function SelectContainer({
 
   return (
     <SelectBox onChange={handleChange}>
+      <option disabled hidden value="" selected>
+        전공을 선택하세요
+      </option>
       {options.map(({ name, value, key }: Major) => (
         <OptionInner value={value} key={key}>
           {name}
