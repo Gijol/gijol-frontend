@@ -1,36 +1,42 @@
-import styled from 'styled-components';
+import { useState } from 'react';
 import Title from 'common/title/title';
-
+import callGraduateApi from './pushBtnApi';
 import DragDrop from './dragDrop/dragDrop';
-import SelectMajor from './select/selectBox';
 import MajorButtonContainer from './buttonContainer/buttonContainer';
-
-const FileAdd = styled.section`
-  max-width: ${(props) => props.theme.basicWidth};
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-  flex-direction: column;
-`;
-
-const FileContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import { FileContainer, FileAdd } from './styles';
 
 const FileAddFrame = function FileAddFrame(): JSX.Element {
+  const [majorValue, setMajorValue] = useState<string>();
+  const [courseFile, setCourseFile] = useState<File | null>(null);
+
+  const pushBtn = () => {
+    callGraduateApi(courseFile, majorValue);
+  };
+
+  const setMajorValueBy = (major: string) => {
+    console.log(major);
+    if (major !== null) {
+      console.log(major);
+      setMajorValue(major);
+    }
+  };
+  const setCourseFileBy = (file: File) => {
+    if (file === null) {
+      return;
+    }
+    setCourseFile(file);
+  };
+
   return (
     <FileContainer>
       <Title>아래 칸에 엑셀 파일을 끌어다 놓아주세요</Title>
       <FileAdd>
-        <DragDrop />
+        <DragDrop setCourseFileBy={setCourseFileBy} />
       </FileAdd>
-      <MajorButtonContainer />
+      <MajorButtonContainer
+        pushBtn={pushBtn}
+        setMajorValueBy={setMajorValueBy}
+      />
     </FileContainer>
   );
 };

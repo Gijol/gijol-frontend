@@ -5,7 +5,14 @@ import SelectMajor from '../select/selectBox';
 import RenderHelp from './helpToggle';
 import { Image, QuestionContainer, UploadButton, Container } from './style';
 
-const MajorButtonContainer = function MajorButtonContainer(): JSX.Element {
+interface IProps {
+  setMajorValueBy: (e: string) => void;
+  pushBtn: () => void;
+}
+const MajorButtonContainer = function MajorButtonContainer({
+  setMajorValueBy,
+  pushBtn,
+}: IProps): JSX.Element {
   const [overState, setOverState] = useState(false);
 
   const setMouseTrue = () => {
@@ -28,8 +35,10 @@ const MajorButtonContainer = function MajorButtonContainer(): JSX.Element {
           <RenderHelp isOver={overState} />
         </div>
       </QuestionContainer>
-      <SelectMajor />
-      <UploadButton type="button">결과 확인하기!</UploadButton>
+      <SelectMajor setMajorValueBy={setMajorValueBy} />
+      <UploadButton type="button" onClick={pushBtn}>
+        결과 확인하기!
+      </UploadButton>
     </Container>
   );
 };
