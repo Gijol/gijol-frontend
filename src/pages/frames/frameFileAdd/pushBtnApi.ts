@@ -1,4 +1,5 @@
 import getResult from 'utils/apiCall';
+import BasicResult from 'utils/api/basic';
 
 async function callGraduateApi(
   courseFile: File | null,
@@ -12,7 +13,8 @@ async function callGraduateApi(
     alert('학과를 선택해주세요');
     return;
   }
-  await getResult(courseFile, majorValue);
+  let result: object;
+  // result = await getResult({ courseFile, majorValue });
 }
 
 export default callGraduateApi;

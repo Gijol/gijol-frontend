@@ -14,9 +14,9 @@ class ScienceBasic extends BasicResult {
     super(userTakenCoursesList, totalCredits, min, max, satisfied, messages);
   }
 
-  getMinMaxCredit(): [number, number] {
-    return [this.minConditionCredits, this.maxConditionCredits];
-  }
+  // getMinMaxCredit(): [number, number] {
+  //   return [this.minConditionCredits, this.maxConditionCredits];
+  // }
   getTakenCoursesList(): Array<Course> {
     return this.userTakenCoursesList.getTakenCourseInfo();
   }
