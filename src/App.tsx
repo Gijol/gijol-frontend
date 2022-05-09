@@ -6,6 +6,7 @@ import { theme } from 'styles/theme';
 import Main from 'pages/main';
 import Qna from 'pages/qna';
 import AboutUs from 'pages/aboutus';
+import ResultPage from 'pages/result';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="" element={<Main />} />
             <Route path="qna" element={<Qna />} />
             <Route path="aboutus" element={<AboutUs />} />
+            <Route path="result" element={<ResultPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
