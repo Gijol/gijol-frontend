@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 
 import Title from 'common/title/title';
 import callGraduateApi from './pushBtnApi';
@@ -19,6 +18,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
     setLoading(true);
     await callGraduateApi(courseFile, majorValue);
     await setLoading(false);
+    // setCourseFile(null);
   }
 
   const setMajorValueBy = (major: string) => {
@@ -28,7 +28,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
       setMajorValue(major);
     }
   };
-  const setCourseFileBy = (file: File) => {
+  const setCourseFileBy = (file: File | null) => {
     if (file === null) {
       return;
     }

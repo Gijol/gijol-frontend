@@ -1,5 +1,11 @@
 import getResult from 'utils/apiCall';
 import BasicResult from 'utils/api/basic';
+import EtcMandatory from 'utils/api/header/etcMandatory';
+import Humanities from 'utils/api/header/humanities';
+import LanguageBasic from 'utils/api/header/languageBasic';
+import Major from 'utils/api/header/major';
+import OtherUncheckedClass from 'utils/api/header/otherUncheckedClass';
+import ScienceBasic from 'utils/api/header/scienceBasic';
 
 async function callGraduateApi(
   courseFile: File | null,
@@ -13,7 +19,8 @@ async function callGraduateApi(
     alert('학과를 선택해주세요');
     return;
   }
-  await getResult({ courseFile, majorValue });
+  const result = await getResult(courseFile, majorValue);
+  console.log(result.etcMandatory);
 }
 
 export default callGraduateApi;
