@@ -54,6 +54,7 @@ class Result {
     return this.otherClass;
   }
 
+
   getScience(): ScienceBasic {
     return this.science;
   }

@@ -4,4 +4,5 @@ import TakenCourse from '../takenCourse';
 
 class LanguageBasic extends BasicResult {}
 
+
 export default LanguageBasic;

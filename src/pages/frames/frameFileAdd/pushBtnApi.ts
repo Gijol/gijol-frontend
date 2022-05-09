@@ -1,4 +1,5 @@
 import getResult from 'utils/apiCall';
+
 import EtcMandatory from 'utils/api/header/etcMandatory';
 import Humanities from 'utils/api/header/humanities';
 import LanguageBasic from 'utils/api/header/languageBasic';
@@ -97,5 +98,6 @@ const callGraduateApi = async (
   );
   return apiResult;
 };
+
 
 export default callGraduateApi;

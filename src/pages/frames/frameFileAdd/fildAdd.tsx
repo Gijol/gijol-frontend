@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Title from 'common/title/title';
 import Result from 'utils/api/result';
+
 import callGraduateApi from './pushBtnApi';
 import DragDrop from './dragDrop/dragDrop';
 import MajorButtonContainer from './buttonContainer/buttonContainer';
@@ -13,6 +14,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
   const [isLoading, setLoading] = useState<boolean>(false);
   const [apiResult, setApiResult] = useState<Result | null>(null);
 
+
   const pushBtn = () => {
     call();
   };
@@ -22,6 +24,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
     await setLoading(false);
     console.log(result);
     setApiResult(result);
+
   }
 
   const setMajorValueBy = (major: string) => {

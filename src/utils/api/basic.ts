@@ -12,6 +12,7 @@ class BasicResult {
 
   protected satisfied: boolean;
 
+
   protected messages: string[];
 
   constructor(
