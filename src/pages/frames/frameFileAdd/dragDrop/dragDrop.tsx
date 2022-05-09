@@ -2,7 +2,10 @@ import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { DragDropBox, InputText } from './styles';
 
-const DragDrop = function DragDrop(): JSX.Element {
+interface IProps {
+  setCourseFileBy: (file: File) => void;
+}
+const DragDrop = function DragDrop({ setCourseFileBy }: IProps): JSX.Element {
   const Id = 'fileUpload';
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [file, setFile] = useState<File | null>(null);
@@ -110,6 +113,7 @@ const DragDrop = function DragDrop(): JSX.Element {
           onChange={(e) => {
             console.log('updated');
             if (e.target.files !== null) {
+              setCourseFileBy(e.target.files[0]);
               setFile(e.target.files[0]);
               e.target.value = '';
             }

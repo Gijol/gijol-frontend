@@ -1,5 +1,6 @@
 import SwiperCore, { Mousewheel, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../../../App.css';
@@ -11,7 +12,7 @@ import ExplanationFrame from '../frameExplain/Explanation';
 
 SwiperCore.use([Mousewheel, Pagination, Navigation]);
 
-const MainComponent = function MainComponent(): JSX.Element {
+const MobileMainComponent = function MainComponent(): JSX.Element {
   const viewHeigth = window.innerHeight;
 
   const pagination = {
@@ -27,7 +28,7 @@ const MainComponent = function MainComponent(): JSX.Element {
       modules={[Navigation, Pagination]}
       mousewheel
       pagination={pagination}
-      touchRatio={0}
+      touchRatio={0.1}
     >
       <SwiperSlide>
         <MainFrame />
@@ -47,4 +48,4 @@ const MainComponent = function MainComponent(): JSX.Element {
   );
 };
 
-export default MainComponent;
+export default MobileMainComponent;

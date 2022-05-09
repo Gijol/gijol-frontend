@@ -1,31 +1,26 @@
 import styled from 'styled-components';
 import MajorOptionArray from './majorOptions';
-
+import { SelectBox, OptionInner } from './styles';
 import Major from './major';
 
-export const SelectBox = styled.select`
-  border-radius: 10px;
-  width: 200px;
-  padding-left: 10px;
-  font-size: 14px;
-  border: none;
-`;
-
-export const OptionInner = styled.option`
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-const SelectContainer = function SelectContainer(props: {
+interface IProps {
+  setMajorValueBy: (e: string) => void;
   options: Major[];
-}): JSX.Element {
-  const handleChange = (e: { target: { value: string } }) => {
-    console.log(e.target.value);
+}
+const SelectContainer = function SelectContainer({
+  options,
+  setMajorValueBy,
+}: IProps): JSX.Element {
+  const handleChange = (e: any) => {
+    setMajorValueBy(e.target.value);
   };
-  const { options: majorOptions } = props;
+
   return (
     <SelectBox onChange={handleChange}>
-      {majorOptions.map(({ name, value, key }: Major) => (
+      <option disabled hidden value="" selected>
+        전공을 선택하세요
+      </option>
+      {options.map(({ name, value, key }: Major) => (
         <OptionInner value={value} key={key}>
           {name}
         </OptionInner>
@@ -34,8 +29,18 @@ const SelectContainer = function SelectContainer(props: {
   );
 };
 
-const SelectMajor = function SelectMajor(): JSX.Element {
-  return <SelectContainer options={MajorOptionArray} />;
+interface SIProps {
+  setMajorValueBy: (e: string) => void;
+}
+const SelectMajor = function SelectMajor({
+  setMajorValueBy,
+}: SIProps): JSX.Element {
+  return (
+    <SelectContainer
+      setMajorValueBy={setMajorValueBy}
+      options={MajorOptionArray}
+    />
+  );
 };
 
 export default SelectMajor;

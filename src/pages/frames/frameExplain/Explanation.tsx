@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Title from 'assets/title';
+import Title from 'common/title/title';
 import ExplainDrawer from './explainDrawer/explainDrawer';
 import {
   Explanation,

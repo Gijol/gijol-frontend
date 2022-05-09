@@ -1,36 +1,60 @@
-import styled from 'styled-components';
-import Title from 'assets/title';
+import { useState } from 'react';
 
+import Title from 'common/title/title';
+import callGraduateApi from './pushBtnApi';
 import DragDrop from './dragDrop/dragDrop';
-import SelectMajor from './select/selectBox';
 import MajorButtonContainer from './buttonContainer/buttonContainer';
-
-const FileAdd = styled.section`
-  max-width: ${(props) => props.theme.basicWidth};
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-  flex-direction: column;
-`;
-
-const FileContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import { LoadingModal, FileContainer, FileAdd } from './styles';
 
 const FileAddFrame = function FileAddFrame(): JSX.Element {
+  const [majorValue, setMajorValue] = useState<string>();
+  const [courseFile, setCourseFile] = useState<File | null>(null);
+  const [isLoading, setLoading] = useState<boolean>(false);
+
+  const pushBtn = () => {
+    call();
+  };
+  async function call() {
+    setLoading(true);
+    await callGraduateApi(courseFile, majorValue);
+    await setLoading(false);
+    // setCourseFile(null);
+  }
+
+  const setMajorValueBy = (major: string) => {
+    console.log(major);
+    if (major !== null) {
+      console.log(major);
+      setMajorValue(major);
+    }
+  };
+  const setCourseFileBy = (file: File | null) => {
+    if (file === null) {
+      return;
+    }
+    setCourseFile(file);
+  };
+
   return (
     <FileContainer>
+      {isLoading ? (
+        <LoadingModal>
+          <div className="loading-modal-container">
+            <div style={{ textAlign: 'center' }}>
+              Gijol이 일하는 중! <br /> 잠시만 기다려주세요
+            </div>
+          </div>
+        </LoadingModal>
+      ) : null}
+
       <Title>아래 칸에 엑셀 파일을 끌어다 놓아주세요</Title>
       <FileAdd>
-        <DragDrop />
+        <DragDrop setCourseFileBy={setCourseFileBy} />
       </FileAdd>
-      <MajorButtonContainer />
+      <MajorButtonContainer
+        pushBtn={pushBtn}
+        setMajorValueBy={setMajorValueBy}
+      />
     </FileContainer>
   );
 };
