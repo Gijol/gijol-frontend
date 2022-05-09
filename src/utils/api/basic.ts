@@ -3,10 +3,15 @@ import Course from './course';
 
 class BasicResult {
   protected userTakenCoursesList: TakenCourse;
+
   protected totalCredits: number;
+
   protected minConditionCredits: number;
+
   protected maxConditionCredits: number;
+
   protected satisfied: boolean;
+
   protected messages: string[];
 
   constructor(
@@ -28,12 +33,15 @@ class BasicResult {
   getMinMaxCredit(): [number, number] {
     return [this.minConditionCredits, this.maxConditionCredits];
   }
+
   getTakenCoursesList(): Array<Course> {
     return this.userTakenCoursesList.getTakenCourseInfo();
   }
+
   getTotalCredits(): number {
     return this.totalCredits;
   }
+
   getMessages(): Array<string> {
     return this.messages;
   }
