@@ -13,8 +13,7 @@ async function callGraduateApi(
     alert('학과를 선택해주세요');
     return;
   }
-  let result: object;
-  // result = await getResult({ courseFile, majorValue });
+  await getResult({ courseFile, majorValue });
 }
 
 export default callGraduateApi;

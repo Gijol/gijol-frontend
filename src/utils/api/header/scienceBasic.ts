@@ -17,15 +17,15 @@ class ScienceBasic extends BasicResult {
   // getMinMaxCredit(): [number, number] {
   //   return [this.minConditionCredits, this.maxConditionCredits];
   // }
-  getTakenCoursesList(): Array<Course> {
-    return this.userTakenCoursesList.getTakenCourseInfo();
-  }
-  getTotalCredits(): number {
-    return this.totalCredits;
-  }
-  getMessages(): Array<string> {
-    return this.messages;
-  }
+  // getTakenCoursesList(): Array<Course> {
+  //   return this.userTakenCoursesList.getTakenCourseInfo();
+  // }
+  // getTotalCredits(): number {
+  //   return this.totalCredits;
+  // }
+  // getMessages(): Array<string> {
+  //   return this.messages;
+  // }
 }
 
 export default ScienceBasic;

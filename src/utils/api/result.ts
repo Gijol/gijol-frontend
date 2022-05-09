@@ -29,7 +29,24 @@ class Result {
     this.science = sci;
   }
 
-  getTotalInfo() {
-    return;
+  getEtcMandatory(): EtcMandatory {
+    return this.etcMandatory;
+  }
+  getHumanities(): Humanities {
+    return this.humanities;
+  }
+  getLanguageBasic(): LanguageBasic {
+    return this.humanities;
+  }
+  getMajor(): Major {
+    return this.major;
+  }
+  getOtherClass(): OtherUncheckedClass {
+    return this.otherClass;
+  }
+  getScience(): ScienceBasic {
+    return this.science;
   }
 }
+
+export default Result;
