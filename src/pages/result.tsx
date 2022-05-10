@@ -1,5 +1,9 @@
 import Header from 'common/header/header';
 import { useLocation } from 'react-router';
+import Overall from './frames/frameOverall/Overall';
+import Specific from './frames/frameSpecific/Specific';
+import Recommend from './frames/frameRecommend/Recommend';
+import Footer from './frames/frameFooter/Footer';
 
 const ResultPage = function ResultPgae(): JSX.Element {
   const { state } = useLocation();
@@ -8,7 +12,12 @@ const ResultPage = function ResultPgae(): JSX.Element {
   return (
     <>
       {/* <Header /> */}
-      <div>결과 페이지 입니다.</div>
+      <div>
+        <Overall />
+        <Specific />
+        <Recommend />
+        <Footer />
+      </div>
       {/* <div>{state.toStirng}</div> */}
     </>
   );
