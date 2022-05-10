@@ -1,5 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
-import api from './baseApi';
+import axios from 'axios';
 
 class HTTPError extends Error {
   constructor(message?: string) {
@@ -10,8 +9,8 @@ class HTTPError extends Error {
 
 const getResult = async (courseFile: File, majorValue: string) => {
   const formData = new FormData();
-  formData.append('majorType', majorValue!);
-  formData.append('multipartFile', courseFile!);
+  formData.append('majorType', majorValue);
+  formData.append('multipartFile', courseFile);
 
   const response = await axios.post(
     'https://dev-api.gijol.im/graduation',

@@ -9,20 +9,10 @@ import ScienceBasic from 'utils/api/header/scienceBasic';
 import Result from 'utils/api/result';
 
 const callGraduateApi = async (
-  courseFile: File | null,
-  majorValue: string | undefined,
+  courseFile: File,
+  majorValue: string,
 ): Promise<Result> => {
-  if (courseFile === null) {
-    alert('성적표 파일을 업로드 해주세요');
-    throw Error('성적표 미입력');
-  }
-  if (majorValue === null || majorValue === undefined) {
-    alert('학과를 선택해주세요');
-    throw Error('학과 미입력');
-  }
   const result = await getResult(courseFile, majorValue);
-
-  console.log(result);
 
   // EtcMandatory Class만들기
   const resultEtcMandatory = result.etcMandatory;
@@ -98,6 +88,5 @@ const callGraduateApi = async (
   );
   return apiResult;
 };
-
 
 export default callGraduateApi;
