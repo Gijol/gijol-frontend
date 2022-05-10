@@ -13,14 +13,13 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
   const [majorValue, setMajorValue] = useState<string>();
   const [courseFile, setCourseFile] = useState<File | null>(null);
   const [isLoading, setLoading] = useState<boolean>(false);
-  // const [apiResult, setApiResult] = useState<Result | null>(null);
+
   const navigate = useNavigate();
 
   const pushBtn = () => {
     call();
   };
   async function call() {
-    setLoading(true);
     if (courseFile === null) {
       alert('성적표 파일을 업로드 해주세요');
       return;
@@ -29,6 +28,8 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
       alert('학과를 선택해주세요');
       return;
     }
+    setLoading(true);
+
     const result = await callGraduateApi(courseFile, majorValue);
     await setLoading(false);
 
