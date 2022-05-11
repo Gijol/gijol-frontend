@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import Title from 'common/title/title';
 import Result from 'utils/api/result';
 
@@ -19,6 +19,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
   const pushBtn = () => {
     call();
   };
+
   async function call() {
     if (courseFile === null) {
       alert('성적표 파일을 업로드 해주세요');
@@ -30,12 +31,11 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
     }
     setLoading(true);
 
-    const result = await callGraduateApi(courseFile, majorValue);
-    await setLoading(false);
-
-    navigate('/gijol-frontend/result', {
-      state: result,
-      replace: false,
+    await callGraduateApi(courseFile, majorValue).then((result: Result) => {
+      setLoading(false);
+      navigate('/gijol-frontend/result', {
+        state: { result },
+      });
     });
   }
 

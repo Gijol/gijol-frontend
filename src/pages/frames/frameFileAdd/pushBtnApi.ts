@@ -7,6 +7,9 @@ import Major from 'utils/api/header/major';
 import OtherUncheckedClass from 'utils/api/header/otherUncheckedClass';
 import ScienceBasic from 'utils/api/header/scienceBasic';
 import Result from 'utils/api/result';
+import BasicResult from 'utils/api/basic';
+import Course from 'utils/api/course';
+import TakenCourse from 'utils/api/takenCourse';
 
 const callGraduateApi = async (
   courseFile: File,
@@ -14,77 +17,57 @@ const callGraduateApi = async (
 ): Promise<Result> => {
   const result = await getResult(courseFile, majorValue);
 
-  // EtcMandatory Class만들기
-  const resultEtcMandatory = result.etcMandatory;
-  const etcMandatory = new EtcMandatory(
-    resultEtcMandatory.userTakenCoursesList,
-    resultEtcMandatory.totalCredits,
-    resultEtcMandatory.minConditionCredits,
-    resultEtcMandatory.maxConditionCredits,
-    resultEtcMandatory.satisfied,
-    resultEtcMandatory.messages,
-  );
+  // Result객체 만들 변수 미리 선언
+  const BasicResultArr: Array<BasicResult> = [];
 
-  // Humanities Class만들기
-  const resultHumanities = result.humanities;
-  const humanities = new Humanities(
-    resultHumanities.userTakenCoursesList,
-    resultHumanities.totalCredits,
-    resultHumanities.minConditionCredits,
-    resultHumanities.maxConditionCredits,
-    resultHumanities.satisfied,
-    resultHumanities.messages,
-  );
+  const resultArr = Object.values(result);
+  resultArr.forEach((value: any) => {
+    if (value !== null) {
+      const {
+        maxConditionCredits,
+        messages,
+        minConditionCredits,
+        satisfied,
+        totalCredits,
+        userTakenCoursesList,
+      } = value;
 
-  // Language Basic Class제작
-  const resultLangaugeBasic = result.languageBasic;
-  const languageBasic = new LanguageBasic(
-    resultLangaugeBasic.userTakenCoursesList,
-    resultLangaugeBasic.totalCredits,
-    resultLangaugeBasic.minConditionCredits,
-    resultLangaugeBasic.maxConditionCredits,
-    resultLangaugeBasic.satisfied,
-    resultLangaugeBasic.messages,
-  );
-
-  // Major 클래스 제작
-  const resultMajor = result.major;
-  const major = new Major(
-    resultMajor.userTakenCoursesList,
-    resultMajor.totalCredits,
-    resultMajor.minConditionCredits,
-    resultMajor.maxConditionCredits,
-    resultMajor.satisfied,
-    resultMajor.messages,
-  );
-
-  const resultOther = result.otherUncheckedClass;
-  const otherUncheckedClass = new OtherUncheckedClass(
-    resultOther.userTakenCoursesList,
-    resultOther.totalCredits,
-    resultOther.minConditionCredits,
-    resultOther.maxConditionCredits,
-    resultOther.satisfied,
-    resultOther.messages,
-  );
-
-  const resultScience = result.scienceBasic;
-  const scienceBasic = new ScienceBasic(
-    resultScience.userTakenCoursesList,
-    resultScience.totalCredits,
-    resultScience.minConditionCredits,
-    resultScience.maxConditionCredits,
-    resultScience.satisfied,
-    resultScience.messages,
-  );
-
+      const messagesArray: string[] = Object.values(messages);
+      const { takenCourses } = userTakenCoursesList;
+      const takenCourseArray = Object.values(takenCourses);
+      const courseArray: Array<Course> = [];
+      takenCourseArray.forEach((val: any) => {
+        const { year, semester, cousreType, courseName, courseCode, credit } =
+          val;
+        const course = new Course(
+          year,
+          semester,
+          cousreType,
+          courseName,
+          courseCode,
+          credit,
+        );
+        courseArray.push(course);
+      });
+      const takenCourse = new TakenCourse(courseArray!);
+      const bResult = new BasicResult(
+        takenCourse,
+        totalCredits,
+        minConditionCredits,
+        maxConditionCredits,
+        satisfied,
+        messagesArray,
+      );
+      BasicResultArr.push(bResult);
+    }
+  });
   const apiResult = new Result(
-    etcMandatory,
-    humanities,
-    languageBasic,
-    major,
-    otherUncheckedClass,
-    scienceBasic,
+    BasicResultArr[0],
+    BasicResultArr[1],
+    BasicResultArr[2],
+    BasicResultArr[3],
+    BasicResultArr[4],
+    BasicResultArr[5],
   );
   return apiResult;
 };
