@@ -11,7 +11,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div>
         <Overall />
         <Specific />

@@ -1,0 +1,39 @@
+.CircleContainer {
+  width: 360px;
+  height: 360px;
+}
+
+.LabelContainer {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 1;
+  font-size: 36px;
+}
+
+.CircleAndLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.BarProgress {
+  width: 600px;
+  height: 36px;
+}
+
+.BarContainer {
+  background-color: aqua;
+  width: 600px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CourseName {
+  height: fit-content;
+  width: fit-content;
+}

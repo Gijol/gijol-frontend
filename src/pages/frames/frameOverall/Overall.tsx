@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.css';
+import CircularProgressWithLabel from 'components/progressBars/CicularProgressWithLabel';
+import LinearProgressWithLabel from 'components/progressBars/LinearProgressWithLabel';
 
 const Overall = function Overall(): JSX.Element {
   return (
@@ -11,8 +13,12 @@ const Overall = function Overall(): JSX.Element {
         </p>
       </div>
       <div className="OverallResult">
-        <div className="circular">원형 그래프</div>
-        <div className="bar">막대 그래프</div>
+        <div className="circular">
+          <CircularProgressWithLabel />
+        </div>
+        <div className="bar">
+          <LinearProgressWithLabel />
+        </div>
       </div>
     </div>
   );
