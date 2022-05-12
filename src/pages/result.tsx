@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import Result from 'utils/api/result';
 import callGraduateApi from 'utils/api/call/pushBtnApi';
 
-import Overall from './frames/frameOverall/Overall';
-import Specific from './frames/frameSpecific/Specific';
-import Recommend from './frames/frameRecommend/Recommend';
-import Footer from './frames/frameFooter/Footer';
+import Overall from './results/frameOverall/Overall';
+import Specific from './results/frameSpecific/Specific';
+import Recommend from './results/frameRecommend/Recommend';
+import Footer from './results/frameFooter/Footer';
 
 import { LoadingModal } from './styles';
 import ResultMainPage from './results/resultMainPage';
@@ -38,7 +38,6 @@ const ResultPage = function ResultPgae(): JSX.Element {
   return (
     <>
       <Header />
-      {/* <div>{state.toStirng}</div> */}
       {isLoading ? (
         <LoadingModal>
           <div className="loading-modal-container">
@@ -48,12 +47,12 @@ const ResultPage = function ResultPgae(): JSX.Element {
           </div>
         </LoadingModal>
       ) : (
-      <div>
-      <Overall />
-      <Specific />
-      <Recommend />
-      <Footer />
-    </div>
+        <div>
+          <Overall />
+          <Specific />
+          <Recommend />
+          <Footer />
+        </div>
       )}
     </>
   );
