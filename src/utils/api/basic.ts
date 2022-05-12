@@ -2,18 +2,17 @@ import TakenCourse from './takenCourse';
 import Course from './course';
 
 class BasicResult {
-  protected userTakenCoursesList: TakenCourse;
+  private userTakenCoursesList: TakenCourse;
 
-  protected totalCredits: number;
+  private totalCredits: number;
 
-  protected minConditionCredits: number;
+  public minConditionCredits: number;
 
-  protected maxConditionCredits: number;
+  public maxConditionCredits: number;
 
-  protected satisfied: boolean;
+  private satisfied: boolean;
 
-
-  protected messages: string[];
+  private messages: string[];
 
   constructor(
     userTakenCoursesList: TakenCourse,
@@ -31,21 +30,32 @@ class BasicResult {
     this.messages = messages;
   }
 
-  getMinMaxCredit(): [number, number] {
+  public get getMinMaxCredit(): [number, number] {
     return [this.minConditionCredits, this.maxConditionCredits];
   }
 
-  getTakenCoursesList(): Array<Course> {
-    return this.userTakenCoursesList.getTakenCourseInfo();
+  public get getTakenCoursesList(): Array<Course> {
+    return this.userTakenCoursesList.getTakenCourseInfo;
   }
 
-  getTotalCredits(): number {
+  readTotalCredits() {
     return this.totalCredits;
   }
 
-  getMessages(): Array<string> {
+  get getTotalCredits() {
+    return this.readTotalCredits();
+  }
+
+  public get getMessages(): Array<string> {
     return this.messages;
   }
+
+  getminCredit = () => {
+    if (this.minConditionCredits === undefined) {
+      console.log('no value');
+    }
+    console.log(this.minConditionCredits);
+  };
 }
 
 export default BasicResult;

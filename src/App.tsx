@@ -7,6 +7,7 @@ import Main from 'pages/main';
 import Qna from 'pages/qna';
 import AboutUs from 'pages/aboutus';
 import ResultPage from 'pages/result';
+import Result from 'utils/api/result';
 
 function App() {
   return (
