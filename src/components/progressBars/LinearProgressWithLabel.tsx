@@ -29,7 +29,7 @@ const LinearProgressWithLabel =
               fill: ({ datum }) => datum.fill,
             },
           }}
-          labels={({ datum }) => `${datum.y}%`}
+          labels={({ datum }) => `${Math.round(datum.y)}%`}
         />
         <VictoryAxis
           crossAxis={false}
