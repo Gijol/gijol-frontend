@@ -1,0 +1,76 @@
+.Container {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  width: 1120px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  animation: Appear 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.OverallResult {
+  width: 1120px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circular {
+  width: 420px;
+  height: 420px;
+  box-shadow: 0 10px 19px gray;
+  border-radius: 20px;
+  opacity: 0;
+  animation: Appear 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.25s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  width: 676px;
+  height: 420px;
+  box-shadow: 0 10px 19px gray;
+  border-radius: 20px;
+  opacity: 0;
+  animation: Appear 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.25s forwards;
+}
+
+.MainTitle {
+  margin: 0 0 24px 0;
+  font-size: 40px;
+}
+
+.SubTitle {
+  margin: 0;
+  font-size: 28px;
+}
+
+.overallScore {
+  color: #1da447;
+}
+
+@keyframes Appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

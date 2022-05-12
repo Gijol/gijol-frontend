@@ -9,6 +9,7 @@
     "@types/jest": "^27.4.1",
     "@types/styled-components": "^5.1.25",
     "axios": "^0.27.2",
+    "rc-progress": "^3.3.2",
     "react": "^18.0.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",

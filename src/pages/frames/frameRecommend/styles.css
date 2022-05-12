@@ -1,0 +1,6 @@
+.RecommendCard {
+  width: 432px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 19px gray;
+}

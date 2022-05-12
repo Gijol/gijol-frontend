@@ -1,0 +1,58 @@
+.BiggerContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.FooterContainer {
+  width: 1120px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FooterNav {
+  left: 160px;
+  width: fit-content;
+  height: 600px;
+}
+
+.MessageAndLogo {
+  right: 160px;
+  width: fit-content;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.Nav1 {
+  height: 200px;
+}
+
+.BoldTitle {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 350;
+}
+
+.Message {
+  font-size: 48px;
+}
+
+.Logo {
+  font-size: 180px;
+  font-weight: 300;
+}

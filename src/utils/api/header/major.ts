@@ -2,17 +2,6 @@ import BasicResult from '../basic';
 import Course from '../course';
 import TakenCourse from '../takenCourse';
 
-class Major extends BasicResult {
-  //   constructor(
-  //     userTakenCoursesList: TakenCourse,
-  //     totalCredits: number,
-  //     min: number,
-  //     max: number,
-  //     satisfied: boolean,
-  //     messages: string[],
-  //   ) {
-  //     super(userTakenCoursesList, totalCredits, min, max, satisfied, messages);
-  //   }
-}
+class Major extends BasicResult {}
 
 export default Major;

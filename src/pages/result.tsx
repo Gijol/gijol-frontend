@@ -1,7 +1,15 @@
+import Header from 'common/header/header';
+import { useLocation } from 'react-router';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+
 import Result from 'utils/api/result';
 import callGraduateApi from 'utils/api/call/pushBtnApi';
+
+import Overall from './frames/frameOverall/Overall';
+import Specific from './frames/frameSpecific/Specific';
+import Recommend from './frames/frameRecommend/Recommend';
+import Footer from './frames/frameFooter/Footer';
+
 import { LoadingModal } from './styles';
 import ResultMainPage from './results/resultMainPage';
 
@@ -29,7 +37,8 @@ const ResultPage = function ResultPgae(): JSX.Element {
 
   return (
     <>
-      <div>d</div>
+      <Header />
+      {/* <div>{state.toStirng}</div> */}
       {isLoading ? (
         <LoadingModal>
           <div className="loading-modal-container">
@@ -39,7 +48,12 @@ const ResultPage = function ResultPgae(): JSX.Element {
           </div>
         </LoadingModal>
       ) : (
-        <div>하하</div>
+      <div>
+      <Overall />
+      <Specific />
+      <Recommend />
+      <Footer />
+    </div>
       )}
     </>
   );
