@@ -2,15 +2,18 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 30em;
   display: flex;
+  margin-top: 150px;
   flex-direction: column;
+  background-color: #e6e6e6;
+
+
   justify-content: center;
 
   > .container {
     max-width: ${(props) => props.theme.basicWidth};
     width: 100%;
-    height: 35em;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

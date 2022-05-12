@@ -1,5 +1,5 @@
 import { FooterLeftWrapper, NavBox } from './styles';
-import '../styles.css';
+
 
 const FooterLeftContainer = function FooterLeftContainer(): JSX.Element {
   return (
