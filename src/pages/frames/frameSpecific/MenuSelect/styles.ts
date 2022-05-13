@@ -9,7 +9,7 @@ const SelectContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Select = styled.div`
+const SelectElement = styled.div`
   position: relative;
   width: 140px;
   height: 48px;
@@ -20,7 +20,8 @@ const Select = styled.div`
   padding-left: 20px;
   transition: 0.15s linear;
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background-color: ${(props) => props.color};
     padding-left: 28px;
     color: white;
@@ -28,4 +29,4 @@ const Select = styled.div`
   }
 `;
 
-export { SelectContainer, Select };
+export { SelectContainer, SelectElement };
