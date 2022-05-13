@@ -14,6 +14,7 @@ import { EffectCoverflow, Pagination } from 'swiper';
 
 const SwiperContainer = styled.div`
   max-width: 1000px;
+  width: 100%;
   height: fit-content;
 `;
 
@@ -39,17 +40,18 @@ const Recommend = function Recommend(): JSX.Element {
           pagination
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
+          style={{ width: '100%' }}
         >
-          <SwiperSlide>
+          <SwiperSlide style={{ width: '300px' }}>
             <div className="RecommendCard">언어와 기초 1</div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{ width: '300px' }}>
             <div className="RecommendCard">언어와 기초 2</div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{ width: '300px' }}>
             <div className="RecommendCard">언어와 기초 3</div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{ width: '300px' }}>
             <div className="RecommendCard">언어와 기초 4</div>
           </SwiperSlide>
         </Swiper>
