@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import Title from 'common/title/title';
-import Result from 'utils/api/result';
 
-import callGraduateApi from './pushBtnApi';
 import DragDrop from './dragDrop/dragDrop';
 import MajorButtonContainer from './buttonContainer/buttonContainer';
 
-import { LoadingModal, FileContainer, FileAdd } from './styles';
+import { FileContainer, FileAdd } from './styles';
 
 const FileAddFrame = function FileAddFrame(): JSX.Element {
   const [majorValue, setMajorValue] = useState<string>();
@@ -19,6 +17,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
   const pushBtn = () => {
     call();
   };
+
   async function call() {
     if (courseFile === null) {
       alert('성적표 파일을 업로드 해주세요');
@@ -28,14 +27,12 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
       alert('학과를 선택해주세요');
       return;
     }
-    setLoading(true);
-
-    const result = await callGraduateApi(courseFile, majorValue);
-    await setLoading(false);
 
     navigate('/gijol-frontend/result', {
-      state: result,
-      replace: false,
+      state: {
+        apiFile: courseFile,
+        apiCode: majorValue,
+      },
     });
   }
 
@@ -54,16 +51,6 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
 
   return (
     <FileContainer>
-      {isLoading ? (
-        <LoadingModal>
-          <div className="loading-modal-container">
-            <div style={{ textAlign: 'center' }}>
-              Gijol이 일하는 중! <br /> 잠시만 기다려주세요
-            </div>
-          </div>
-        </LoadingModal>
-      ) : null}
-
       <Title>아래 칸에 엑셀 파일을 끌어다 놓아주세요</Title>
       <FileAdd>
         <DragDrop setCourseFileBy={setCourseFileBy} />

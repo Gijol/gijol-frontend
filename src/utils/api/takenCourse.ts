@@ -7,7 +7,7 @@ class TakenCourse {
     this.#takenCourses = takenCourses;
   }
 
-  getTakenCourseInfo() {
+  public get getTakenCourseInfo(): Array<Course> {
     return this.#takenCourses;
   }
 }
