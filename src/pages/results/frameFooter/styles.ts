@@ -16,6 +16,5 @@ export const FooterContainer = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    /* background-color: aqua; */
   }
 `;

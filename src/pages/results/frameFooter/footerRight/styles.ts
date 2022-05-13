@@ -7,16 +7,17 @@ export const FooterRightWrapper = styled.div`
   align-items: flex-end;
 
   > .message {
-    font-size: 3.5em;
+    font-size: 3em;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 500;
 
     > .bold {
       color: ${(props) => props.theme.color.sub};
     }
   }
   > .logo {
-    font-size: 10em;
+    margin-top: 40px;
+    font-size: 7em;
     font-weight: 300;
   }
 `;
