@@ -1,5 +1,6 @@
 import React from 'react';
 import SpecificBarProgress from './SpecificProgress/SpecificBarProgress';
+import SpecificCircleProgress from './SpecificProgress/SpecificCircleProgress';
 import {
   SpecificResultAll,
   SpecificResultBar,
@@ -24,7 +25,13 @@ const MenuResult = function MenuResult({
     <SpecificResultContainer>
       <SpecificResultAll>
         <SpecificResultCircleAndBar>
-          <SpecificResultCircle>여기는 원형 그래프임</SpecificResultCircle>
+          <SpecificResultCircle>
+            <SpecificCircleProgress
+              CourseColor={color}
+              TotalScore={TotalScore}
+              MyScore={MyScore}
+            />
+          </SpecificResultCircle>
           <SpecificResultBar>
             <SpecificBarProgress
               CourseColor={color}

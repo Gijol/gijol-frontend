@@ -2,12 +2,36 @@ import styled from 'styled-components';
 
 const SpecificBarAndLabel = styled.div`
   position: relative;
-  width: fit-content;
-  height: fit-content;
+  width: 236px;
+  height: 120px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+const SpecificLabelOfBar = styled.div`
+  font-size: 24px;
+`;
+
+const SpecificCircleContainer = styled.div`
+  width: 252px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export { SpecificBarAndLabel };
+const SpecificLabelOfCircle = styled.div`
+  position: absolute;
+  font-size: 24px;
+  z-index: 1;
+`;
+
+export {
+  SpecificBarAndLabel,
+  SpecificLabelOfBar,
+  SpecificCircleContainer,
+  SpecificLabelOfCircle,
+};

@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
-import { Line } from 'rc-progress';
-import { SpecificBarAndLabel, SpecificLabelOfBar } from './styles';
+import React, { useEffect, useState, useRef } from 'react';
+import { Circle } from 'rc-progress';
+import { SpecificCircleContainer, SpecificLabelOfCircle } from './styles';
 
 interface Props {
   CourseColor: string;
@@ -8,7 +8,7 @@ interface Props {
   MyScore: number;
 }
 
-const SpecificBarProgress = function SpecificBarProgress({
+const SpecificCircleProgress = function SpecificCircleProgress({
   CourseColor,
   TotalScore,
   MyScore,
@@ -24,19 +24,19 @@ const SpecificBarProgress = function SpecificBarProgress({
     }, 15);
   }, []);
   return (
-    <SpecificBarAndLabel>
-      <SpecificLabelOfBar
-        color={CourseColor}
-      >{`${value}% 정도 들으셨네요!`}</SpecificLabelOfBar>
-      <Line
+    <SpecificCircleContainer>
+      <SpecificLabelOfCircle>
+        {`${MyScore}학점 / ${TotalScore}학점`}
+      </SpecificLabelOfCircle>
+      <Circle
         percent={value}
-        strokeColor={CourseColor}
-        trailColor="#ffffff"
         strokeWidth={8}
+        strokeColor={CourseColor}
         trailWidth={8}
+        trailColor="#ffffff"
       />
-    </SpecificBarAndLabel>
+    </SpecificCircleContainer>
   );
 };
 
-export default SpecificBarProgress;
+export default SpecificCircleProgress;

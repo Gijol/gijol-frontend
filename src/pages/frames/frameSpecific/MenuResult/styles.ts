@@ -5,7 +5,7 @@ const SpecificResultContainer = styled.div`
   width: 840px;
   height: 100%;
   border-radius: 0 20px 20px 0;
-  box-shadow: -5px 0 10px gray;
+  box-shadow: -1px 0 10px gray;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,22 +33,32 @@ const SpecificResultCircleAndBar = styled.div`
 const SpecificResultCourseTaken = styled.div`
   width: 480px;
   height: 100%;
-  background-color: beige;
+  background-color: #f2f4f6;
   border-radius: 20px;
 `;
 
 const SpecificResultCircle = styled.div`
   width: 300px;
   height: 300px;
-  background-color: beige;
+  background-color: #f2f4f6;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const SpecificResultBar = styled.div`
   width: 300px;
   height: 140px;
-  background-color: beige;
+  background-color: #f2f4f6;
   border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); */
+  // 그림자 이용할 것인지 논의해봐야됨
 `;
 export {
   SpecificResultContainer,
