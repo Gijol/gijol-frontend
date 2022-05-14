@@ -70,6 +70,8 @@ const CourseListContainer = styled.div`
   height: 420px;
   background-color: white;
   border-radius: 20px;
+  overflow-y: scroll;
+  font-size: 24px;
 `;
 
 export {
