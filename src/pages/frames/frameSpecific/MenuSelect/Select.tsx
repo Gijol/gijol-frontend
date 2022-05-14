@@ -17,17 +17,9 @@ const Select = function Select({
     getCourseValue(value);
   };
   return (
-    <SelectElement color={color}>
-      <div
-        role="button"
-        tabIndex={0}
-        onClick={handleClick}
-        aria-hidden="true"
-        // onKeyDown={handleClick}
-      >
-        {name}
-      </div>
-    </SelectElement>
+    <div role="button" tabIndex={0} onClick={handleClick} aria-hidden="true">
+      <SelectElement color={color}>{name}</SelectElement>
+    </div>
   );
 };
 

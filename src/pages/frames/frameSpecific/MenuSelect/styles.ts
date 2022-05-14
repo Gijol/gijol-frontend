@@ -9,9 +9,11 @@ const SelectContainer = styled.div`
   justify-content: space-between;
 `;
 
-const SelectElement = styled.div`
+// div 태그는 focusable 하지 않아서 &:focus를 적용하지 못함
+// 적용하기 위해선 button을 이용해야함
+const SelectElement = styled.button`
   position: relative;
-  width: 140px;
+  width: 160px;
   height: 48px;
   font-size: 20px;
   display: flex;
@@ -19,14 +21,15 @@ const SelectElement = styled.div`
   justify-content: center;
   padding-left: 20px;
   transition: 0.15s linear;
-  &:hover {
+  border: none;
+  background-color: white;
+  &:hover,
+  &:focus {
     background-color: ${(props) => props.color};
     padding-left: 28px;
     color: white;
-    width: 132px;
+    width: 160px;
   }
-  // div 태그는 focusable 하지 않아서 &:focus를 적용하지 못함
-  // 적용하기 위해선 button을 이용해야함
 `;
 
 const NonSelect = styled.div`

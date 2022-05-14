@@ -60,12 +60,24 @@ const Specific = function Specific(): JSX.Element {
             <p>옆의 대시보드를 눌러 세부결과를 확인하세요</p>
           </NonSelect>
         ) : null}
-        {value === 1 ? <MenuResult course="언어와 기초" /> : null}
-        {value === 2 ? <MenuResult course="기초과학" /> : null}
-        {value === 3 ? <MenuResult course="인문사회" /> : null}
-        {value === 4 ? <MenuResult course="전공" /> : null}
-        {value === 5 ? <MenuResult course="기타필수" /> : null}
-        {value === 6 ? <MenuResult course="기타" /> : null}
+        {value === 1 ? (
+          <MenuResult color="#6BCB77" TotalScore={7} MyScore={5} />
+        ) : null}
+        {value === 2 ? (
+          <MenuResult color="#4D96FF" TotalScore={7} MyScore={5} />
+        ) : null}
+        {value === 3 ? (
+          <MenuResult color="#F0CA33" TotalScore={7} MyScore={5} />
+        ) : null}
+        {value === 4 ? (
+          <MenuResult color="#FF6B6B" TotalScore={7} MyScore={5} />
+        ) : null}
+        {value === 5 ? (
+          <MenuResult color="#9772FB" TotalScore={7} MyScore={5} />
+        ) : null}
+        {value === 6 ? (
+          <MenuResult color="#B0B8C1" TotalScore={7} MyScore={5} />
+        ) : null}
       </div>
     </div>
   );
