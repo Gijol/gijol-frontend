@@ -2,6 +2,7 @@ import React from 'react';
 import SpecificBarProgress from './SpecificProgress/SpecificBarProgress';
 import SpecificCircleProgress from './SpecificProgress/SpecificCircleProgress';
 import {
+  CourseListContainer,
   SpecificResultAll,
   SpecificResultBar,
   SpecificResultCircle,
@@ -41,7 +42,9 @@ const MenuResult = function MenuResult({
           </SpecificResultBar>
         </SpecificResultCircleAndBar>
         <SpecificResultCourseTaken>
-          여기는 수강한 강의 목록
+          <CourseListContainer>
+            여기에 스크롤 영역이 들어갑니다.
+          </CourseListContainer>
         </SpecificResultCourseTaken>
       </SpecificResultAll>
     </SpecificResultContainer>

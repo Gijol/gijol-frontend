@@ -35,6 +35,10 @@ const SpecificResultCourseTaken = styled.div`
   height: 100%;
   background-color: #f2f4f6;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const SpecificResultCircle = styled.div`
@@ -60,6 +64,14 @@ const SpecificResultBar = styled.div`
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); */
   // 그림자 이용할 것인지 논의해봐야됨
 `;
+
+const CourseListContainer = styled.div`
+  width: 440px;
+  height: 420px;
+  background-color: white;
+  border-radius: 20px;
+`;
+
 export {
   SpecificResultContainer,
   SpecificResultAll,
@@ -67,4 +79,5 @@ export {
   SpecificResultCourseTaken,
   SpecificResultCircle,
   SpecificResultBar,
+  CourseListContainer,
 };
