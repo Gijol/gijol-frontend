@@ -1,3 +1,4 @@
+import BasicResult from './basic';
 import EtcMandatory from './header/etcMandatory';
 import Humanities from './header/humanities';
 import LanguageBasic from './header/languageBasic';
@@ -6,25 +7,25 @@ import OtherUncheckedClass from './header/otherUncheckedClass';
 import ScienceBasic from './header/scienceBasic';
 
 class Result {
-  etcMandatory: EtcMandatory;
+  etcMandatory: BasicResult;
 
-  humanities: Humanities;
+  humanities: BasicResult;
 
-  languageBasic: LanguageBasic;
+  languageBasic: BasicResult;
 
-  major: Major;
+  major: BasicResult;
 
-  otherClass: OtherUncheckedClass;
+  otherClass: BasicResult;
 
-  science: ScienceBasic;
+  science: BasicResult;
 
   constructor(
-    etc: EtcMandatory,
-    hum: Humanities,
-    language: LanguageBasic,
-    major: Major,
-    other: OtherUncheckedClass,
-    sci: ScienceBasic,
+    etc: BasicResult,
+    hum: BasicResult,
+    language: BasicResult,
+    major: BasicResult,
+    other: BasicResult,
+    sci: BasicResult,
   ) {
     this.etcMandatory = etc;
     this.humanities = hum;
@@ -34,27 +35,27 @@ class Result {
     this.science = sci;
   }
 
-  getEtcMandatory(): EtcMandatory {
+  public get getEtcMandatory(): BasicResult {
     return this.etcMandatory;
   }
 
-  getHumanities(): Humanities {
+  public getHumanities(): BasicResult {
     return this.humanities;
   }
 
-  getLanguageBasic(): LanguageBasic {
+  getLanguageBasic(): BasicResult {
     return this.humanities;
   }
 
-  getMajor(): Major {
+  getMajor(): BasicResult {
     return this.major;
   }
 
-  getOtherClass(): OtherUncheckedClass {
+  getOtherClass(): BasicResult {
     return this.otherClass;
   }
 
-  getScience(): ScienceBasic {
+  getScience(): BasicResult {
     return this.science;
   }
 }

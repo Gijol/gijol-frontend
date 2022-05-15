@@ -8,11 +8,20 @@ const FrameContainer = styled.div`
   background-color: #f0f2f9;
   overflow: hidden;
 `;
+
+const TitleContainer = styled.div`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 const Title = styled.h1`
   white-space: pre;
   font-weight: 700;
-  margin-top: 170px;
   z-index: 10;
+  margin-top: -20px;
   font-style: normal;
   color: ${(props) => props.theme.color.main};
   font-size: 60px;
@@ -24,6 +33,7 @@ const Title = styled.h1`
 const Blur = styled.div`
   position: absolute;
   left: 0;
+  z-index: 5;
   width: 100%;
   height: 500px;
   margin: 0;
@@ -36,4 +46,4 @@ const Blur = styled.div`
   );
 `;
 
-export { FrameContainer, Title, Blur };
+export { TitleContainer, FrameContainer, Title, Blur };

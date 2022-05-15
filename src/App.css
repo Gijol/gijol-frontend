@@ -49,3 +49,9 @@
   margin-top: 0.6em !important;
   margin-bottom: 0.6em !important;
 }
+.swiper-slide-shadow-left {
+  background-image: none !important;
+}
+.swiper-slide-shadow-right {
+  background-image: none !important;
+}

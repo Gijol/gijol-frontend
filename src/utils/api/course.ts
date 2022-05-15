@@ -1,10 +1,15 @@
 class Course {
-  #year: number;
-  #semester: string;
-  #courseType: string;
-  #courseName: string;
-  #courseCode: string;
-  #courseCredit: number;
+  private year: number;
+
+  private semester: string;
+
+  private courseType: string;
+
+  private courseName: string;
+
+  private courseCode: string;
+
+  private courseCredit: number;
 
   constructor(
     year: number,
@@ -14,25 +19,27 @@ class Course {
     courseCode: string,
     courseCredit: number,
   ) {
-    this.#year = year;
-    this.#semester = semester;
-    this.#courseType = courseType;
-    this.#courseName = courseName;
-    this.#courseCode = courseCode;
-    this.#courseCredit = courseCredit;
+    this.year = year;
+    this.semester = semester;
+    this.courseType = courseType;
+    this.courseName = courseName;
+    this.courseCode = courseCode;
+    this.courseCredit = courseCredit;
   }
 
-  getCourseYear() {
-    return this.#year;
+  public get getCourseYear() {
+    return this.year;
   }
 
-  getCourseName() {
-    return this.#courseName;
+  public get getCourseName() {
+    return this.courseName;
   }
-  getCourseCode() {
-    return this.#courseCode;
+
+  public get getCourseCode() {
+    return this.courseCode;
   }
-  getCourseInfo() {
+
+  public get getCourseInfo() {
     return [this.getCourseName, this.getCourseCode];
   }
 }

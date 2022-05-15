@@ -41,7 +41,7 @@ const LinearProgressWithLabel =
             '기타필수',
             '기타',
           ]}
-          tickFormat={(t) => `${t}`}
+          tickFormat={(t: any) => `${t}`}
           style={{
             tickLabels: { fontSize: 12 },
             ticks: { color: '#f2f4f6' },
