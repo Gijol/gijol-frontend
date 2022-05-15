@@ -46,10 +46,6 @@ const MenuResult = function MenuResult({
         <SpecificResultCourseTaken>
           <CourseListContainer>
             <CourseList />
-            <CourseList />
-            <CourseList />
-            <CourseList />
-            <CourseList />
           </CourseListContainer>
         </SpecificResultCourseTaken>
       </SpecificResultAll>

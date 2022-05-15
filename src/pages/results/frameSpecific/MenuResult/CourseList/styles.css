@@ -15,6 +15,16 @@
   margin: 8px 0 4px 0;
 }
 
+.course-code {
+  font-size: 16px;
+  color: #8b95a1;
+}
+
+.course-name {
+  font-size: 24px;
+  line-height: 40px;
+}
+
 .course-distribute {
   width: 384px;
   margin: 0;
