@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -6,14 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import './styles.css';
-
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper';
+import RecommendBox from './recommendBox/recommendBox';
 
 const SwiperContainer = styled.div`
-  max-width: 1000px;
   width: 100%;
   height: fit-content;
 `;
@@ -30,7 +27,6 @@ const Recommend = function Recommend(): JSX.Element {
           effect="coverflow"
           grabCursor
           centeredSlides
-          slidesPerView="auto"
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -38,21 +34,22 @@ const Recommend = function Recommend(): JSX.Element {
             modifier: 1,
           }}
           pagination
+          slidesPerView={3}
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
           style={{ width: '100%' }}
         >
-          <SwiperSlide style={{ width: '300px' }}>
-            <div className="RecommendCard">언어와 기초 1</div>
+          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+            <RecommendBox name="언어와기초1" colorCode="#6ACA75" />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '300px' }}>
-            <div className="RecommendCard">언어와 기초 2</div>
+          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+            <RecommendBox name="언어와기초2" colorCode="#4C96FE" />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '300px' }}>
-            <div className="RecommendCard">언어와 기초 3</div>
+          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+            <RecommendBox name="언어와기초3" colorCode="#cccccc" />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '300px' }}>
-            <div className="RecommendCard">언어와 기초 4</div>
+          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+            <RecommendBox name="언어와기초4" colorCode="#e2e2e2" />
           </SwiperSlide>
         </Swiper>
       </SwiperContainer>
