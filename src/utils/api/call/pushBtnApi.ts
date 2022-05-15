@@ -22,7 +22,10 @@ const callGraduateApi = async (
 
   const resultArr = Object.values(result);
   resultArr.forEach((value: any) => {
-    if (value !== null) {
+    console.log(value);
+  });
+  resultArr.forEach((value: any) => {
+    if (typeof value === 'object') {
       const {
         maxConditionCredits,
         messages,

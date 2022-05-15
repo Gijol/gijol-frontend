@@ -1,6 +1,24 @@
+.MainTitle {
+  position: relative;
+}
+
 .SpecificResult {
+  position: relative;
   width: 1000px;
   height: 500px;
   border-radius: 20px;
   box-shadow: 0 10px 19px gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-bar {
+  position: relative;
+  width: 160px;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
