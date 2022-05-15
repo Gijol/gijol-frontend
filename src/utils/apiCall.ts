@@ -16,11 +16,10 @@ const getResult = async (courseFile: File, majorValue: string) => {
     'https://dev-api.gijol.im/graduation',
     formData,
   );
-  if (response.status === 200) {
-    return response.data;
+  if (response.status === 500) {
+    throw new HTTPError('파일 입력 오류');
   }
-  const error = new HTTPError('파일 입력 오류 발생');
-  return error;
+  return response.data;
 };
 
 export default getResult;
