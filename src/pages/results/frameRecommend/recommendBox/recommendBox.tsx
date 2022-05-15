@@ -148,6 +148,7 @@ const RecommendBox = function RecommendBox({
       </div>
     </RecommendBoxContainer>
   );
+
 };
 
 export default RecommendBox;

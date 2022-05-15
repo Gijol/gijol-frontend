@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -50,6 +49,7 @@ const Recommend = function Recommend(): JSX.Element {
           </SwiperSlide>
           <SwiperSlide style={{ width: '432px', height: '500px' }}>
             <RecommendBox name="언어와기초4" colorCode="#e2e2e2" />
+
           </SwiperSlide>
         </Swiper>
       </SwiperContainer>
