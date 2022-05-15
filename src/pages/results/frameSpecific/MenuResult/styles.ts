@@ -5,7 +5,7 @@ const SpecificResultContainer = styled.div`
   width: 840px;
   height: 100%;
   border-radius: 0 20px 20px 0;
-  box-shadow: -1px 0 10px gray;
+  box-shadow: -2px 0 20px -6px gray;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -61,8 +61,6 @@ const SpecificResultBar = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); */
-  // 그림자 이용할 것인지 논의해봐야됨
 `;
 
 const CourseListContainer = styled.div`

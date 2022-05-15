@@ -37,11 +37,13 @@ const NonSelect = styled.div`
   width: 840px;
   height: 500px;
   border-radius: 0 20px 20px 0;
-  box-shadow: -5px 0 10px gray;
+  box-shadow: -2px 0 20px -6px gray;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 24px;
+  color: #191f28;
 `;
 
 export { SelectContainer, SelectElement, NonSelect };
