@@ -49,7 +49,6 @@ const Recommend = function Recommend(): JSX.Element {
           </SwiperSlide>
           <SwiperSlide style={{ width: '432px', height: '500px' }}>
             <RecommendBox name="언어와기초4" colorCode="#e2e2e2" />
-
           </SwiperSlide>
         </Swiper>
       </SwiperContainer>
