@@ -1,5 +1,5 @@
 import Header from 'common/header/header';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 
 import Result from 'utils/api/result';
@@ -19,19 +19,26 @@ interface apiProps {
 }
 const ResultPage = function ResultPgae(): JSX.Element {
   const { state } = useLocation();
+  const navigate = useNavigate();
+
   const apiState = state as apiProps;
 
   const [result, setResult] = useState<Result>();
   const [isLoading, setLoading] = useState<boolean>(false);
 
-  const { apiFile, apiCode }: { apiFile: File; apiCode: string } = apiState;
   useEffect(() => {
-    setLoading(true);
-    callGraduateApi(apiFile, apiCode).then((value: any) => {
-      setResult(value);
-      console.log(value);
-      setLoading(false);
-    });
+    try {
+      const { apiFile, apiCode }: { apiFile: File; apiCode: string } = apiState;
+      setLoading(true);
+      callGraduateApi(apiFile, apiCode).then((value: any) => {
+        setResult(value);
+        console.log(value);
+        setLoading(false);
+      });
+    } catch (e: any) {
+      alert('잘못된 접근입니다!');
+      navigate('/gijol-frontend/');
+    }
   }, []);
   // console.log(state.apiFile);
 
