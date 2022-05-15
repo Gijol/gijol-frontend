@@ -39,6 +39,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
           alert('정확한 성적표를 업로드 해주세요');
           navigate('/gijol-frontend/');
         });
+
     } catch (e: any) {
       alert('잘못된 접근입니다!');
       navigate('/gijol-frontend/');

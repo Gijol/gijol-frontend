@@ -8,13 +8,13 @@ const Overall = function Overall(): JSX.Element {
     <div className="Container">
       <div className="title">
         <p className="MainTitle">우선 전체적으로 봅시다</p>
-        <p className="SubTitle">
+        {/* <p className="SubTitle">
           당신은 <span className="overallScore">76</span> 학점을 들으셨군요!
-        </p>
+        </p> */}
       </div>
       <div className="OverallResult">
         <div className="circular">
-          <CircularProgressWithLabel />
+          <CircularProgressWithLabel MyScore={76} />
         </div>
         <div className="bar">
           <LinearProgressWithLabel />

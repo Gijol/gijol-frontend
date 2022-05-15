@@ -21,7 +21,7 @@ const SpecificBarProgress = function SpecificBarProgress({
       setValue(valueRef.current);
       if (valueRef.current === Math.round((MyScore * 100) / TotalScore))
         clearInterval(loop);
-    }, 15);
+    }, 8);
   }, []);
   return (
     <SpecificBarAndLabel>
