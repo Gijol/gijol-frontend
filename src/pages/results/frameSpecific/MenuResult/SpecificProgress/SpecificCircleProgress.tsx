@@ -21,7 +21,7 @@ const SpecificCircleProgress = function SpecificCircleProgress({
       setValue(valueRef.current);
       if (valueRef.current === Math.round((MyScore * 100) / TotalScore))
         clearInterval(loop);
-    }, 15);
+    }, 8);
   }, []);
   return (
     <SpecificCircleContainer>

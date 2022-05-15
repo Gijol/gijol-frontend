@@ -1,4 +1,5 @@
 import React from 'react';
+import CourseList from './CourseList/CourseList';
 import SpecificBarProgress from './SpecificProgress/SpecificBarProgress';
 import SpecificCircleProgress from './SpecificProgress/SpecificCircleProgress';
 import {
@@ -10,6 +11,7 @@ import {
   SpecificResultContainer,
   SpecificResultCourseTaken,
 } from './styles';
+import './CourseList/styles.css';
 
 interface Props {
   color: string;
@@ -43,20 +45,11 @@ const MenuResult = function MenuResult({
         </SpecificResultCircleAndBar>
         <SpecificResultCourseTaken>
           <CourseListContainer>
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
-            여기에 스크롤 영역이 들어갑니다. 여기에 스크롤 영역이 들어갑니다.
+            <CourseList />
+            <CourseList />
+            <CourseList />
+            <CourseList />
+            <CourseList />
           </CourseListContainer>
         </SpecificResultCourseTaken>
       </SpecificResultAll>
