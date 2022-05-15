@@ -10,7 +10,7 @@
 }
 
 .title {
-  width: 1120px;
+  width: 1000px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 .OverallResult {
-  width: 1120px;
+  width: 1000px;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -30,9 +30,9 @@
 }
 
 .circular {
-  width: 420px;
-  height: 420px;
-  box-shadow: 0 10px 19px gray;
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 12px 20px -6px gray;
   border-radius: 20px;
   opacity: 0;
   animation: Appear 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.25s forwards;
@@ -43,9 +43,9 @@
 }
 
 .bar {
-  width: 676px;
-  height: 420px;
-  box-shadow: 0 10px 19px gray;
+  width: 576px;
+  height: 400px;
+  box-shadow: 0 12px 20px -6px gray;
   border-radius: 20px;
   opacity: 0;
   animation: Appear 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.25s forwards;
