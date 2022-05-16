@@ -1,5 +1,4 @@
 import React from 'react';
-import Result from 'utils/api/result';
 import CourseList from './CourseList/CourseList';
 import SpecificBarProgress from './SpecificProgress/SpecificBarProgress';
 import SpecificCircleProgress from './SpecificProgress/SpecificCircleProgress';
@@ -18,15 +17,30 @@ interface Props {
   color: string;
   TotalScore: number;
   MyScore: number;
-  result: Result;
+  courseList: Array<any>;
 }
 
 const MenuResult = function MenuResult({
   color,
   TotalScore,
   MyScore,
-  result,
+  courseList,
 }: Props): JSX.Element {
+  const courselist = () => {
+    const result = [];
+    if (courseList.length > 0) {
+      for (let i = 0; i < courseList.length; i += 1) {
+        result.push(<CourseList key={i} courseListSingle={courseList[i]} />);
+      }
+    } else if (courseList.length === 0) {
+      result.push(
+        <div className="unattended-container">
+          <span className="unattended">강의를 수강하지 않았습니다.</span>
+        </div>,
+      );
+    }
+    return result;
+  };
   return (
     <SpecificResultContainer>
       <SpecificResultAll>
@@ -47,9 +61,7 @@ const MenuResult = function MenuResult({
           </SpecificResultBar>
         </SpecificResultCircleAndBar>
         <SpecificResultCourseTaken>
-          <CourseListContainer>
-            <CourseList />
-          </CourseListContainer>
+          <CourseListContainer>{courselist()}</CourseListContainer>
         </SpecificResultCourseTaken>
       </SpecificResultAll>
     </SpecificResultContainer>

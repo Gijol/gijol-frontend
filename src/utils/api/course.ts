@@ -39,8 +39,12 @@ class Course {
     return this.courseCode;
   }
 
-  public get getCourseInfo() {
-    return [this.getCourseName, this.getCourseCode];
+  public get getCourseSemester() {
+    return this.semester;
+  }
+
+  public get getCourseCredit() {
+    return this.courseCredit;
   }
 }
 

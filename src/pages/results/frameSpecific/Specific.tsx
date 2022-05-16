@@ -69,9 +69,9 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         {value === 1 ? (
           <MenuResult
             color="#6BCB77"
-            TotalScore={7}
+            TotalScore={result.getLanguageBasic.getMinCredit}
             MyScore={result.getLanguageBasic.getTotalCredits}
-            result={result}
+            courseList={result.languageBasic.getTakenCoursesList}
           />
         ) : null}
         {value === 2 ? (
@@ -79,15 +79,15 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#4D96FF"
             TotalScore={12}
             MyScore={result.getScience.getTotalCredits}
-            result={result}
+            courseList={result.science.getTakenCoursesList}
           />
         ) : null}
         {value === 3 ? (
           <MenuResult
             color="#F0CA33"
-            TotalScore={36}
+            TotalScore={result.getHumanities.getMinCredit}
             MyScore={result.getHumanities.getTotalCredits}
-            result={result}
+            courseList={result.humanities.getTakenCoursesList}
           />
         ) : null}
         {value === 4 ? (
@@ -95,23 +95,23 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#FF6B6B"
             TotalScore={result.getMajor.getMinCredit}
             MyScore={result.getMajor.getTotalCredits}
-            result={result}
+            courseList={result.major.getTakenCoursesList}
           />
         ) : null}
         {value === 5 ? (
           <MenuResult
             color="#9772FB"
-            TotalScore={7}
+            TotalScore={result.getEtcMandatory.getMinCredit}
             MyScore={result.getEtcMandatory.getTotalCredits}
-            result={result}
+            courseList={result.etcMandatory.getTakenCoursesList}
           />
         ) : null}
         {value === 6 ? (
           <MenuResult
             color="#B0B8C1"
-            TotalScore={50}
+            TotalScore={130}
             MyScore={result.getOtherClass.getTotalCredits}
-            result={result}
+            courseList={result.otherClass.getTakenCoursesList}
           />
         ) : null}
       </div>

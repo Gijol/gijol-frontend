@@ -36,14 +36,24 @@ const SpecificBarProgress = function SpecificBarProgress({
       setValue(0);
     }
   }, []);
+  const courseMessage = () => {
+    const result = [];
+    if (MyScore > 0) {
+      if (TotalScore - MyScore <= 0) {
+        result.push(<span>전부 들으셨네요!</span>);
+      } else {
+        result.push(<span>{value}% 들으셨네요!</span>);
+      }
+    } else {
+      result.push(<span>아무것도 안들으셨네요..</span>);
+    }
+    return result;
+  };
+
   return (
     <SpecificBarAndLabel>
       <SpecificLabelOfBar color={CourseColor}>
-        {MyScore - TotalScore > 0 ? (
-          <span>전부 들으셨네요!</span>
-        ) : (
-          <span>{value}% 들으셨네요!</span>
-        )}
+        {courseMessage()}
       </SpecificLabelOfBar>
       <Line
         percent={value}

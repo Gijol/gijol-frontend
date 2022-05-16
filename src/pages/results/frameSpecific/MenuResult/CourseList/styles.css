@@ -32,7 +32,6 @@
   margin: 0;
   border: 0;
   background-color: #6b7684;
-
 }
 
 .course-semester {
@@ -40,4 +39,20 @@
   height: 24px;
   margin: 4px;
   color: #6b7684;
+}
+
+.unattended {
+  margin: 4px;
+  line-height: 24px;
+  font-size: 28px;
+  color: #6b7684;
+}
+
+.unattended-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
