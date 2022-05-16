@@ -16,9 +16,7 @@ const callGraduateApi = async (
 
   const resultArr = Object.values(result);
 
-  resultArr.forEach((value: any) => {
-    console.log(value);
-  });
+  const apiTotalCredits = resultArr[6] as number;
   resultArr.forEach((value: any) => {
     if (typeof value === 'object') {
       const {
@@ -47,7 +45,7 @@ const callGraduateApi = async (
         );
         courseArray.push(course);
       });
-      const takenCourse = new TakenCourse(courseArray!);
+      const takenCourse = new TakenCourse(courseArray);
       const bResult = new BasicResult(
         takenCourse,
         totalCredits,
@@ -66,6 +64,7 @@ const callGraduateApi = async (
     BasicResultArr[3],
     BasicResultArr[4],
     BasicResultArr[5],
+    apiTotalCredits,
   );
   return apiResult;
 };

@@ -6,9 +6,9 @@ class BasicResult {
 
   private totalCredits: number;
 
-  public minConditionCredits: number;
+  private minConditionCredits: number;
 
-  public maxConditionCredits: number;
+  private maxConditionCredits: number;
 
   private satisfied: boolean;
 
@@ -30,32 +30,29 @@ class BasicResult {
     this.messages = messages;
   }
 
-  public get getMinMaxCredit(): [number, number] {
-    return [this.minConditionCredits, this.maxConditionCredits];
-  }
-
   public get getTakenCoursesList(): Array<Course> {
     return this.userTakenCoursesList.getTakenCourseInfo;
   }
 
-  readTotalCredits() {
+  public get getTotalCredits(): number {
     return this.totalCredits;
-  }
-
-  get getTotalCredits() {
-    return this.readTotalCredits();
   }
 
   public get getMessages(): Array<string> {
     return this.messages;
   }
 
-  getminCredit = () => {
-    if (this.minConditionCredits === undefined) {
-      console.log('no value');
-    }
-    console.log(this.minConditionCredits);
-  };
+  public get getMaxCredit(): number {
+    return this.maxConditionCredits;
+  }
+
+  public get getMinCredit(): number {
+    return this.minConditionCredits;
+  }
+
+  public get isSatisfied(): boolean {
+    return this.satisfied;
+  }
 }
 
 export default BasicResult;

@@ -1,9 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 import './styles.css';
 import CircularProgressWithLabel from 'components/progressBars/CicularProgressWithLabel';
 import LinearProgressWithLabel from 'components/progressBars/LinearProgressWithLabel';
 
-const Overall = function Overall(): JSX.Element {
+interface IProps {
+  total: number;
+}
+const Overall = function Overall({ total }: IProps): JSX.Element {
+  const [totalCredit, setTotalCredit] = useState<number>(total);
+
   return (
     <div className="Container">
       <div className="title">
@@ -14,7 +19,7 @@ const Overall = function Overall(): JSX.Element {
       </div>
       <div className="OverallResult">
         <div className="circular">
-          <CircularProgressWithLabel MyScore={76} />
+          <CircularProgressWithLabel MyScore={totalCredit} />
         </div>
         <div className="bar">
           <LinearProgressWithLabel />
