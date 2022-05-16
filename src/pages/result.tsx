@@ -15,6 +15,7 @@ import { LoadingModal } from './styles';
 interface apiProps {
   apiFile: File;
   apiCode: string;
+  result: Result;
 }
 const ResultPage = function ResultPgae(): JSX.Element {
   const { state } = useLocation();
@@ -56,7 +57,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
         </LoadingModal>
       ) : (
         <div>
-          <Overall total={result.getTotalCredits} />
+          <Overall result={result} />
           <Specific result={result} />
           <Recommend />
           <Footer />

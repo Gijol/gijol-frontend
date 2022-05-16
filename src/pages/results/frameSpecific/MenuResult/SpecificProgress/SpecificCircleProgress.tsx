@@ -16,12 +16,25 @@ const SpecificCircleProgress = function SpecificCircleProgress({
   const [value, setValue] = useState(0);
   const valueRef = useRef(0);
   useEffect(() => {
-    const loop = setInterval(() => {
-      valueRef.current += 1;
-      setValue(valueRef.current);
-      if (valueRef.current === Math.round((MyScore * 100) / TotalScore))
-        clearInterval(loop);
-    }, 8);
+    if (MyScore > 0) {
+      const loop = setInterval(() => {
+        valueRef.current += 1;
+        setValue(valueRef.current);
+        if (MyScore > 0) {
+          if (MyScore >= TotalScore) {
+            if (
+              valueRef.current === Math.round((TotalScore * 100) / TotalScore)
+            )
+              clearInterval(loop);
+          } else if (MyScore < TotalScore) {
+            if (valueRef.current === Math.round((MyScore * 100) / TotalScore))
+              clearInterval(loop);
+          }
+        }
+      }, 8);
+    } else if (MyScore === 0) {
+      setValue(0);
+    }
   }, []);
   return (
     <SpecificCircleContainer>

@@ -71,6 +71,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#6BCB77"
             TotalScore={7}
             MyScore={result.getLanguageBasic.getTotalCredits}
+            result={result}
           />
         ) : null}
         {value === 2 ? (
@@ -78,6 +79,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#4D96FF"
             TotalScore={12}
             MyScore={result.getScience.getTotalCredits}
+            result={result}
           />
         ) : null}
         {value === 3 ? (
@@ -85,6 +87,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#F0CA33"
             TotalScore={36}
             MyScore={result.getHumanities.getTotalCredits}
+            result={result}
           />
         ) : null}
         {value === 4 ? (
@@ -92,6 +95,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#FF6B6B"
             TotalScore={result.getMajor.getMinCredit}
             MyScore={result.getMajor.getTotalCredits}
+            result={result}
           />
         ) : null}
         {value === 5 ? (
@@ -99,13 +103,15 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             color="#9772FB"
             TotalScore={7}
             MyScore={result.getEtcMandatory.getTotalCredits}
+            result={result}
           />
         ) : null}
         {value === 6 ? (
           <MenuResult
             color="#B0B8C1"
-            TotalScore={result.getOtherClass.getMaxCredit}
+            TotalScore={50}
             MyScore={result.getOtherClass.getTotalCredits}
+            result={result}
           />
         ) : null}
       </div>
