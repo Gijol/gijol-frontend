@@ -1,16 +1,27 @@
 import React from 'react';
+import Course from 'utils/api/course';
 import './styles.css';
 
-const CourseList = function CourseList(): JSX.Element {
+interface Props {
+  courseListSingle: Course;
+}
+
+const CourseList = function CourseList({
+  courseListSingle,
+}: Props): JSX.Element {
   return (
     <div className="course-box">
       <div className="course-title">
-        <span className="course-code">GS1001</span>
+        <span className="course-code">{courseListSingle.getCourseCode}</span>
         <br />
-        <span className="course-name">미적분학과 응용</span>
+        <span className="course-name">{courseListSingle.getCourseName}</span>
       </div>
       <hr className="course-distribute" />
-      <div className="course-semester">2020 1학기 3학점</div>
+      <div className="course-semester">
+        {courseListSingle.getCourseYear}
+        년도 {courseListSingle.getCourseSemester}{' '}
+        {courseListSingle.getCourseCredit}학점
+      </div>
     </div>
   );
 };

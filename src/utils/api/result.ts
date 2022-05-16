@@ -42,7 +42,7 @@ class Result {
   }
 
   public get getLanguageBasic(): BasicResult {
-    return this.humanities;
+    return this.languageBasic;
   }
 
   public get getMajor(): BasicResult {
