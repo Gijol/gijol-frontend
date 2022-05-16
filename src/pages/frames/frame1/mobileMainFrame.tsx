@@ -1,5 +1,5 @@
 import { FrameContainer, Blur } from './styles';
-import MobileTitle from 'common/title/mobileTitle';
+import MobileTitle from 'common/title/subTitle';
 import ButtonContainer from './buttonBox/buttons';
 
 const MainFrame = function MainFrame(): JSX.Element {
