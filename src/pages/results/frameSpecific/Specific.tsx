@@ -67,22 +67,46 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
           </NonSelect>
         ) : null}
         {value === 1 ? (
-          <MenuResult color="#6BCB77" TotalScore={7} MyScore={5} />
+          <MenuResult
+            color="#6BCB77"
+            TotalScore={7}
+            MyScore={result.getLanguageBasic.getTotalCredits}
+          />
         ) : null}
         {value === 2 ? (
-          <MenuResult color="#4D96FF" TotalScore={7} MyScore={5} />
+          <MenuResult
+            color="#4D96FF"
+            TotalScore={12}
+            MyScore={result.getScience.getTotalCredits}
+          />
         ) : null}
         {value === 3 ? (
-          <MenuResult color="#F0CA33" TotalScore={7} MyScore={5} />
+          <MenuResult
+            color="#F0CA33"
+            TotalScore={36}
+            MyScore={result.getHumanities.getTotalCredits}
+          />
         ) : null}
         {value === 4 ? (
-          <MenuResult color="#FF6B6B" TotalScore={7} MyScore={5} />
+          <MenuResult
+            color="#FF6B6B"
+            TotalScore={result.getMajor.getMinCredit}
+            MyScore={result.getMajor.getTotalCredits}
+          />
         ) : null}
         {value === 5 ? (
-          <MenuResult color="#9772FB" TotalScore={7} MyScore={5} />
+          <MenuResult
+            color="#9772FB"
+            TotalScore={7}
+            MyScore={result.getEtcMandatory.getTotalCredits}
+          />
         ) : null}
         {value === 6 ? (
-          <MenuResult color="#B0B8C1" TotalScore={7} MyScore={5} />
+          <MenuResult
+            color="#B0B8C1"
+            TotalScore={result.getOtherClass.getMaxCredit}
+            MyScore={result.getOtherClass.getTotalCredits}
+          />
         ) : null}
       </div>
     </div>
