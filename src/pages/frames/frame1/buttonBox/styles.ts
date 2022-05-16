@@ -23,7 +23,7 @@ const StandardButton = styled.button`
 
 const ButtonsContainer = styled.div`
   display: flex;
-  /* flex-direction: column; */
+  margin-bottom: 8em;
   justify-content: center;
   align-items: center;
   z-index: 20;

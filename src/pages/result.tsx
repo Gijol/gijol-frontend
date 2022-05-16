@@ -59,7 +59,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
         <div>
           <Overall result={result} />
           <Specific result={result} />
-          <Recommend />
+          <Recommend result={result} />
           <Footer />
         </div>
       )}

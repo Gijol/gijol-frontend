@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import BasicResult from 'utils/api/basic';
 
 const toggleOn = keyframes`
   0% {
@@ -81,6 +82,7 @@ const RecommendBoxContainer = styled.div`
     }
     > .recommend-middle {
       flex: 1 1 0;
+      overflow: hidden;
     }
     > .recommend-footer {
       width: 100%;
@@ -98,10 +100,12 @@ const RecommendBoxContainer = styled.div`
 interface IProps {
   name: string;
   colorCode: string;
+  result: BasicResult;
 }
 const RecommendBox = function RecommendBox({
   name,
   colorCode,
+  result,
 }: IProps): JSX.Element {
   const [isClicked, clickController] = useState<boolean>(false);
 
@@ -134,16 +138,26 @@ const RecommendBox = function RecommendBox({
         tabIndex={0}
         onClick={toggleClick}
       >
-        <div className="recommend-title">전공</div>
+        <div className="recommend-title">{name}</div>
         <div className="recommend-title-header-container">
           {isClicked
             ? '수강 추천 과목'
             : '여기를 눌러 Gijol의 추천 강의를 확인하세요'}
         </div>
-        <div className="recommend-middle" />
 
         {isClicked ? (
-          <div className="recommend-footer">전공과목을 포함해 뭐시깽이</div>
+          <>
+            <div className="recommend-middle">
+              {result.getMessages.map((message: string, index: number) => {
+                return <div key={message.length}>{message}</div>;
+              })}
+            </div>
+            <div className="recommend-footer">
+              {result.isSatisfied
+                ? '전부 다 들으셨습니다!'
+                : 'Gijol의 추천 강의 입니다'}
+            </div>
+          </>
         ) : null}
       </div>
     </RecommendBoxContainer>

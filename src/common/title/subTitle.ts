@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-const MobileTitle = styled.h1`
-  margin: 16px auto;
+const SubTitle = styled.h1`
+  margin-bottom: 12px;
+  margin-top: 0px;
   font-size: 28px;
   letter-spacing: 0px;
   font-weight: 400;
@@ -9,4 +10,4 @@ const MobileTitle = styled.h1`
   line-height: 1.2;
 `;
 
-export default MobileTitle;
+export default SubTitle;
