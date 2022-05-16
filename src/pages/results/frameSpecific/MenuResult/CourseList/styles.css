@@ -11,17 +11,33 @@
 
 .course-title {
   width: 384px;
-  height: 56px;
+  height: 58px;
   margin: 8px 0 4px 0;
+}
+
+.course-code {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6b7684;
+}
+
+.course-name {
+  font-size: 24px;
+  line-height: 38px;
 }
 
 .course-distribute {
   width: 384px;
+  height: 1px;
   margin: 0;
+  border: 0;
+  background-color: #6b7684;
+
 }
 
 .course-semester {
   width: 384px;
   height: 24px;
   margin: 4px;
+  color: #6b7684;
 }
