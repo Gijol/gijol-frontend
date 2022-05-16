@@ -1,11 +1,5 @@
 import getResult from 'utils/apiCall';
 
-import EtcMandatory from 'utils/api/header/etcMandatory';
-import Humanities from 'utils/api/header/humanities';
-import LanguageBasic from 'utils/api/header/languageBasic';
-import Major from 'utils/api/header/major';
-import OtherUncheckedClass from 'utils/api/header/otherUncheckedClass';
-import ScienceBasic from 'utils/api/header/scienceBasic';
 import Result from 'utils/api/result';
 import BasicResult from 'utils/api/basic';
 import Course from 'utils/api/course';
@@ -21,6 +15,7 @@ const callGraduateApi = async (
   const BasicResultArr: Array<BasicResult> = [];
 
   const resultArr = Object.values(result);
+
   resultArr.forEach((value: any) => {
     console.log(value);
   });

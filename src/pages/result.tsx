@@ -11,7 +11,6 @@ import Recommend from './results/frameRecommend/Recommend';
 import Footer from './results/frameFooter/Footer';
 
 import { LoadingModal } from './styles';
-import ResultMainPage from './results/resultMainPage';
 
 interface apiProps {
   apiFile: File;
@@ -30,11 +29,16 @@ const ResultPage = function ResultPgae(): JSX.Element {
     try {
       const { apiFile, apiCode }: { apiFile: File; apiCode: string } = apiState;
       setLoading(true);
-      callGraduateApi(apiFile, apiCode).then((value: any) => {
-        setResult(value);
-        console.log(value);
-        setLoading(false);
-      });
+      callGraduateApi(apiFile, apiCode)
+        .then((value: any) => {
+          setResult(value);
+          console.log(value);
+          setLoading(false);
+        })
+        .catch((e: any) => {
+          alert('정확한 성적표를 업로드 해주세요');
+          navigate('/gijol-frontend/');
+        });
     } catch (e: any) {
       alert('잘못된 접근입니다!');
       navigate('/gijol-frontend/');
