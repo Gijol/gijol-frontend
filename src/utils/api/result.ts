@@ -1,10 +1,4 @@
 import BasicResult from './basic';
-import EtcMandatory from './header/etcMandatory';
-import Humanities from './header/humanities';
-import LanguageBasic from './header/languageBasic';
-import Major from './header/major';
-import OtherUncheckedClass from './header/otherUncheckedClass';
-import ScienceBasic from './header/scienceBasic';
 
 class Result {
   etcMandatory: BasicResult;
@@ -19,6 +13,8 @@ class Result {
 
   science: BasicResult;
 
+  totalCredits: number;
+
   constructor(
     etc: BasicResult,
     hum: BasicResult,
@@ -26,6 +22,7 @@ class Result {
     major: BasicResult,
     other: BasicResult,
     sci: BasicResult,
+    num: number,
   ) {
     this.etcMandatory = etc;
     this.humanities = hum;
@@ -33,30 +30,35 @@ class Result {
     this.major = major;
     this.otherClass = other;
     this.science = sci;
+    this.totalCredits = num;
   }
 
   public get getEtcMandatory(): BasicResult {
     return this.etcMandatory;
   }
 
-  public getHumanities(): BasicResult {
+  public get getHumanities(): BasicResult {
     return this.humanities;
   }
 
-  getLanguageBasic(): BasicResult {
+  public get getLanguageBasic(): BasicResult {
     return this.humanities;
   }
 
-  getMajor(): BasicResult {
+  public get getMajor(): BasicResult {
     return this.major;
   }
 
-  getOtherClass(): BasicResult {
+  public get getOtherClass(): BasicResult {
     return this.otherClass;
   }
 
-  getScience(): BasicResult {
+  public get getScience(): BasicResult {
     return this.science;
+  }
+
+  public get getTotalCredits(): number {
+    return this.totalCredits;
   }
 }
 

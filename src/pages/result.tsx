@@ -21,35 +21,32 @@ const ResultPage = function ResultPgae(): JSX.Element {
   const navigate = useNavigate();
 
   const apiState = state as apiProps;
+  const [result, setResult] = useState<Result | null>();
 
-  const [result, setResult] = useState<Result>();
-  const [isLoading, setLoading] = useState<boolean>(false);
+  const redirect = (msg: string) => {
+    alert(msg);
+    navigate('/gijol-frontend/');
+  };
 
   useEffect(() => {
     try {
       const { apiFile, apiCode }: { apiFile: File; apiCode: string } = apiState;
-      setLoading(true);
       callGraduateApi(apiFile, apiCode)
         .then((value: any) => {
           setResult(value);
-          console.log(value);
-          setLoading(false);
         })
-        .catch((e: any) => {
-          alert('정확한 성적표를 업로드 해주세요');
-          navigate('/gijol-frontend/');
+        .catch(() => {
+          redirect('정확한 성적표를 업로드 해주세요');
         });
-    } catch (e: any) {
-      alert('잘못된 접근입니다!');
-      navigate('/gijol-frontend/');
+    } catch {
+      redirect('잘못된 접근입니다');
     }
   }, []);
-  // console.log(state.apiFile);
 
   return (
     <>
       <Header />
-      {isLoading ? (
+      {result === null || result === undefined ? (
         <LoadingModal>
           <div className="loading-modal-container">
             <div style={{ textAlign: 'center' }}>
@@ -59,8 +56,8 @@ const ResultPage = function ResultPgae(): JSX.Element {
         </LoadingModal>
       ) : (
         <div>
-          <Overall />
-          <Specific />
+          <Overall total={result.getTotalCredits} />
+          <Specific result={result} />
           <Recommend />
           <Footer />
         </div>

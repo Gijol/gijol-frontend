@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './styles.css';
+import Result from 'utils/api/result';
+
 import MenuResult from './MenuResult/MenuResult';
 import { SelectContainer, NonSelect } from './MenuSelect/styles';
 import Select from './MenuSelect/Select';
 
-const Specific = function Specific(): JSX.Element {
+interface IProps {
+  result: Result;
+}
+
+const Specific = function Specific({ result }: IProps): JSX.Element {
   const [value, setValue] = useState<number>(0);
   const getCourseValue = (courseValue: number) => {
     setValue(courseValue);
