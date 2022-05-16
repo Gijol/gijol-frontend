@@ -11,3 +11,6 @@
   background-size: cover;
   height: 300px;
 }
+.swiper-pagination {
+  display: none;
+}
