@@ -16,18 +16,35 @@ const SpecificBarProgress = function SpecificBarProgress({
   const [value, setValue] = useState(0);
   const valueRef = useRef(0);
   useEffect(() => {
-    const loop = setInterval(() => {
-      valueRef.current += 1;
-      setValue(valueRef.current);
-      if (valueRef.current === Math.round((MyScore * 100) / TotalScore))
-        clearInterval(loop);
-    }, 8);
+    if (MyScore > 0) {
+      const loop = setInterval(() => {
+        valueRef.current += 1;
+        setValue(valueRef.current);
+        if (MyScore > 0) {
+          if (MyScore >= TotalScore) {
+            if (
+              valueRef.current === Math.round((TotalScore * 100) / TotalScore)
+            )
+              clearInterval(loop);
+          } else if (MyScore < TotalScore) {
+            if (valueRef.current === Math.round((MyScore * 100) / TotalScore))
+              clearInterval(loop);
+          }
+        }
+      }, 8);
+    } else if (MyScore === 0) {
+      setValue(0);
+    }
   }, []);
   return (
     <SpecificBarAndLabel>
-      <SpecificLabelOfBar
-        color={CourseColor}
-      >{`${value}% 정도 들으셨네요!`}</SpecificLabelOfBar>
+      <SpecificLabelOfBar color={CourseColor}>
+        {MyScore - TotalScore > 0 ? (
+          <span>전부 들으셨네요!</span>
+        ) : (
+          <span>{value}% 들으셨네요!</span>
+        )}
+      </SpecificLabelOfBar>
       <Line
         percent={value}
         strokeColor={CourseColor}

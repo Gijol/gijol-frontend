@@ -1,4 +1,5 @@
 import React from 'react';
+import Result from 'utils/api/result';
 import CourseList from './CourseList/CourseList';
 import SpecificBarProgress from './SpecificProgress/SpecificBarProgress';
 import SpecificCircleProgress from './SpecificProgress/SpecificCircleProgress';
@@ -17,12 +18,14 @@ interface Props {
   color: string;
   TotalScore: number;
   MyScore: number;
+  result: Result;
 }
 
 const MenuResult = function MenuResult({
   color,
   TotalScore,
   MyScore,
+  result,
 }: Props): JSX.Element {
   return (
     <SpecificResultContainer>
