@@ -16,12 +16,12 @@ class Result {
   totalCredits: number;
 
   constructor(
-    etc: BasicResult,
-    hum: BasicResult,
     language: BasicResult,
-    major: BasicResult,
-    other: BasicResult,
     sci: BasicResult,
+    major: BasicResult,
+    hum: BasicResult,
+    etc: BasicResult,
+    other: BasicResult,
     num: number,
   ) {
     this.etcMandatory = etc;
