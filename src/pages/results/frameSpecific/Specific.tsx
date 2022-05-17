@@ -15,6 +15,13 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
   const getCourseValue = (courseValue: number) => {
     setValue(courseValue);
   };
+  const left =
+    130 -
+    result.getLanguageBasic.getMinCredit -
+    result.getScience.getMinCredit -
+    result.getHumanities.getMinCredit -
+    result.getMajor.getMinCredit -
+    result.getEtcMandatory.getMinCredit;
   return (
     <div className="Container">
       <div className="MainTitle">조금 더 자세히 볼까요?</div>
@@ -78,7 +85,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         {value === 2 ? (
           <MenuResult
             color="#4D96FF"
-            TotalScore={12}
+            TotalScore={result.getScience.getMinCredit}
             MyScore={result.getScience.getTotalCredits}
             courseList={result.science.getTakenCoursesList}
             satisfied={result.getScience.isSatisfied}
@@ -114,7 +121,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         {value === 6 ? (
           <MenuResult
             color="#B0B8C1"
-            TotalScore={130}
+            TotalScore={left}
             MyScore={result.getOtherClass.getTotalCredits}
             courseList={result.otherClass.getTakenCoursesList}
             satisfied={result.getOtherClass.isSatisfied}
