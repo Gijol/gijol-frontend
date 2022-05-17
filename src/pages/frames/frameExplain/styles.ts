@@ -9,8 +9,8 @@ const Explanation = styled.section`
 const ExplanationHeaderContainer = styled.div`
   width: 100%;
   display: inline-flex;
-  margin-top: 5em;
-  margin-bottom: 1em;
+  margin-top: 3em;
+  margin-bottom: 2em;
   flex-direction: column;
 `;
 
