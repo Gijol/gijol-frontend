@@ -1,10 +1,17 @@
+import { useEffect, useRef, useState } from 'react';
+
 import styled from 'styled-components';
+import { Circle } from 'rc-progress';
+
+import { MobileHeader } from '../mobileContainer/moblieContainer';
+import MLinearProgressWithLabel from '../mobileAnimation';
 
 const IntroduceConatiner = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: auto */
   margin-left: 1em;
+  margin-right: 1em;
   height: 100%;
 
   > .mobile-title {
@@ -14,6 +21,7 @@ const IntroduceConatiner = styled.div`
     letter-spacing: 0.1em;
     font-weight: 600;
     color: ${(props) => props.theme.color.main};
+
     > .color {
       letter-spacing: 0;
       color: ${(props) => props.theme.color.sub};
@@ -28,9 +36,33 @@ const IntroduceConatiner = styled.div`
     font-weight: 400;
   }
 `;
+const GraphContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+`;
+
 const MobileIntroduce = function MobileIntroduce(): JSX.Element {
+  const [value, setValue] = useState(0);
+  const valueRef = useRef(0);
+  // const [isDone, setDone] = useState<boolean>(false);
+
+  useEffect(() => {
+    const loop = setInterval(() => {
+      setValue(valueRef.current);
+      valueRef.current += 1;
+      if (valueRef.current === 34) clearInterval(loop);
+    }, 12.4);
+  }, []);
+
   return (
     <IntroduceConatiner>
+      <MobileHeader>
+        <div className="logo">Gijol</div>
+        <div className="qna-btn">QnA</div>
+      </MobileHeader>
       <div className="mobile-title">
         지스트 졸업
         <br />
@@ -39,7 +71,9 @@ const MobileIntroduce = function MobileIntroduce(): JSX.Element {
       <div className="mobile-sub-title">
         Gijol이 당신의 수강 현황과 <br /> 졸업 가능성을 분석해드립니다!
       </div>
-      <div>Gijol은 PC로 이용가능합니다!</div>
+      <GraphContainer>
+        <MLinearProgressWithLabel />
+      </GraphContainer>
     </IntroduceConatiner>
   );
 };

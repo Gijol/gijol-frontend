@@ -3,8 +3,6 @@ import styled from 'styled-components';
 const MobileMainContainer = styled.div`
   width: 100%;
   height: 100vh;
-  /* padding-left: 1em; */
-  /* padding-top: em; */
 `;
 
 const MobileHeader = styled.div`
@@ -17,7 +15,6 @@ const MobileHeader = styled.div`
   justify-content: space-between;
 
   > .logo {
-    margin-left: 0.7em;
     font-weight: 600;
     font-size: 24px;
   }
@@ -30,7 +27,6 @@ const MobileHeader = styled.div`
     width: 5em;
     height: 2.4em;
     background-color: ${(props) => props.theme.color.sub};
-    margin-right: 0.7em;
   }
 `;
 
