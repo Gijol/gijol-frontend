@@ -19,6 +19,7 @@ interface Props {
   TotalScore: number;
   MyScore: number;
   courseList: Array<any>;
+  satisfied: boolean;
 }
 
 const MenuResult = function MenuResult({
@@ -26,6 +27,7 @@ const MenuResult = function MenuResult({
   TotalScore,
   MyScore,
   courseList,
+  satisfied,
 }: Props): JSX.Element {
   const courselist = () => {
     const result = [];
@@ -58,6 +60,7 @@ const MenuResult = function MenuResult({
               CourseColor={color}
               TotalScore={TotalScore}
               MyScore={MyScore}
+              satisfied={satisfied}
             />
           </SpecificResultBar>
         </SpecificResultCircleAndBar>

@@ -72,6 +72,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             TotalScore={result.getLanguageBasic.getMinCredit}
             MyScore={result.getLanguageBasic.getTotalCredits}
             courseList={result.languageBasic.getTakenCoursesList}
+            satisfied={result.getLanguageBasic.isSatisfied}
           />
         ) : null}
         {value === 2 ? (
@@ -80,6 +81,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             TotalScore={12}
             MyScore={result.getScience.getTotalCredits}
             courseList={result.science.getTakenCoursesList}
+            satisfied={result.getScience.isSatisfied}
           />
         ) : null}
         {value === 3 ? (
@@ -88,6 +90,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             TotalScore={result.getHumanities.getMinCredit}
             MyScore={result.getHumanities.getTotalCredits}
             courseList={result.humanities.getTakenCoursesList}
+            satisfied={result.getHumanities.isSatisfied}
           />
         ) : null}
         {value === 4 ? (
@@ -96,6 +99,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             TotalScore={result.getMajor.getMinCredit}
             MyScore={result.getMajor.getTotalCredits}
             courseList={result.major.getTakenCoursesList}
+            satisfied={result.getMajor.isSatisfied}
           />
         ) : null}
         {value === 5 ? (
@@ -104,6 +108,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             TotalScore={result.getEtcMandatory.getMinCredit}
             MyScore={result.getEtcMandatory.getTotalCredits}
             courseList={result.etcMandatory.getTakenCoursesList}
+            satisfied={result.getEtcMandatory.isSatisfied}
           />
         ) : null}
         {value === 6 ? (
@@ -112,6 +117,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
             TotalScore={130}
             MyScore={result.getOtherClass.getTotalCredits}
             courseList={result.otherClass.getTakenCoursesList}
+            satisfied={result.getOtherClass.isSatisfied}
           />
         ) : null}
       </div>
