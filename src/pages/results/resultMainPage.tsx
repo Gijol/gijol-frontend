@@ -1,7 +1,4 @@
-import { type } from 'os';
 import BasicResult from 'utils/api/basic';
-import EtcMandatory from 'utils/api/header/etcMandatory';
-import LanguageBasic from 'utils/api/header/languageBasic';
 import Result from 'utils/api/result';
 
 interface IProps {

@@ -8,6 +8,7 @@ import Qna from 'pages/qna';
 import AboutUs from 'pages/aboutus';
 import ResultPage from 'pages/result';
 import Result from 'utils/api/result';
+import MobileMain from 'pages/mobile/mobileMain';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="qna" element={<Qna />} />
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="result" element={<ResultPage />} />
+            <Route path="mobile" element={<MobileMain />} />
           </Route>
         </Routes>
       </BrowserRouter>
