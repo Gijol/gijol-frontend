@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 const DrawerContainer = styled.div`
-  min-width: 300px;
+  min-width: 200px;
 `;
 
 const toggleOn = keyframes`
