@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './styles.css';
 import Result from 'utils/api/result';
 
+import MainContainer from 'common/container/container';
+import MainTitle from 'common/title/title';
 import MenuResult from './MenuResult/MenuResult';
 import { SelectContainer, NonSelect } from './MenuSelect/styles';
 import Select from './MenuSelect/Select';
@@ -16,8 +18,10 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
     setValue(courseValue);
   };
   return (
-    <div className="Container">
-      <div className="MainTitle">조금 더 자세히 볼까요?</div>
+    <MainContainer>
+      <MainTitle style={{ marginBottom: '2em' }}>
+        조금 더 자세히 볼까요?
+      </MainTitle>
       <div className="SpecificResult">
         <div className="menu-bar">
           <div className="menu">
@@ -115,7 +119,10 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
           />
         ) : null}
       </div>
-    </div>
+    </MainContainer>
+    // <div className="Container">
+
+    // </div>
   );
 };
 
