@@ -4,12 +4,12 @@ const FrameContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-  background-color: #f0f2f9;
+  background-color: white;
   max-width: ${(props) => props.theme.basicWidth};
 `;
 
 const MainContainer = styled.div`
-  background-color: #f0f2f9;
+  background-color: white;
   width: 100%;
 `;
 
