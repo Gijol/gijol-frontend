@@ -6,14 +6,15 @@ const MobileMainContainer = styled.div`
 `;
 
 const MobileHeader = styled.div`
-  width: 100%;
+  /* width: 100%; */
   height: 2em;
   margin-top: 1em;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  margin-right: 0.6em;
+  margin-left: 1em;
   > .logo {
     font-weight: 600;
     font-size: 24px;

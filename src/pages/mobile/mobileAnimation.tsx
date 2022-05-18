@@ -18,20 +18,27 @@ const GraphDesc = styled.div`
 
 const MLinearProgressWithLabel =
   function MLinearProgressWithLabel(): JSX.Element {
-    const [value, setValue] = useState(80);
+    const [value, setValue] = useState<number>(80);
+    const [gradVal, setGradVal] = useState<number>(0);
+    const valueRef = useRef(0);
+
+    // useEffect(() => {
+    //   const loop = setInterval(() => {
+    //     valueRef.current += 1;
+    //     setGradVal(valueRef.current);
+    //     if (valueRef.current === 80) clearInterval(loop);
+    //   }, 12.4);
+    // }, []);
 
     return (
       <GraphDesc>
         <VictoryChart
           domainPadding={0}
           domain={{ x: [0.73, 6.27] }}
+          animate={{ duration: 1000, onLoad: { duration: 50 } }}
           style={{ parent: { border: '#f2f4f6' } }}
         >
           <VictoryBar
-            animate={{
-              duration: 2000,
-              onLoad: { duration: 1000 },
-            }}
             barRatio={0.8}
             data={[
               {
@@ -96,7 +103,7 @@ const MLinearProgressWithLabel =
           />
         </VictoryChart>
         <div className="text-graph-container">
-          졸업까지 {value}% 남았습니다!
+          졸업까지 {100 - gradVal}% 남았습니다!
         </div>
       </GraphDesc>
     );
