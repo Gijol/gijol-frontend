@@ -1,50 +1,33 @@
 import { useState } from 'react';
 
-import styled from 'styled-components';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { MobileMainContainer } from './mobileContainer/moblieContainer';
-// Import Swiper styles
+import {
+  MobileHeader,
+  MobileMainContainer,
+} from './mobileContainer/moblieContainer';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-// import '../../../App.css';
 
+import { ModalContainer } from './styles';
 import MobileIntroduce from './mobileFrame/mobileIntroduce';
-
-const ModalContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding-left: 1.5em;
-  padding-right: 1em;
-  color: white;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  line-height: 1.5em;
-  height: 150px;
-  background-color: ${(props) => props.theme.color.sub};
-  z-index: 10;
-
-  > .exit {
-    position: absolute;
-    right: 80px;
-    top: 5px;
-  }
-`;
+import MobileFunction from './mobileFrame/mobileFunction';
 
 const MobileMain = function MobileMain(): JSX.Element {
   const [isPressed, setPressed] = useState<boolean>(false);
   const press = () => {
     setPressed(true);
-    console.log('Pressed');
   };
+
+  const mobileHeight = window.screen.availHeight;
+
   return (
     <>
+      <MobileHeader>
+        <div className="logo">Gijol</div>
+        <div className="qna-btn">QnA</div>
+      </MobileHeader>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -59,15 +42,17 @@ const MobileMain = function MobileMain(): JSX.Element {
           paddingBottom: 0,
         }}
       >
-        <SwiperSlide>
+        <SwiperSlide style={{ height: mobileHeight }}>
           <MobileMainContainer>
             <MobileIntroduce />
           </MobileMainContainer>
         </SwiperSlide>
-        <SwiperSlide>
-          <MobileMainContainer>모바일 2</MobileMainContainer>
+        <SwiperSlide style={{ height: mobileHeight }}>
+          <MobileMainContainer>
+            <MobileFunction />
+          </MobileMainContainer>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ height: mobileHeight }}>
           <MobileMainContainer>모바일 3</MobileMainContainer>
         </SwiperSlide>
       </Swiper>

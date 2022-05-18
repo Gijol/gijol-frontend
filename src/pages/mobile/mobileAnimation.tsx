@@ -2,33 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import Result from 'utils/api/result';
 import { VictoryAxis, VictoryBar, VictoryChart } from 'victory';
-
-const GraphDesc = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  > .text-graph-container {
-    width: 100%;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    text-align: center;
-    font-weight: 400;
-  }
-`;
+import { GraphDesc } from './styles';
 
 const MLinearProgressWithLabel =
   function MLinearProgressWithLabel(): JSX.Element {
     const [value, setValue] = useState<number>(80);
     const [gradVal, setGradVal] = useState<number>(0);
     const valueRef = useRef(0);
-
-    // useEffect(() => {
-    //   const loop = setInterval(() => {
-    //     valueRef.current += 1;
-    //     setGradVal(valueRef.current);
-    //     if (valueRef.current === 80) clearInterval(loop);
-    //   }, 12.4);
-    // }, []);
 
     return (
       <GraphDesc>
