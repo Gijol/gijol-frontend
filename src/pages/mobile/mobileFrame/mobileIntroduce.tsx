@@ -3,9 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Circle } from 'rc-progress';
 
-import { MobileHeader } from '../mobileContainer/moblieContainer';
 import MLinearProgressWithLabel from '../mobileAnimation';
-
 
 const IntroduceConatiner = styled.div`
   display: flex;
@@ -61,11 +59,6 @@ const MobileIntroduce = function MobileIntroduce(): JSX.Element {
 
   return (
     <IntroduceConatiner>
-      <MobileHeader>
-        <div className="logo">Gijol</div>
-        <div className="qna-btn">QnA</div>
-      </MobileHeader>
-
       <div className="mobile-title">
         지스트 졸업
         <br />

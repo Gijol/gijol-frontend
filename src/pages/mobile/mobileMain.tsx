@@ -92,7 +92,6 @@ const MobileMain = function MobileMain(): JSX.Element {
           </ModalContainer>
         ) : null}
       </div>
-
     </>
   );
 };
