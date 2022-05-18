@@ -29,9 +29,15 @@ const SpecificLabelOfCircle = styled.div`
   z-index: 1;
 `;
 
+const ExtraMessage = styled.span`
+  font-size: 20px;
+  text-align: center;
+`;
+
 export {
   SpecificBarAndLabel,
   SpecificLabelOfBar,
   SpecificCircleContainer,
   SpecificLabelOfCircle,
+  ExtraMessage,
 };

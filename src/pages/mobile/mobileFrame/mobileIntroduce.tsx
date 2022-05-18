@@ -6,12 +6,14 @@ import { Circle } from 'rc-progress';
 import { MobileHeader } from '../mobileContainer/moblieContainer';
 import MLinearProgressWithLabel from '../mobileAnimation';
 
+
 const IntroduceConatiner = styled.div`
   display: flex;
   flex-direction: column;
   /* width: auto */
   margin-left: 1em;
   margin-right: 1em;
+
   height: 100%;
 
   > .mobile-title {
@@ -63,6 +65,7 @@ const MobileIntroduce = function MobileIntroduce(): JSX.Element {
         <div className="logo">Gijol</div>
         <div className="qna-btn">QnA</div>
       </MobileHeader>
+
       <div className="mobile-title">
         지스트 졸업
         <br />

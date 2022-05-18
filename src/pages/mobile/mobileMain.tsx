@@ -1,10 +1,13 @@
 import { useState } from 'react';
-
 import styled from 'styled-components';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { MobileMainContainer } from './mobileContainer/moblieContainer';
+import {
+  MobileMainContainer,
+  MobileHeader,
+} from './mobileContainer/moblieContainer';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -45,6 +48,10 @@ const MobileMain = function MobileMain(): JSX.Element {
   };
   return (
     <>
+      <MobileHeader>
+        <div className="logo">Gijol</div>
+        <div className="qna-btn">QnA</div>
+      </MobileHeader>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -85,6 +92,7 @@ const MobileMain = function MobileMain(): JSX.Element {
           </ModalContainer>
         ) : null}
       </div>
+
     </>
   );
 };
