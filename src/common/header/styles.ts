@@ -50,6 +50,7 @@ const RightNav = styled(Link)`
 const MobileHeader = styled.div`
   height: 2em;
   margin-top: 1em;
+  margin-bottom: 1em;
   z-index: 10;
   display: flex;
   align-items: center;

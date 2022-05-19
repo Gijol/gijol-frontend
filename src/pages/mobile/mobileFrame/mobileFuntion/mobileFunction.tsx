@@ -5,9 +5,9 @@ import MobileFunctionRecommend from './mobileFunctionRecommend';
 
 const BottomTitle = styled.div`
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
-  /* margin-top: -10; */
+  margin-top: 0.5em;
   margin-bottom: 3em;
 `;
 const MobileFunction = function MobileFunction(): JSX.Element {
@@ -15,7 +15,9 @@ const MobileFunction = function MobileFunction(): JSX.Element {
     <IntroduceConatiner style={{ paddingTop: '3em' }}>
       <MobileFunctionOverall />
       <MobileFunctionRecommend />
-      <BottomTitle>간편히 Gijol에서 만나보세요</BottomTitle>
+      <BottomTitle>
+        <span style={{ color: '#1daa47' }}>Gijol</span>에서 만나보세요
+      </BottomTitle>
     </IntroduceConatiner>
   );
 };

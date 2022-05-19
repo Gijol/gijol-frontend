@@ -1,4 +1,4 @@
-import Intro1 from 'assets/img/Gijol-introduce1.png';
+import Intro from 'assets/img/Gijol-recommend.png';
 
 import { InnerContainer, MobileImage } from '../styles';
 
@@ -10,7 +10,7 @@ const MobileFunctionRecommend =
           나를 위한 강의 추천
         </div>
         <MobileImage>
-          <img alt="intro1" className="inner-img" src={Intro1} />
+          <img alt="intro1" className="inner-img" src={Intro} />
         </MobileImage>
       </InnerContainer>
     );

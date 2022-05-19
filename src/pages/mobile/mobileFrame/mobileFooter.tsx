@@ -10,11 +10,19 @@ const FooterTitle = styled.div`
 `;
 
 const MenuDrawer = styled.div`
-  height: 4em;
+  height: 3.5em;
   margin-top: 3em;
 
   > .menu-title {
     font-size: 1.4em;
+    font-weight: 500;
+    color: #1daa47;
+  }
+  > ul {
+    > li {
+      list-style-type: none;
+      margin-top: 0.3em;
+    }
   }
 
   > .sub {
@@ -34,7 +42,7 @@ const MobileFooterContainer = function MobileFooterContainer(): JSX.Element {
             <div>공지사항</div>
           </li>
           <li>
-            <div>공지사항</div>
+            <div>자주 묻는 질문</div>
           </li>
         </ul>
       </MenuDrawer>

@@ -11,7 +11,7 @@ import MobileFunction from './mobileFrame/mobileFuntion/mobileFunction';
 import MobileFooterContainer from './mobileFrame/mobileFooter';
 
 const MobileSwiper = function MobileSwiper(): JSX.Element {
-  const mobileHeight = window.screen.availHeight - 32;
+  const mobileHeight = window.screen.availHeight - 40;
 
   return (
     <Swiper
@@ -36,7 +36,12 @@ const MobileSwiper = function MobileSwiper(): JSX.Element {
           <MobileFunction />
         </MobileMainContainer>
       </SwiperSlide>
-      <SwiperSlide style={{ height: mobileHeight }}>
+      <SwiperSlide
+        style={{
+          height: mobileHeight,
+          backgroundColor: '#e6e6e6',
+        }}
+      >
         <MobileMainContainer>
           <MobileMainContainer>
             <MobileFooterContainer />

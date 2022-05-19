@@ -39,18 +39,19 @@ export const GraphContainer = styled.div`
 `;
 
 export const InnerContainer = styled.div`
+  margin-bottom: 1em;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #e6e6e6;
+  box-shadow: 0px 2.3px 1px #c8c8c8;
   width: 100%;
   height: 12em;
   > .header {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 500;
     margin-bottom: 0.2em;
     margin-top: 0.5em;
-  }
-  > .sub-header {
-    font-size: 1.2em;
-    font-weight: 600;
   }
 `;
 
