@@ -31,7 +31,11 @@ const CircularProgressWithLabel = function CircularProgressWithLabel({
         />
       </div>
       <div className="LabelContainer">
-        130학점 중<br /> <span className="MyScore">{value}</span>학점 이수
+        <span>총 이수 학점</span>
+        <br />
+        <span className="my-score-overall">
+          <span className="my-score">{value}</span>학점 / 130학점
+        </span>
       </div>
     </div>
   );
