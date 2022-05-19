@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Title from 'common/title/title';
 
+import { ExplanationHeaderContainer } from '../frameExplain/styles';
 import DragDrop from './dragDrop/dragDrop';
 import MajorButtonContainer from './buttonContainer/buttonContainer';
 
@@ -51,7 +52,9 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
 
   return (
     <FileContainer>
-      <Title>아래 칸에 엑셀 파일을 끌어다 놓아주세요</Title>
+      <ExplanationHeaderContainer>
+        <Title>아래 칸에 엑셀 파일을 끌어다 놓아주세요</Title>
+      </ExplanationHeaderContainer>
       <FileAdd>
         <DragDrop setCourseFileBy={setCourseFileBy} />
       </FileAdd>

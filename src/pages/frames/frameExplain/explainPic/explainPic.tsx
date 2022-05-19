@@ -15,19 +15,27 @@ const ExplainDrawerPic = function ExplainDrawerPic({
   return (
     <ExplainDrawerPicContainer>
       {stepNum === 1 ? (
-        <ExplainPic src={explainPic1} alt="제우스 로그인 창" />
+        <div className="explainPicContainer">
+          <ExplainPic src={explainPic1} alt="제우스 로그인 창" />
+        </div>
       ) : null}
 
       {stepNum === 2 ? (
-        <ExplainPic src={explainPic2} alt="개인 성적 조회" />
+        <div className="explainPicContainer">
+          <ExplainPic src={explainPic2} alt="개인 성적 조회" />
+        </div>
       ) : null}
 
       {stepNum === 3 ? (
-        <ExplainPic src={explainPic3} alt="수강목록, 엑셀 파일로 저장" />
+        <div className="explainPicContainer">
+          <ExplainPic src={explainPic3} alt="수강목록, 엑셀 파일로 저장" />
+        </div>
       ) : null}
 
       {stepNum === 4 ? (
-        <ExplainPic src={explainPic4} alt="Gijol에 업로드 하기" />
+        <div className="explainPicContainer">
+          <ExplainPic src={explainPic4} alt="Gijol에 업로드 하기" />
+        </div>
       ) : null}
     </ExplainDrawerPicContainer>
   );

@@ -27,6 +27,10 @@ const ExplainDrawerPicContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  > .explainPicContainer {
+    width: 688px;
+    height: 377px;
+  }
 `;
 
 const ExplainPic = styled.img`

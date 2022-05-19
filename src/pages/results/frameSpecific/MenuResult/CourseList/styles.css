@@ -1,6 +1,7 @@
 .course-box {
   width: 416px;
-  height: 100px;
+  min-height: 100px;
+  height: fit-content;
   border-radius: 20px;
   margin: 12px;
   box-shadow: 0 0 20px -16px;
@@ -11,7 +12,8 @@
 
 .course-title {
   width: 384px;
-  height: 58px;
+  min-height: 58px;
+  height: fit-content;
   margin: 8px 0 4px 0;
 }
 
