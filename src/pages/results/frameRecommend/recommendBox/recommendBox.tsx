@@ -53,9 +53,16 @@ const RecommendBox = function RecommendBox({
         {isClicked ? (
           <>
             <div className="recommend-middle">
-              {result.getMessages.map((message: string, index: number) => {
-                return <div key={message.length}>{message}</div>;
-              })}
+              {result.getMessages.length >= 1 ? (
+                <div className="message-container">
+                  {' '}
+                  {result.getMessages.map((message: string, index: number) => {
+                    return <div key={message.length}>{message}</div>;
+                  })}
+                </div>
+              ) : (
+                <div className="message-all-pass">전부 다 수강하셨습니다!</div>
+              )}
             </div>
             <div className="recommend-footer">
               {result.isSatisfied

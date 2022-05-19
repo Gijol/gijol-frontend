@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Result from 'utils/api/result';
 import Title from 'common/title/title';
+
 import SubTitle from 'common/title/subTitle';
 
 // Import Swiper styles
@@ -11,6 +12,7 @@ import 'swiper/css/pagination';
 import './styles.css';
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper';
+import MainContainer from 'common/container/container';
 import RecommendBox from './recommendBox/recommendBox';
 
 const SwiperContainer = styled.div`
@@ -22,7 +24,7 @@ interface IProps {
 }
 const Recommend = function Recommend({ result }: IProps): JSX.Element {
   return (
-    <div className="Container">
+    <MainContainer>
       <Title>그럼 어떤 강의를 들어야 할까요?</Title>
       <SubTitle>Gijol은 아래 강의를 추천합니다</SubTitle>
       <SwiperContainer>
@@ -87,7 +89,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           </SwiperSlide>
         </Swiper>
       </SwiperContainer>
-    </div>
+    </MainContainer>
   );
 };
 

@@ -80,7 +80,24 @@ export const RecommendBoxContainer = styled.div`
     }
     > .recommend-middle {
       flex: 1 1 0;
-      overflow: hidden;
+
+      > div {
+        font-size: 20px;
+        font-weight: 600;
+        color: gray;
+        text-align: center;
+      }
+
+      > .message-all-pass {
+        line-height: 250px;
+      }
+
+      > .message-container {
+        line-height: 2em;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
     }
     > .recommend-footer {
       width: 100%;
