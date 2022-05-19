@@ -40,6 +40,27 @@ export const GraphContainer = styled.div`
 
 export const InnerContainer = styled.div`
   width: 100%;
-  height: 15em;
-  background-color: aqua;
+  height: 12em;
+  > .header {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    margin-top: 0.5em;
+  }
+  > .sub-header {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+`;
+
+export const MobileImage = styled.div`
+  width: 100%;
+  /* padding: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > .inner-img {
+    width: 95%;
+  }
 `;

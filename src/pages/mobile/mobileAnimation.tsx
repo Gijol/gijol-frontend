@@ -10,6 +10,14 @@ const MLinearProgressWithLabel =
     const [gradVal, setGradVal] = useState<number>(0);
     const valueRef = useRef(0);
 
+    useEffect(() => {
+      const loop = setInterval(() => {
+        setGradVal(valueRef.current);
+        valueRef.current += 1;
+        if (valueRef.current === 34) clearInterval(loop);
+      }, 12.4);
+    }, []);
+
     return (
       <GraphDesc>
         <VictoryChart

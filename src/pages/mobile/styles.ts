@@ -12,7 +12,7 @@ export const ModalContainer = styled.div`
   align-items: center;
   font-weight: 600;
   line-height: 1.5em;
-  height: 150px;
+  height: 100px;
   background-color: ${(props) => props.theme.color.sub};
   z-index: 10;
 
