@@ -1,38 +1,39 @@
 import styled, { keyframes } from 'styled-components';
 
-const fadeIn = keyframes`
-  from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-`;
-const fadeOut = keyframes`
-  from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-`;
+// const fadeIn = keyframes`
+//   from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// `;
+// const fadeOut = keyframes`
+//   from {
+//         opacity: 1;
+//     }
+//     to {
+//         opacity: 0;
+//     }
+// `;
 
 const ExplainDrawerPicContainer = styled.div`
-  width: 60%;
-  height: 100px;
-  > .image-fade-in {
-    animation: ${fadeIn} 0.5s;
-    height: 100%;
-    font-size: 30px;
-  }
-  > .image-fade-out {
-    animation: ${fadeOut} 0.5s;
-    height: 0px;
-    font-size: 0px;
-  }
-  > .image-default {
-    width: 95%;
-    background-color: blue;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  box-shadow: 0 0 20px -6px gray;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  > .explainPicContainer {
+    width: 688px;
+    height: 377px;
   }
 `;
-export default ExplainDrawerPicContainer;
+
+const ExplainPic = styled.img`
+  border-radius: 10px;
+`;
+export { ExplainDrawerPicContainer, ExplainPic };

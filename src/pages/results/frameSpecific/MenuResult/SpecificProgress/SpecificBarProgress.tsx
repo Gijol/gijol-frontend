@@ -1,17 +1,23 @@
 import { useEffect, useState, useRef } from 'react';
 import { Line } from 'rc-progress';
-import { SpecificBarAndLabel, SpecificLabelOfBar } from './styles';
+import {
+  SpecificBarAndLabel,
+  SpecificLabelOfBar,
+  ExtraMessage,
+} from './styles';
 
 interface Props {
   CourseColor: string;
   TotalScore: number;
   MyScore: number;
+  satisfied: boolean;
 }
 
 const SpecificBarProgress = function SpecificBarProgress({
   CourseColor,
   TotalScore,
   MyScore,
+  satisfied,
 }: Props): JSX.Element {
   const [value, setValue] = useState(0);
   const valueRef = useRef(0);
@@ -38,14 +44,21 @@ const SpecificBarProgress = function SpecificBarProgress({
   }, []);
   const courseMessage = () => {
     const result = [];
-    if (MyScore > 0) {
-      if (TotalScore - MyScore <= 0) {
-        result.push(<span>전부 들으셨네요!</span>);
-      } else {
+    if (satisfied === true) {
+      result.push(<span>전부 들으셨네요!</span>);
+    } else if (satisfied === false) {
+      if (MyScore > 0 && TotalScore - MyScore <= 0) {
+        result.push(
+          <ExtraMessage>
+            학점은 채우셨지만,
+            <br /> 필수과목은 부족하네요..
+          </ExtraMessage>,
+        );
+      } else if (MyScore > 0 && TotalScore - MyScore > 0) {
         result.push(<span>{value}% 들으셨네요!</span>);
+      } else {
+        result.push(<span>아무것도 안들으셨네요..</span>);
       }
-    } else {
-      result.push(<span>아무것도 안들으셨네요..</span>);
     }
     return result;
   };

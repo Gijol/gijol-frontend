@@ -9,6 +9,13 @@ interface Props {
 const LinearProgressWithLabel = function LinearProgressWithLabel({
   result,
 }: Props): JSX.Element {
+  const left =
+    130 -
+    result.getLanguageBasic.getMinCredit -
+    result.getScience.getMinCredit -
+    result.getHumanities.getMinCredit -
+    result.getMajor.getMinCredit -
+    result.getEtcMandatory.getMinCredit;
   return (
     <VictoryChart
       domainPadding={0}
@@ -25,9 +32,11 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           {
             x: 1,
             y:
-              result.getLanguageBasic.getTotalCredits < 7
+              result.getLanguageBasic.getTotalCredits <
+              result.getLanguageBasic.getMinCredit
                 ? Math.round(
-                    (result.getLanguageBasic.getTotalCredits * 100) / 7,
+                    (result.getLanguageBasic.getTotalCredits * 100) /
+                      result.getLanguageBasic.getMinCredit,
                   )
                 : 100,
             // result.getLanguageBasic.getTotalCredits
@@ -36,8 +45,11 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           {
             x: 2,
             y:
-              result.getScience.getTotalCredits < 12
-                ? Math.round((result.getScience.getTotalCredits * 100) / 12)
+              result.getScience.getTotalCredits < result.getScience.getMinCredit
+                ? Math.round(
+                    (result.getScience.getTotalCredits * 100) /
+                      result.getScience.getMinCredit,
+                  )
                 : 100,
             // result.getScience.getMinCredit
             fill: '#4D96FF',
@@ -45,8 +57,12 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           {
             x: 3,
             y:
-              result.getHumanities.getTotalCredits < 36
-                ? Math.round((result.getHumanities.getTotalCredits * 100) / 36)
+              result.getHumanities.getTotalCredits <
+              result.getHumanities.getMinCredit
+                ? Math.round(
+                    (result.getHumanities.getTotalCredits * 100) /
+                      result.getHumanities.getMinCredit,
+                  )
                 : 100,
             // result.getHumanities.getMinCredit
             fill: '#F0CA33',
@@ -65,8 +81,12 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           {
             x: 5,
             y:
-              result.getEtcMandatory.getTotalCredits < 7
-                ? Math.round((result.getEtcMandatory.getTotalCredits * 100) / 7)
+              result.getEtcMandatory.getTotalCredits <
+              result.getEtcMandatory.getMinCredit
+                ? Math.round(
+                    (result.getEtcMandatory.getTotalCredits * 100) /
+                      result.getEtcMandatory.getMinCredit,
+                  )
                 : 100,
             // result.getEtcMandatory.getMinCredit
             fill: '#9772FB',
@@ -74,10 +94,12 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           {
             x: 6,
             y:
-              result.getOtherClass.getTotalCredits < 50
-                ? Math.round((result.getOtherClass.getTotalCredits * 100) / 50)
+              result.getOtherClass.getTotalCredits <
+              result.getOtherClass.getMinCredit
+                ? Math.round(
+                    (result.getOtherClass.getTotalCredits * 100) / left,
+                  )
                 : 100,
-            // result.getOtherClass.getMinCredit
             fill: '#B0B8C1',
           },
         ]}

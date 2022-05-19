@@ -33,6 +33,10 @@
   justify-content: center;
 }
 
-.MyScore {
+.my-score-overall {
+  font-size: 28px;
+}
+
+.my-score {
   color: #1da447;
 }
