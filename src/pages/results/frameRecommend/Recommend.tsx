@@ -59,7 +59,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
             depth: 100,
             modifier: 1,
           }}
-          touchRatio={1}
+          touchRatio={0}
           pagination
           slidesPerView="auto"
           modules={[EffectCoverflow, Pagination]}
