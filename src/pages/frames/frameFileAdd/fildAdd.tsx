@@ -29,7 +29,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
       return;
     }
 
-    navigate('/gijol-frontend/result', {
+    navigate('/result', {
       state: {
         apiFile: courseFile,
         apiCode: majorValue,

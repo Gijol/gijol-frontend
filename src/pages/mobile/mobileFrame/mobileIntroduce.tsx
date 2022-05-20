@@ -2,7 +2,6 @@ import { GraphContainer, IntroduceConatiner } from './styles';
 import MLinearProgressWithLabel from '../mobileAnimation';
 
 const MobileIntroduce = function MobileIntroduce(): JSX.Element {
-
   return (
     <IntroduceConatiner>
       <div className="mobile-title">

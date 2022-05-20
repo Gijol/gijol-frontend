@@ -92,7 +92,6 @@ const MLinearProgressWithLabel =
         </VictoryChart>
         <div className="text-graph-container">
           졸업까지 {100 - gradVal}% 남았습니다!
-
         </div>
       </GraphDesc>
     );
