@@ -24,7 +24,7 @@ const RecommendBox = function RecommendBox({
   };
 
   return (
-    <RecommendBoxContainer color={colorCode}>
+    <RecommendBoxContainer color={colorCode} className="recommend-container">
       <div
         className={
           isClicked
