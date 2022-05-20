@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 const DrawerContainer = styled.div`
-  min-width: 200px;
+  width: 200px;
 `;
 
 const toggleOn = keyframes`
@@ -44,6 +44,7 @@ const DrawerElement = styled.div`
     /* width: 100%; */
     border-left: 3px solid ${(props) => props.theme.color.sub};
     height: 0px;
+    padding-left: 20px;
     overflow: hidden;
     animation: ${toggleOff} 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
