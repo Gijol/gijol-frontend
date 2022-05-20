@@ -6,7 +6,7 @@ export const FooterContainer = styled.div`
   display: flex;
   margin-top: 150px;
   flex-direction: column;
-  background-color: #e6e6e6;
+  background-color: #e5e8eb;
 
   justify-content: center;
 

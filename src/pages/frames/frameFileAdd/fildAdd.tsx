@@ -7,6 +7,7 @@ import DragDrop from './dragDrop/dragDrop';
 import MajorButtonContainer from './buttonContainer/buttonContainer';
 
 import { FileContainer, FileAdd } from './styles';
+import '../../results/frameOverall/styles.css';
 
 const FileAddFrame = function FileAddFrame(): JSX.Element {
   const [majorValue, setMajorValue] = useState<string>();
@@ -52,9 +53,9 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
 
   return (
     <FileContainer>
-      <ExplanationHeaderContainer>
+      <div className="title">
         <Title>아래 칸에 엑셀 파일을 끌어다 놓아주세요</Title>
-      </ExplanationHeaderContainer>
+      </div>
       <FileAdd>
         <DragDrop setCourseFileBy={setCourseFileBy} />
       </FileAdd>

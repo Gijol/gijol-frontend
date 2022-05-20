@@ -5,12 +5,12 @@ const Explanation = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 `;
 const ExplanationHeaderContainer = styled.div`
   width: 100%;
   display: inline-flex;
-  margin-top: 3em;
-  margin-bottom: 2em;
   flex-direction: column;
 `;
 
@@ -26,11 +26,11 @@ const ExplanationHeader = styled.h2`
 `;
 
 const DrawerContainer = styled.div`
-  padding-right: 3.5em;
-  padding-left: 3.5em;
+  padding: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2.5em;
 `;
 
 export {

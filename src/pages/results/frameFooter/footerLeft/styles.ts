@@ -18,19 +18,18 @@ export const NavBox = styled.div`
 
   > .bold-title {
     color: ${(props) => props.theme.color.sub};
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 0.2em;
   }
   > .items {
     margin-top: 0.6em;
     margin-bottom: 0.6em;
-    margin-left: 1em;
 
     > .link {
       text-decoration: none;
       color: ${(props) => props.theme.color.main};
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 400;
     }
   }
