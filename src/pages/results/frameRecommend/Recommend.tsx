@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Result from 'utils/api/result';
-import Title from 'common/title/title';
-
+import MainTitle from 'common/title/title';
 import SubTitle from 'common/title/subTitle';
+import '../frameOverall/styles.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,9 +25,30 @@ interface IProps {
 const Recommend = function Recommend({ result }: IProps): JSX.Element {
   return (
     <MainContainer>
-      <Title>그럼 어떤 강의를 들어야 할까요?</Title>
-      <SubTitle>Gijol은 아래 강의를 추천합니다</SubTitle>
-      <SwiperContainer>
+      <div className="title">
+        <MainTitle
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          그럼 어떤 강의를 들어야 할까요?
+        </MainTitle>
+        <SubTitle
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          Gijol은 아래 강의를 추천합니다
+        </SubTitle>
+      </div>
+      <SwiperContainer
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+        data-aos-once="true"
+      >
         <Swiper
           effect="coverflow"
           grabCursor
@@ -45,42 +66,42 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           className="mySwiper"
           style={{ width: '100%' }}
         >
-          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+          <SwiperSlide style={{ width: '346px', height: '400px' }}>
             <RecommendBox
               name="언어와기초"
               result={result.getLanguageBasic}
               colorCode="#6BCB76"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+          <SwiperSlide style={{ width: '346px', height: '400px' }}>
             <RecommendBox
               name="기초 과학"
               result={result.getScience}
               colorCode="#4C96FE"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+          <SwiperSlide style={{ width: '346px', height: '400px' }}>
             <RecommendBox
               name="인문 사회"
               result={result.getHumanities}
               colorCode="#F0C934"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+          <SwiperSlide style={{ width: '346px', height: '400px' }}>
             <RecommendBox
               name="전공"
               result={result.getMajor}
               colorCode="#FF6B6B"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+          <SwiperSlide style={{ width: '346px', height: '400px' }}>
             <RecommendBox
               name="기타 필수"
               result={result.getEtcMandatory}
               colorCode="#9771FB"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '432px', height: '500px' }}>
+          <SwiperSlide style={{ width: '346px', height: '400px' }}>
             <RecommendBox
               name="기타"
               result={result.getOtherClass}

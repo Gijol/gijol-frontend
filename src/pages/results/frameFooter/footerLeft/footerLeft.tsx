@@ -21,32 +21,14 @@ const FooterLeftContainer = function FooterLeftContainer(): JSX.Element {
           <div className="bold-title">문의</div>
           <div className="items">
             <a className="link" href="/" target="_blank">
-              Gijol Support
-            </a>
-          </div>
-          <div className="items">
-            <a className="link" href="/" target="_blank">
               피드백 문의
             </a>
           </div>
-        </NavBox>
-      </div>
-      <div className="footer-left">
-        <NavBox>
-          <div className="bold-title">문의</div>
           <div className="items">
             <a className="link" href="/" target="_blank">
               Gijol Support
             </a>
           </div>
-          <div className="items">
-            <a className="link" href="/" target="_blank">
-              피드백 문의
-            </a>
-          </div>
-        </NavBox>
-        <NavBox>
-          <div className="bold-title">About</div>
           <div className="items">
             <a className="link" href="/" target="_blank">
               Gijol members
