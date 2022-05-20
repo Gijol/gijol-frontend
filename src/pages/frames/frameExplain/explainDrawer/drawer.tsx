@@ -42,7 +42,13 @@ const Drawer = function Drawer({
               fontSize: '18px',
             }}
           >
-            GIST ZEUS system에 접속합니다
+            <a
+              href="https://zeus.gist.ac.kr/sys/main/login.do"
+              style={{ textDecoration: 'none', color: '#1da447' }}
+            >
+              zeus.gist.ac.kr
+            </a>
+            에 접속합니다
           </div>
         ) : null}
         {drawerNum === 2 ? (
