@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MainTitle = styled.div`
-  margin: 2.5em auto 0.5em auto;
+  margin: 3em auto 1em auto;
   font-size: 36px;
   letter-spacing: 0px;
   font-weight: 500;

@@ -8,6 +8,7 @@ import {
   DrawerContainer,
 } from './styles';
 import ExplainDrawerPic from './explainPic/explainPic';
+import '../../results/frameOverall/styles.css';
 
 const ExplanationFrame = function ExplanationFrame(): JSX.Element {
   const [stepNum, setStepNum] = useState<number>(1);
@@ -18,9 +19,9 @@ const ExplanationFrame = function ExplanationFrame(): JSX.Element {
 
   return (
     <Explanation>
-      <ExplanationHeaderContainer>
+      <div className="title">
         <Title>졸업 요건 확인에 필요한 파일을 저장하세요</Title>
-      </ExplanationHeaderContainer>
+      </div>
       <DrawerContainer>
         <ExplainDrawerPic stepNum={stepNum} />
         <ExplainDrawer stepNum={stepNum} setStateNumber={setStepNumber} />
