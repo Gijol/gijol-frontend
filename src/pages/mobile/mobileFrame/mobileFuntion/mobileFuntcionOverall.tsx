@@ -18,6 +18,7 @@ const MobileFunctionOverall = function MobileFunctionOverall(): JSX.Element {
       <Swiper
         style={{
           paddingTop: '1em',
+          height: '150px',
         }}
         spaceBetween={30}
         centeredSlides
