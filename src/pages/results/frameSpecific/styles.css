@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .menu-bar {
@@ -21,4 +23,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.specific-result-conatiner {
+  width: 1000px;
+  height: 600px;
+  background-color: blue;
 }

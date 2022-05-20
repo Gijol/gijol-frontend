@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Result from 'utils/api/result';
-import Title from 'common/title/title';
-
+import MainTitle from 'common/title/title';
 import SubTitle from 'common/title/subTitle';
+import '../frameOverall/styles.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,8 +25,10 @@ interface IProps {
 const Recommend = function Recommend({ result }: IProps): JSX.Element {
   return (
     <MainContainer>
-      <Title>그럼 어떤 강의를 들어야 할까요?</Title>
-      <SubTitle>Gijol은 아래 강의를 추천합니다</SubTitle>
+      <div className="title">
+        <MainTitle>그럼 어떤 강의를 들어야 할까요?</MainTitle>
+        <SubTitle>Gijol은 아래 강의를 추천합니다</SubTitle>
+      </div>
       <SwiperContainer>
         <Swiper
           effect="coverflow"

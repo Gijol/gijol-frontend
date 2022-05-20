@@ -16,10 +16,8 @@ const Overall = function Overall({ result }: IProps): JSX.Element {
   return (
     <MainContainer>
       <div className="title">
-        <MainTitle>당신의 수강 현황을 알려드립니다!</MainTitle>
-        <SubTitle style={{ marginBottom: '2em' }}>
-          우선 전체적으로 볼까요?
-        </SubTitle>
+        <MainTitle>당신의 수강 현황을 알려드립니다</MainTitle>
+        <SubTitle>우선 졸업요건 충족 현황에 대한 종합적인 결과입니다!</SubTitle>
       </div>
       <div className="OverallResult">
         <div className="circular">
