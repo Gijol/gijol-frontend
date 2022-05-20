@@ -66,42 +66,42 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           className="mySwiper"
           style={{ width: '100%' }}
         >
-          <SwiperSlide style={{ width: '346px', height: '400px' }}>
+          <SwiperSlide className="swiper-box">
             <RecommendBox
               name="언어와기초"
               result={result.getLanguageBasic}
               colorCode="#6BCB76"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '346px', height: '400px' }}>
+          <SwiperSlide className="swiper-box">
             <RecommendBox
               name="기초 과학"
               result={result.getScience}
               colorCode="#4C96FE"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '346px', height: '400px' }}>
+          <SwiperSlide className="swiper-box">
             <RecommendBox
               name="인문 사회"
               result={result.getHumanities}
               colorCode="#F0C934"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '346px', height: '400px' }}>
+          <SwiperSlide className="swiper-box">
             <RecommendBox
               name="전공"
               result={result.getMajor}
               colorCode="#FF6B6B"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '346px', height: '400px' }}>
+          <SwiperSlide className="swiper-box">
             <RecommendBox
               name="기타 필수"
               result={result.getEtcMandatory}
               colorCode="#9771FB"
             />
           </SwiperSlide>
-          <SwiperSlide style={{ width: '346px', height: '400px' }}>
+          <SwiperSlide className="swiper-box">
             <RecommendBox
               name="기타"
               result={result.getOtherClass}

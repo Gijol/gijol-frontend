@@ -21,13 +21,18 @@ const toggleOff = keyframes`
 `;
 
 export const RecommendBoxContainer = styled.div`
-  width: 346px !important;
+  width: 432px;
   display: block;
   width: 100%;
-  height: 400px;
+  height: 500px;
   border-radius: 20px;
   background-color: ${(props) => props.color};
   box-shadow: 0 2px 20px -6px gray;
+
+  @media (max-width: 1440px) {
+    width: 346px;
+    height: 400px;
+  }
 
   > .upper-recommend-box {
     width: 100%;
