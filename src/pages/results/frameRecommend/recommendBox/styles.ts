@@ -21,10 +21,10 @@ const toggleOff = keyframes`
 `;
 
 export const RecommendBoxContainer = styled.div`
-  width: 432px !important;
+  width: 346px !important;
   display: block;
   width: 100%;
-  height: 500px;
+  height: 400px;
   border-radius: 20px;
   background-color: ${(props) => props.color};
   box-shadow: 0 2px 20px -6px gray;
@@ -71,9 +71,9 @@ export const RecommendBoxContainer = styled.div`
     > .recommend-title {
       z-index: 10;
       position: absolute;
-      left: 1em;
+      left: 0.9em;
       color: #fff;
-      top: -2em;
+      top: -1.9em;
       font-size: 1.7em;
       font-weight: 600;
       letter-spacing: 1.4;
