@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import BasicResult from 'utils/api/basic';
 import { RecommendBoxContainer } from './styles';
 
@@ -14,7 +14,8 @@ const RecommendBox = function RecommendBox({
 }: IProps): JSX.Element {
   const [isClicked, clickController] = useState<boolean>(false);
 
-  const toggleClick = () => {
+  const toggleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     console.log('clicked');
     if (isClicked === true) {
       clickController(false);
@@ -41,7 +42,9 @@ const RecommendBox = function RecommendBox({
         role="button"
         aria-hidden
         tabIndex={0}
-        onClick={toggleClick}
+        onClick={(event) => {
+          toggleClick(event);
+        }}
       >
         <div className="recommend-title">{name}</div>
         <div className="recommend-title-header-container">
