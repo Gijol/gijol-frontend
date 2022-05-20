@@ -4,9 +4,9 @@ const FileAdd = styled.section`
   max-width: ${(props) => props.theme.basicWidth};
   display: flex;
   justify-content: center;
-
   align-items: center;
   flex-direction: column;
+  margin-top: 1.5em;
 `;
 
 const FileContainer = styled.div`
@@ -14,6 +14,8 @@ const FileContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 export { FileAdd, FileContainer };

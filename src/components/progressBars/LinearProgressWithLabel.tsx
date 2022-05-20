@@ -9,13 +9,34 @@ interface Props {
 const LinearProgressWithLabel = function LinearProgressWithLabel({
   result,
 }: Props): JSX.Element {
-  const left =
+  const languageScoreLeft = Math.max(
+    result.getLanguageBasic.getMinCredit,
+    result.getLanguageBasic.getTotalCredits,
+  );
+  const scienceScoreLeft = Math.max(
+    result.getScience.getMinCredit,
+    result.getScience.getTotalCredits,
+  );
+  const humanitiesScoreLeft = Math.max(
+    result.getHumanities.getMinCredit,
+    result.getHumanities.getTotalCredits,
+  );
+  const majorScoreLeft = Math.max(
+    result.getMajor.getMinCredit,
+    result.getMajor.getTotalCredits,
+  );
+  const etcmandatoryScoreLeft = Math.max(
+    result.getEtcMandatory.getMinCredit,
+    result.getEtcMandatory.getTotalCredits,
+  );
+
+  const etcScoreLeft =
     130 -
-    result.getLanguageBasic.getMinCredit -
-    result.getScience.getMinCredit -
-    result.getHumanities.getMinCredit -
-    result.getMajor.getMinCredit -
-    result.getEtcMandatory.getMinCredit;
+    languageScoreLeft -
+    scienceScoreLeft -
+    humanitiesScoreLeft -
+    majorScoreLeft -
+    etcmandatoryScoreLeft;
   return (
     <VictoryChart
       domainPadding={0}
@@ -97,7 +118,7 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
               result.getOtherClass.getTotalCredits <
               result.getOtherClass.getMinCredit
                 ? Math.round(
-                    (result.getOtherClass.getTotalCredits * 100) / left,
+                    (result.getOtherClass.getTotalCredits * 100) / etcScoreLeft,
                   )
                 : 100,
             fill: '#B0B8C1',
