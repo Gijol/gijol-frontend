@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BasicResult from 'utils/api/basic';
 import { RecommendBoxContainer } from './styles';
+import 'swiper/css';
 
 interface IProps {
   name: string;
@@ -36,8 +37,8 @@ const RecommendBox = function RecommendBox({
       <div
         className={
           isClicked
-            ? 'main-recommend-box button-pressed'
-            : 'main-recommend-box button-unpressed'
+            ? 'main-recommend-box button-pressed swiper-no-swiping'
+            : 'main-recommend-box button-unpressed swiper-no-swiping'
         }
         role="button"
         aria-hidden
@@ -58,7 +59,6 @@ const RecommendBox = function RecommendBox({
             <div className="recommend-middle">
               {result.getMessages.length >= 1 ? (
                 <div className="message-container">
-                  {' '}
                   {result.getMessages.map((message: string, index: number) => {
                     return <div key={message.length}>{message}</div>;
                   })}
