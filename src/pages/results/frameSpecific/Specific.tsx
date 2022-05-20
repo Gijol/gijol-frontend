@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './styles.css';
 import Result from 'utils/api/result';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import MainContainer from 'common/container/container';
 import MainTitle from 'common/title/title';
@@ -46,14 +49,38 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
     humanitiesScoreLeft -
     majorScoreLeft -
     etcmandatoryScoreLeft;
+
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <MainContainer>
       <div className="title">
-        <MainTitle>이제 세부적으로 볼까요?</MainTitle>
-        <SubTitle>아래 결과는 항목별 이수 여부 및 학점 현황입니다</SubTitle>
+        <MainTitle
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          이제 세부적으로 볼까요?
+        </MainTitle>
+        <SubTitle
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          아래 결과는 항목별 이수 여부 및 학점 현황입니다
+        </SubTitle>
       </div>
       <div className="specific-result-container">
-        <div className="SpecificResult">
+        <div
+          className="SpecificResult"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
           <div className="menu-bar">
             <div className="menu">
               <SelectContainer>

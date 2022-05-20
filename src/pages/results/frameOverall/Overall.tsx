@@ -16,10 +16,30 @@ const Overall = function Overall({ result }: IProps): JSX.Element {
   return (
     <MainContainer>
       <div className="title">
-        <MainTitle>당신의 수강 현황을 알려드립니다</MainTitle>
-        <SubTitle>우선 졸업요건 충족 현황에 대한 종합적인 결과입니다!</SubTitle>
+        <MainTitle
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          당신의 수강 현황을 알려드립니다
+        </MainTitle>
+        <SubTitle
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          우선 졸업요건 충족 현황에 대한 종합적인 결과입니다!
+        </SubTitle>
       </div>
-      <div className="OverallResult">
+      <div
+        className="OverallResult"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+        data-aos-once="true"
+      >
         <div className="circular">
           <CircularProgressWithLabel MyScore={totalCredit} />
         </div>

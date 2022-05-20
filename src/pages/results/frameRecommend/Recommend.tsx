@@ -26,10 +26,29 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
   return (
     <MainContainer>
       <div className="title">
-        <MainTitle>그럼 어떤 강의를 들어야 할까요?</MainTitle>
-        <SubTitle>Gijol은 아래 강의를 추천합니다</SubTitle>
+        <MainTitle
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          그럼 어떤 강의를 들어야 할까요?
+        </MainTitle>
+        <SubTitle
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          data-aos-once="true"
+        >
+          Gijol은 아래 강의를 추천합니다
+        </SubTitle>
       </div>
-      <SwiperContainer>
+      <SwiperContainer
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
+        data-aos-once="true"
+      >
         <Swiper
           effect="coverflow"
           grabCursor

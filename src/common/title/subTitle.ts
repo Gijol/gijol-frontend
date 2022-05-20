@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SubTitle = styled.h1`
+const SubTitle = styled.div`
   margin-bottom: 0.2em;
   margin-top: 0.2em;
   font-size: 24px;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainTitle = styled.h1`
+const MainTitle = styled.div`
   margin: 2.5em auto 0.5em auto;
   font-size: 36px;
   letter-spacing: 0px;

@@ -71,9 +71,9 @@ export const RecommendBoxContainer = styled.div`
     > .recommend-title {
       z-index: 10;
       position: absolute;
-      left: 0.9em;
+      left: 0.7em;
       color: #fff;
-      top: -1.9em;
+      top: -1.7em;
       font-size: 1.7em;
       font-weight: 600;
       letter-spacing: 1.4;
