@@ -18,7 +18,6 @@ const MobileSwiper = function MobileSwiper(): JSX.Element {
       slidesPerView={1}
       direction="vertical"
       onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       style={{
         width: '100%',
         height: mobileHeight,
