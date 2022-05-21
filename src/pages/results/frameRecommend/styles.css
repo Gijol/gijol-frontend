@@ -11,7 +11,7 @@
   height: 300px;
 }
 .swiper-pagination {
-  display: none;
+  /* display: none; */
 }
 .swiper-box {
   width: 432px;
