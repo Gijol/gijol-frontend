@@ -35,6 +35,7 @@ const RecommendBox = function RecommendBox({
         }
       />
       <div
+        draggable={false}
         className={
           isClicked
             ? 'main-recommend-box button-pressed swiper-no-swiping'
@@ -56,11 +57,15 @@ const RecommendBox = function RecommendBox({
 
         {isClicked ? (
           <>
-            <div className="recommend-middle">
+            <div draggable={false} className="recommend-middle">
               {result.getMessages.length >= 1 ? (
                 <div className="message-container">
                   {result.getMessages.map((message: string, index: number) => {
-                    return <div key={message.length}>{message}</div>;
+                    return (
+                      <div style={{ userSelect: 'none' }} key={message.length}>
+                        {message}
+                      </div>
+                    );
                   })}
                 </div>
               ) : (
