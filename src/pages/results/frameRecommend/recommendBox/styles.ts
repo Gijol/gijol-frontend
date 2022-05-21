@@ -138,6 +138,7 @@ export const RecommendBoxContainer = styled.div`
             padding-bottom: 1em;
           }
         }
+
       }
 
       @media (max-width: 1440px) {

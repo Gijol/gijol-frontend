@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Title from 'common/title/title';
+import ReactGA from 'react-ga';
 
 import { ExplanationHeaderContainer } from '../frameExplain/styles';
 import DragDrop from './dragDrop/dragDrop';
@@ -17,6 +18,11 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
   const navigate = useNavigate();
 
   const pushBtn = () => {
+    ReactGA.event({
+      category: 'Button',
+      action: "go to other's profile",
+      label: 'profile',
+    });
     call();
   };
 
@@ -30,7 +36,7 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
       return;
     }
 
-    navigate('/gijol-frontend/result', {
+    navigate('/result', {
       state: {
         apiFile: courseFile,
         apiCode: majorValue,

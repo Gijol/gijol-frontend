@@ -59,8 +59,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
             depth: 100,
             modifier: 1,
           }}
-          touchRatio={0.01}
-          pagination
+          touchRatio={1}
           slidesPerView="auto"
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"

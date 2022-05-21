@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import BasicResult from 'utils/api/basic';
 import { RecommendBoxContainer } from './styles';
+import 'swiper/css';
 
 interface IProps {
   name: string;
@@ -14,7 +15,8 @@ const RecommendBox = function RecommendBox({
 }: IProps): JSX.Element {
   const [isClicked, clickController] = useState<boolean>(false);
 
-  const toggleClick = () => {
+  const toggleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     console.log('clicked');
     if (isClicked === true) {
       clickController(false);
@@ -33,10 +35,11 @@ const RecommendBox = function RecommendBox({
         }
       />
       <div
+        draggable={false}
         className={
           isClicked
-            ? 'main-recommend-box button-pressed'
-            : 'main-recommend-box button-unpressed'
+            ? 'main-recommend-box button-pressed swiper-no-swiping'
+            : 'main-recommend-box button-unpressed swiper-no-swiping'
         }
         role="button"
         aria-hidden
@@ -52,7 +55,7 @@ const RecommendBox = function RecommendBox({
 
         {isClicked ? (
           <>
-            <div className="recommend-middle">
+            <div draggable={false} className="recommend-middle">
               {result.getMessages.length >= 1 ? (
                 <div className="message-container">
                   <ul className="message-list">
@@ -67,6 +70,7 @@ const RecommendBox = function RecommendBox({
                       },
                     )}
                   </ul>
+
                 </div>
               ) : (
                 <div
