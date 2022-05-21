@@ -87,37 +87,31 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
                 <Select
                   color="#6BCB77"
                   value={1}
-                  name="언어와 기초"
                   getCourseValue={getCourseValue}
                 />
                 <Select
                   color="#4D96FF"
                   value={2}
-                  name="기초과학"
                   getCourseValue={getCourseValue}
                 />
                 <Select
                   color="#F0CA33"
                   value={3}
-                  name="인문사회"
                   getCourseValue={getCourseValue}
                 />
                 <Select
                   color="#FF6B6B"
                   value={4}
-                  name="전공"
                   getCourseValue={getCourseValue}
                 />
                 <Select
                   color="#9772FB"
                   value={5}
-                  name="기타필수"
                   getCourseValue={getCourseValue}
                 />
                 <Select
                   color="#B0B8C1"
                   value={6}
-                  name="기타"
                   getCourseValue={getCourseValue}
                 />
               </SelectContainer>

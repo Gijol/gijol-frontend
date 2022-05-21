@@ -96,7 +96,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           </SwiperSlide>
           <SwiperSlide className="swiper-box">
             <RecommendBox
-              name="기타 필수"
+              name="기타필수ㆍ연구"
               result={result.getEtcMandatory}
               colorCode="#9771FB"
             />
