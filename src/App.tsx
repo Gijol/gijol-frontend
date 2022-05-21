@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './static/fonts/font.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles/theme';
@@ -27,7 +28,7 @@ function App() {
     ReactGA.initialize(REENV!);
     ReactGA.set({ page: window.location.pathname });
     ReactGA.pageview(window.location.pathname);
-  }, [window.location]);
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
