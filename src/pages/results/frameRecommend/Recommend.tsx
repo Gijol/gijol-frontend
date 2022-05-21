@@ -11,7 +11,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './styles.css';
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper';
 import MainContainer from 'common/container/container';
 import RecommendBox from './recommendBox/recommendBox';
 
@@ -36,7 +36,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
         </MainTitle>
         <SubTitle
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="50"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
         >
@@ -45,7 +45,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
       </div>
       <SwiperContainer
         data-aos="fade-up"
-        data-aos-delay="400"
+        data-aos-delay="100"
         data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
         data-aos-once="true"
       >

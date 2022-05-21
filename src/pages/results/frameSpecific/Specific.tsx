@@ -66,7 +66,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         </MainTitle>
         <SubTitle
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="50"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
         >
@@ -77,7 +77,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         <div
           className="SpecificResult"
           data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos-delay="100"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
         >

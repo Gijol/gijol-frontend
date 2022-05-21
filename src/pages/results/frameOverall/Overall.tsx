@@ -26,7 +26,7 @@ const Overall = function Overall({ result }: IProps): JSX.Element {
         </MainTitle>
         <SubTitle
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="50"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
         >
@@ -36,7 +36,7 @@ const Overall = function Overall({ result }: IProps): JSX.Element {
       <div
         className="OverallResult"
         data-aos="fade-up"
-        data-aos-delay="400"
+        data-aos-delay="100"
         data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
         data-aos-once="true"
       >
