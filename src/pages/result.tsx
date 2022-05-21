@@ -45,8 +45,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
   }, []);
 
   return (
-    <>
-      <Header />
+    <div>
       {result === null || result === undefined ? (
         <LoadingModal>
           <div className="loading-modal-container">
@@ -57,13 +56,14 @@ const ResultPage = function ResultPgae(): JSX.Element {
         </LoadingModal>
       ) : (
         <div>
+          <Header />
           <Overall result={result} />
           <Specific result={result} />
           <Recommend result={result} />
           <Footer />
         </div>
       )}
-    </>
+    </div>
   );
   // return <ResultMainPage _result={result} />;
 };

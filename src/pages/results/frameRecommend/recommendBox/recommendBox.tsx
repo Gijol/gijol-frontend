@@ -43,10 +43,8 @@ const RecommendBox = function RecommendBox({
         }
         role="button"
         aria-hidden
-        tabIndex={0}
-        onClick={(event) => {
-          toggleClick(event);
-        }}
+        tabIndex={-1}
+        onClick={toggleClick}
       >
         <div className="recommend-title">{name}</div>
         <div className="recommend-title-header-container">
@@ -60,16 +58,27 @@ const RecommendBox = function RecommendBox({
             <div draggable={false} className="recommend-middle">
               {result.getMessages.length >= 1 ? (
                 <div className="message-container">
-                  {result.getMessages.map((message: string, index: number) => {
-                    return (
-                      <div style={{ userSelect: 'none' }} key={message.length}>
-                        {message}
-                      </div>
-                    );
-                  })}
+                  <ul className="message-list">
+                    {' '}
+                    {result.getMessages.map(
+                      (message: string, index: number) => {
+                        return (
+                          <li className="message-single" key={message.length}>
+                            <div key={message.length}>{message}</div>
+                          </li>
+                        );
+                      },
+                    )}
+                  </ul>
+
                 </div>
               ) : (
-                <div className="message-all-pass">전부 다 수강하셨습니다!</div>
+                <div
+                  className="message-all-pass"
+                  style={{ color: '#3c4149', fontSize: '20px' }}
+                >
+                  전부 다 수강하셨습니다!
+                </div>
               )}
             </div>
             <div className="recommend-footer">

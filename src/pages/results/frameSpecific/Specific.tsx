@@ -66,7 +66,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         </MainTitle>
         <SubTitle
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="50"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
         >
@@ -77,7 +77,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
         <div
           className="SpecificResult"
           data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos-delay="100"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
         >
@@ -129,6 +129,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
               MyScore={result.getLanguageBasic.getTotalCredits}
               courseList={result.languageBasic.getTakenCoursesList}
               satisfied={result.getLanguageBasic.isSatisfied}
+              forHumanities={value}
             />
           ) : null}
           {value === 2 ? (
@@ -138,6 +139,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
               MyScore={result.getScience.getTotalCredits}
               courseList={result.science.getTakenCoursesList}
               satisfied={result.getScience.isSatisfied}
+              forHumanities={value}
             />
           ) : null}
           {value === 3 ? (
@@ -147,6 +149,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
               MyScore={result.getHumanities.getTotalCredits}
               courseList={result.humanities.getTakenCoursesList}
               satisfied={result.getHumanities.isSatisfied}
+              forHumanities={value}
             />
           ) : null}
           {value === 4 ? (
@@ -156,6 +159,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
               MyScore={result.getMajor.getTotalCredits}
               courseList={result.major.getTakenCoursesList}
               satisfied={result.getMajor.isSatisfied}
+              forHumanities={value}
             />
           ) : null}
           {value === 5 ? (
@@ -165,6 +169,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
               MyScore={result.getEtcMandatory.getTotalCredits}
               courseList={result.etcMandatory.getTakenCoursesList}
               satisfied={result.getEtcMandatory.isSatisfied}
+              forHumanities={value}
             />
           ) : null}
           {value === 6 ? (
@@ -174,6 +179,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
               MyScore={result.getOtherClass.getTotalCredits}
               courseList={result.otherClass.getTakenCoursesList}
               satisfied={result.getOtherClass.isSatisfied}
+              forHumanities={value}
             />
           ) : null}
         </div>

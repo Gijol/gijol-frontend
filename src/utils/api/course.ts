@@ -46,6 +46,10 @@ class Course {
   public get getCourseCredit() {
     return this.courseCredit;
   }
+
+  public get getCourseType() {
+    return this.courseType;
+  }
 }
 
 export default Course;

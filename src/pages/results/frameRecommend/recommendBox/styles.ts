@@ -113,15 +113,46 @@ export const RecommendBoxContainer = styled.div`
 
       > .message-container {
         overflow: hidden;
-        width: 100%;
+        width: 432px;
         height: 275px;
         opacity: 0;
         animation: text-appear-from-down 0.4s linear forwards;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > .message-list {
+          height: fit-content;
+          width: 352px;
+          padding-left: 2em;
+          padding-right: 2em;
+          margin-top: 0;
+          font-size: 20px;
+          color: #3c4149;
+
+          > .message-single {
+            white-space: pre-line;
+            text-align: left;
+            padding-top: 0em;
+            padding-bottom: 1em;
+          }
+        }
+
       }
 
       @media (max-width: 1440px) {
         .message-container {
+          width: 346px;
           height: 220px;
+
+          > .message-list {
+            width: 266px;
+            font-size: 16px;
+            > .message-single {
+              font-size: 16px;
+            }
+          }
         }
       }
     }
