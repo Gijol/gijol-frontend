@@ -40,11 +40,11 @@ export const RecommendBoxContainer = styled.div`
     border-radius: 20px;
   }
   > .button-pressed {
-    animation: ${toggleOn} 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: ${toggleOn} 0.4s cubic-bezier(0.19, 1, 0.22, 1);
     height: 85%;
   }
   > .button-unpressed {
-    animation: ${toggleOff} 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: ${toggleOff} 0.4s cubic-bezier(0.19, 1, 0.22, 1);
     height: 15%;
   }
   > .main-recommend-box {
@@ -76,16 +76,20 @@ export const RecommendBoxContainer = styled.div`
     > .recommend-title {
       z-index: 10;
       position: absolute;
-      left: 0.7em;
+      left: 0.8em;
       color: #fff;
-      top: -1.7em;
-      font-size: 1.7em;
+      top: -1.8em;
+      font-size: 1.8em;
       font-weight: 600;
       letter-spacing: 1.4;
     }
-    > .recommend-middle {
-      flex: 1 1 0;
 
+    @media (max-width: 1440px) {
+      .recommend-title {
+        font-size: 1.4em;
+      }
+    }
+    > .recommend-middle {
       > div {
         font-size: 20px;
         font-weight: 600;
@@ -94,14 +98,31 @@ export const RecommendBoxContainer = styled.div`
       }
 
       > .message-all-pass {
-        line-height: 250px;
+        line-height: 275px;
+        height: 275px;
+        opacity: 0;
+        animation: text-appear-from-down 0.4s linear forwards;
+      }
+
+      @media (max-width: 1440px) {
+        .message-all-pass {
+          line-height: 220px;
+          height: 220px;
+        }
       }
 
       > .message-container {
-        line-height: 2em;
         overflow: hidden;
         width: 100%;
-        height: 100%;
+        height: 275px;
+        opacity: 0;
+        animation: text-appear-from-down 0.4s linear forwards;
+      }
+
+      @media (max-width: 1440px) {
+        .message-container {
+          height: 220px;
+        }
       }
     }
     > .recommend-footer {
@@ -114,6 +135,29 @@ export const RecommendBoxContainer = styled.div`
       justify-content: center;
       background-color: #f1f4f6;
       font-weight: 600;
+      opacity: 0;
+      animation: text-appear-from-down 0.4s linear forwards;
+    }
+
+    @media (max-width: 1440px) {
+      .recommend-title-header-container {
+        height: 60px;
+      }
+      .recommend-footer {
+        height: 60px;
+      }
+    }
+
+    @keyframes text-appear-from-down {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 `;

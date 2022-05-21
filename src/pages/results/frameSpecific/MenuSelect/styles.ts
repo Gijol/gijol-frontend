@@ -15,7 +15,7 @@ const SelectElement = styled.button`
   position: relative;
   width: 160px;
   height: 48px;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
