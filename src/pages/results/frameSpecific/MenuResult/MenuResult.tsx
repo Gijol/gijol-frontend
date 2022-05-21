@@ -20,6 +20,7 @@ interface Props {
   MyScore: number;
   courseList: Array<any>;
   satisfied: boolean;
+  forHumanities: number;
 }
 
 const MenuResult = function MenuResult({
@@ -28,12 +29,19 @@ const MenuResult = function MenuResult({
   MyScore,
   courseList,
   satisfied,
+  forHumanities,
 }: Props): JSX.Element {
   const courselist = () => {
     const result = [];
     if (courseList.length > 0) {
       for (let i = 0; i < courseList.length; i += 1) {
-        result.push(<CourseList key={i} courseListSingle={courseList[i]} />);
+        result.push(
+          <CourseList
+            key={i}
+            courseListSingle={courseList[i]}
+            forHumanities={forHumanities}
+          />,
+        );
       }
     } else if (courseList.length === 0) {
       result.push(

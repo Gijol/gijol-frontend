@@ -5,7 +5,10 @@ const HeaderWrapper = styled.div`
   width: 100%;
   z-index: 100;
   position: fixed;
+  top: 0;
+  backdrop-filter: blur(50px);
   border-bottom: 0.7px solid rgba(0, 0, 0, 0.25);
+  background-color: white;
 `;
 
 const LogoContainer = styled(Link)`
@@ -39,8 +42,8 @@ const Space = styled.div`
 
 const RightNav = styled(Link)`
   text-decoration: none;
-  padding-left: 20px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 15px;
   letter-spacing: 0px;
   line-height: 1.2;
   font-weight: 400;

@@ -15,25 +15,45 @@ const Select = function Select({
     getCourseValue(value);
   };
   return (
-    <div role="button" tabIndex={0} onClick={handleClick} aria-hidden="true">
+    <div
+      role="button"
+      tabIndex={-1}
+      onClick={handleClick}
+      aria-hidden="true"
+      style={{ outline: 'null' }}
+    >
       {value === 1 ? (
-        <SelectElement color={color}>언어와 기초</SelectElement>
+        <SelectElement color={color} tabIndex={-1}>
+          언어와 기초
+        </SelectElement>
       ) : null}
       {value === 2 ? (
-        <SelectElement color={color}>기초과학</SelectElement>
+        <SelectElement color={color} tabIndex={-1}>
+          기초과학
+        </SelectElement>
       ) : null}
       {value === 3 ? (
-        <SelectElement color={color}>인문사회</SelectElement>
+        <SelectElement color={color} tabIndex={-1}>
+          인문사회
+        </SelectElement>
       ) : null}
-      {value === 4 ? <SelectElement color={color}>전공</SelectElement> : null}
+      {value === 4 ? (
+        <SelectElement color={color} tabIndex={-1}>
+          전공
+        </SelectElement>
+      ) : null}
       {value === 5 ? (
-        <SelectElement color={color}>
+        <SelectElement color={color} tabIndex={-1}>
           <span>
             기타필수<span>ㆍ</span>연구
           </span>
         </SelectElement>
       ) : null}
-      {value === 6 ? <SelectElement color={color}>기타</SelectElement> : null}
+      {value === 6 ? (
+        <SelectElement color={color} tabIndex={-1}>
+          기타
+        </SelectElement>
+      ) : null}
     </div>
   );
 };
