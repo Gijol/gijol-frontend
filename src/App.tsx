@@ -27,7 +27,7 @@ function App() {
     ReactGA.initialize(REENV!);
     ReactGA.set({ page: window.location.pathname });
     ReactGA.pageview(window.location.pathname);
-  }, [window.location]);
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
