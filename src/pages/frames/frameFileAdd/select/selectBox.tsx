@@ -16,12 +16,12 @@ const SelectContainer = function SelectContainer({
   };
 
   return (
-    <SelectBox onChange={handleChange}>
-      <option disabled hidden value="" selected>
+    <SelectBox onChange={handleChange} tabIndex={-1}>
+      <option disabled hidden value="" selected tabIndex={-1}>
         전공을 선택하세요
       </option>
       {options.map(({ name, value, key }: Major) => (
-        <OptionInner value={value} key={key}>
+        <OptionInner value={value} key={key} tabIndex={-1}>
           {name}
         </OptionInner>
       ))}

@@ -8,6 +8,7 @@ const MainTitle = styled.div`
   /* font-weight: 400; */
   color: ${(props) => props.theme.color.main};
   line-height: 1.2;
+  user-select: none;
 `;
 
 export default MainTitle;

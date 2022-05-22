@@ -9,6 +9,7 @@ const SubTitle = styled.div`
   /* color: ${(props) => props.theme.color.main}; */
   color: #616161;
   line-height: 1.2;
+  user-select: none;
 `;
 
 export default SubTitle;

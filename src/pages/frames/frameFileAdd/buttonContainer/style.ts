@@ -17,6 +17,7 @@ const UploadButton = styled.button`
   border: 0px;
   background-color: ${(props) => props.theme.color.sub};
   color: white;
+  cursor: pointer;
 
   &:hover {
     color: ${(props) => props.theme.color.sub};
@@ -32,6 +33,7 @@ const QuestionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 `;
 
 const Image = styled.img`

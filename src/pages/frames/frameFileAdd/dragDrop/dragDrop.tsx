@@ -130,13 +130,17 @@ const DragDrop = function DragDrop({ setCourseFileBy }: IProps): JSX.Element {
                   aria-hidden="true"
                   role="button"
                   className="DragDrop-Files-Filter"
-                  onClick={(e) => handleFilterFile(e)}
+                  onClick={(e) => {
+                    handleFilterFile(e);
+                  }}
                 >
                   삭제
                 </div>
               </div>
             ) : (
-              <div>졸업 요건을 확인할 파일을 끌어다 업로드 해주세요.</div>
+              <div style={{ cursor: 'pointer' }}>
+                졸업 요건을 확인할 파일을 끌어다 업로드 해주세요.
+              </div>
             )}
           </div>
         </InputText>

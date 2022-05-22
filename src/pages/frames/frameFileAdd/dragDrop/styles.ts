@@ -53,6 +53,8 @@ const InputText = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
+  user-select: none;
 `;
 
 export { DragDropBox, InputText };

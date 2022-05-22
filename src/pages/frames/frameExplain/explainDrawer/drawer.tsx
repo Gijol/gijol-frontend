@@ -22,6 +22,7 @@ const Drawer = function Drawer({
         }
         aria-hidden="true"
         onClick={(e) => setNum(e, drawerNum)}
+        style={{ userSelect: 'none', cursor: 'pointer' }}
       >
         Step {drawerNum}
       </div>
@@ -40,11 +41,16 @@ const Drawer = function Drawer({
               whiteSpace: 'pre-line',
               width: '180px',
               fontSize: '18px',
+              userSelect: 'none',
             }}
           >
             <a
               href="https://zeus.gist.ac.kr/sys/main/login.do"
-              style={{ textDecoration: 'none', color: '#1da447' }}
+              style={{
+                textDecoration: 'none',
+                color: '#1da447',
+              }}
+              tabIndex={-1}
             >
               zeus.gist.ac.kr
             </a>
@@ -57,6 +63,7 @@ const Drawer = function Drawer({
               whiteSpace: 'pre-line',
               width: '180px',
               fontSize: '18px',
+              userSelect: 'none',
             }}
           >
             성적 &gt; 개인성적조회 &gt; Report card&#40;KOR&#41; 버튼을 눌러
@@ -69,6 +76,7 @@ const Drawer = function Drawer({
               whiteSpace: 'pre-line',
               width: '180px',
               fontSize: '18px',
+              userSelect: 'none',
             }}
           >
             초록색 버튼을 눌러 엑셀 파일로 저장합니다
@@ -80,6 +88,7 @@ const Drawer = function Drawer({
               whiteSpace: 'pre-line',
               width: '180px',
               fontSize: '18px',
+              userSelect: 'none',
             }}
           >
             저장한 엑셀 파일을 업로드 합니다
