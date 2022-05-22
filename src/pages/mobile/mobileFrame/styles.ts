@@ -45,8 +45,7 @@ export const InnerContainer = styled.div`
   background-color: #e6e6e6;
   box-shadow: 0px 2.3px 1px #c8c8c8;
   width: 100%;
-  /* height: 12em; */
-  height: fit-content;
+  /* height: 300px; */
   > .header {
     text-align: center;
     font-size: 1.3em;
