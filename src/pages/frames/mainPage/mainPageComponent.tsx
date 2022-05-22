@@ -13,7 +13,6 @@ SwiperCore.use([Mousewheel, Pagination, Navigation]);
 
 const MainComponent = function MainComponent(): JSX.Element {
   const viewHeigth = window.innerHeight;
-
   const pagination = {
     clickable: true,
   };
@@ -24,7 +23,7 @@ const MainComponent = function MainComponent(): JSX.Element {
       style={{ width: '100%', height: viewHeigth }}
       direction="vertical"
       speed={500}
-      modules={[Navigation, Pagination]}
+      modules={[Pagination]}
       mousewheel
       pagination={pagination}
       touchRatio={0}
