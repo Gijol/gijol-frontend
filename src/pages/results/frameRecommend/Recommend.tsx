@@ -103,7 +103,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           </SwiperSlide>
           <SwiperSlide className="swiper-box">
             <RecommendBox
-              name="기타"
+              name="자유학점"
               result={result.getOtherClass}
               colorCode="#AFB8C1"
             />

@@ -51,7 +51,7 @@ const Select = function Select({
       ) : null}
       {value === 6 ? (
         <SelectElement color={color} tabIndex={-1}>
-          기타
+          자유학점
         </SelectElement>
       ) : null}
     </div>
