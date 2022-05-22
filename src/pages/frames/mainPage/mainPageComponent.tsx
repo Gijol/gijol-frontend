@@ -20,7 +20,7 @@ const MainComponent = function MainComponent(): JSX.Element {
   return (
     <Swiper
       // controller={{ swiper: swiper }}
-      style={{ width: '100%', height: viewHeigth }}
+      style={{ width: '100%', height: viewHeigth, overflowY: 'hidden' }}
       direction="vertical"
       speed={500}
       modules={[Pagination]}
