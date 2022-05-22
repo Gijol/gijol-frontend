@@ -11,6 +11,7 @@ import Recommend from './results/frameRecommend/Recommend';
 import Footer from './results/frameFooter/Footer';
 
 import { LoadingModal } from './styles';
+import FeedBackContainer from './results/feedBack/feedback';
 
 interface apiProps {
   apiFile: File;
@@ -55,13 +56,16 @@ const ResultPage = function ResultPgae(): JSX.Element {
           </div>
         </LoadingModal>
       ) : (
-        <div>
-          <Header />
-          <Overall result={result} />
-          <Specific result={result} />
-          <Recommend result={result} />
-          <Footer />
-        </div>
+        <>
+          <FeedBackContainer />
+          <div>
+            <Header />
+            <Overall result={result} />
+            <Specific result={result} />
+            <Recommend result={result} />
+            <Footer />
+          </div>
+        </>
       )}
     </div>
   );

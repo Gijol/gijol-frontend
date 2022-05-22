@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FrameContainer = styled.div`
   max-width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: white;
