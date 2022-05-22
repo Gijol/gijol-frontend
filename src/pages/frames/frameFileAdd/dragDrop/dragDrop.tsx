@@ -76,7 +76,6 @@ const DragDrop = function DragDrop({ setCourseFileBy }: IProps): JSX.Element {
       } else {
         selectFile = event.target.files.item(0);
       }
-      console.log(selectFile);
       setCourseFileBy(selectFile);
       setFile(selectFile);
     },

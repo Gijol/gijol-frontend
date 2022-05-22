@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import styled, { keyframes } from 'styled-components';
 import Close from 'assets/img/close.png';
 import { FeedBackBtn, FeedBackChannel, FeedbackTextContainer } from './styles';
 
@@ -8,23 +7,24 @@ const FeedBackContainer = function FeedBackContainer(): JSX.Element {
   const [isClicked, setClicked] = useState<boolean>(false);
   const [innerClicked, setInnerClicked] = useState<boolean>(false);
   const [data, setData] = useState<string | null>(null);
-  let onceUsed = false;
+  const [used, setUsed] = useState<boolean>(false);
 
   const clickTrue = () => {
     setClicked(true);
   };
   const clickFalse = () => {
+    setUsed(false);
     setClicked(false);
     setInnerClicked(false);
     setData(null);
   };
   const clickInnerTrue = () => {
-    console.log('inner');
+    setUsed(true);
     setInnerClicked(true);
   };
 
   const submit = () => {
-    onceUsed = true;
+    setUsed(true);
     if (data === null || data === '') {
       alert('내용을 입력해 주세요');
       return;
@@ -33,7 +33,6 @@ const FeedBackContainer = function FeedBackContainer(): JSX.Element {
     axios
       .post('https://dev-api.gijol.im/graduation/feedback', { message: data })
       .then(() => {
-        alert('감사합니다!');
         setData(null);
       })
       .catch(() => {
@@ -99,7 +98,7 @@ const FeedBackContainer = function FeedBackContainer(): JSX.Element {
                   </>
                 ) : (
                   <>
-                    {onceUsed ? <div className="unpressed" /> : null}
+                    <div className={used === true ? 'unpressed' : 'none'} />
                     <div className="button-container">
                       <div
                         id="btn-submit"

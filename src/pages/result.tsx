@@ -38,11 +38,12 @@ const ResultPage = function ResultPgae(): JSX.Element {
           setResult(value);
         })
         .catch((error: any) => {
-          if (error.response.status === 500) {
+          if (error.response.status === 415) {
             redirect('정확한 성적표를 업로드 해주세요');
-          }
-          if (error.response.status === 405) {
-            redirect('지원하지 않는 학번입니다.');
+          } else if (error.response.status === 405) {
+            redirect('죄송합니다. 현재 18학번부터 서비스를 제공하고 있습니다.');
+          } else {
+            redirect('시스템 오류입니다.');
           }
         });
     } catch {
@@ -74,7 +75,6 @@ const ResultPage = function ResultPgae(): JSX.Element {
       )}
     </div>
   );
-  // return <ResultMainPage _result={result} />;
 };
 
 export default ResultPage;

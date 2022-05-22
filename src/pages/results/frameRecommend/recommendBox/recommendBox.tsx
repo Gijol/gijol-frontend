@@ -17,7 +17,6 @@ const RecommendBox = function RecommendBox({
 
   const toggleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    console.log('clicked');
     if (isClicked === true) {
       clickController(false);
     } else {

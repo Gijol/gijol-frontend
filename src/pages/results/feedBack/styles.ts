@@ -108,7 +108,8 @@ export const FeedbackTextContainer = styled.div`
   height: fit-content;
   border-radius: 18px;
   background-color: #ffffff;
-  box-shadow: rgb(0 0 0 / 10%) 0px 3px 16px 1px;
+  box-shadow: rgb(0 0 0 / 10%) 1px 4px 17px 2px;
+
   margin-bottom: 1em;
 
   > .clicked {
@@ -118,7 +119,6 @@ export const FeedbackTextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: rgb(0 0 0 / 10%) 0px 3px 16px 1px;
 
     > .input-container {
       width: 90%;

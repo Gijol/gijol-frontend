@@ -66,7 +66,6 @@ const callGraduateApi = async (
     BasicResultArr[5],
     apiTotalCredits,
   );
-  console.log(apiResult);
   return apiResult;
 };
 
