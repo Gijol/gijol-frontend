@@ -46,6 +46,8 @@ const Drawer = function Drawer({
           >
             <a
               href="https://zeus.gist.ac.kr/sys/main/login.do"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: 'none',
                 color: '#1da447',

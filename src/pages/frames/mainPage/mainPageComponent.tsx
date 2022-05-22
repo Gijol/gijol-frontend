@@ -25,6 +25,7 @@ const MainComponent = function MainComponent(): JSX.Element {
       speed={500}
       modules={[Pagination]}
       mousewheel
+      autoplay={false}
       pagination={pagination}
       touchRatio={0}
     >
