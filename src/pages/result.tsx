@@ -27,7 +27,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
 
   const redirect = (msg: string) => {
     alert(msg);
-    navigate('/gijol-frontend/');
+    navigate('/');
   };
 
   useEffect(() => {
@@ -37,8 +37,13 @@ const ResultPage = function ResultPgae(): JSX.Element {
         .then((value: any) => {
           setResult(value);
         })
-        .catch(() => {
-          redirect('정확한 성적표를 업로드 해주세요');
+        .catch((error: any) => {
+          if (error.response.status === 500) {
+            redirect('정확한 성적표를 업로드 해주세요');
+          }
+          if (error.response.status === 405) {
+            redirect('지원하지 않는 학번입니다.');
+          }
         });
     } catch {
       redirect('잘못된 접근입니다');

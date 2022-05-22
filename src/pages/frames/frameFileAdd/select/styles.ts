@@ -10,6 +10,8 @@ export const SelectBox = styled.select`
 `;
 
 export const OptionInner = styled.option`
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: 1px;
+  font-weight: 400;
 `;
