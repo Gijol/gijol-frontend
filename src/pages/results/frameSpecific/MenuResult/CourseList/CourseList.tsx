@@ -11,7 +11,6 @@ const CourseList = function CourseList({
   courseListSingle,
   forHumanities,
 }: Props): JSX.Element {
-  console.log(courseListSingle);
   return (
     <div className="course-box" style={{ userSelect: 'none' }}>
       <div className="course-title">

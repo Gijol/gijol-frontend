@@ -45,7 +45,6 @@ const FileAddFrame = function FileAddFrame(): JSX.Element {
   }
 
   const setMajorValueBy = (major: string) => {
-    console.log(major);
     if (major !== null) {
       setMajorValue(major);
     }
