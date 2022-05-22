@@ -24,8 +24,8 @@
 }
 
 .course-name {
+  line-height: 38px;
   font-size: 24px;
-  height: 38px;
   display: flex;
   flex-direction: row;
   align-items: center;
