@@ -12,7 +12,7 @@ import ExplanationFrame from '../frameExplain/Explanation';
 SwiperCore.use([Mousewheel, Pagination, Navigation]);
 
 const MainComponent = function MainComponent(): JSX.Element {
-  const viewHeigth = window.innerHeight - 60;
+  const viewHeigth = window.innerHeight;
   const pagination = {
     clickable: true,
   };

@@ -12,7 +12,7 @@ const BottomTitle = styled.div`
 `;
 const MobileFunction = function MobileFunction(): JSX.Element {
   return (
-    <IntroduceConatiner style={{ paddingTop: '3em' }}>
+    <IntroduceConatiner style={{ paddingTop: '1em' }}>
       <MobileFunctionOverall />
       <MobileFunctionRecommend />
       <BottomTitle>

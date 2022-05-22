@@ -18,7 +18,7 @@ const MobileFunctionOverall = function MobileFunctionOverall(): JSX.Element {
       <Swiper
         style={{
           paddingTop: '1em',
-          height: '150px',
+          height: '200px',
         }}
         spaceBetween={30}
         centeredSlides
@@ -26,17 +26,14 @@ const MobileFunctionOverall = function MobileFunctionOverall(): JSX.Element {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay]}
       >
-        <SwiperSlide>
+        <SwiperSlide style={{ height: '200px' }}>
           <MobileImage>
             <img alt="intro1" className="inner-img" src={Intro1} />
           </MobileImage>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ height: '220px' }}>
           <MobileImage>
             <img alt="intro2" className="inner-img" src={Intro2} />
           </MobileImage>
