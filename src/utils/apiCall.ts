@@ -16,6 +16,9 @@ const getResult = async (courseFile: File, majorValue: string) => {
     'https://dev-api.gijol.im/graduation',
     formData,
   );
+  if (response.status === 405) {
+    throw new HTTPError('지원하지 않는 학번입니다');
+  }
   if (response.status === 500) {
     throw new HTTPError('파일 입력 오류');
   }

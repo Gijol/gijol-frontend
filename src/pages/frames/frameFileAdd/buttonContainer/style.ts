@@ -44,9 +44,9 @@ const Image = styled.img`
 const Help = styled.div`
   position: absolute;
   box-sizing: border-box;
-  overflow-y: scroll;
   max-height: 150px;
   font-size: 12px;
+  overflow: hidden;
   z-index: 999;
   margin-left: -100px;
   background: white;
