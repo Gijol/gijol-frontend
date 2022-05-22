@@ -45,7 +45,7 @@ const SpecificBarProgress = function SpecificBarProgress({
   const courseMessage = () => {
     const result = [];
     if (satisfied === true) {
-      result.push(<span>전부 들으셨네요!</span>);
+      result.push(<span style={{ fontSize: '22px' }}>전부 들으셨네요!</span>);
     } else if (satisfied === false) {
       if (MyScore > 0 && TotalScore - MyScore <= 0) {
         result.push(
@@ -55,9 +55,13 @@ const SpecificBarProgress = function SpecificBarProgress({
           </ExtraMessage>,
         );
       } else if (MyScore > 0 && TotalScore - MyScore > 0) {
-        result.push(<span>{value}% 들으셨네요!</span>);
+        result.push(
+          <span style={{ fontSize: '22px' }}>{value}% 들으셨네요!</span>,
+        );
       } else {
-        result.push(<span>아무것도 안들으셨네요..</span>);
+        result.push(
+          <span style={{ fontSize: '22px' }}>아무것도 안들으셨네요...</span>,
+        );
       }
     }
     return result;

@@ -26,7 +26,7 @@ const SpecificCircleContainer = styled.div`
 
 const SpecificLabelOfCircle = styled.div`
   position: absolute;
-  font-size: 24px;
+  font-size: 22px;
   z-index: 1;
   user-select: none;
 `;
