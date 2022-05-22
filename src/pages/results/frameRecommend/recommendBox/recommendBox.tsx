@@ -70,7 +70,6 @@ const RecommendBox = function RecommendBox({
                       },
                     )}
                   </ul>
-
                 </div>
               ) : (
                 <div
