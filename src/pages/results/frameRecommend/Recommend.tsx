@@ -31,6 +31,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           data-aos-delay="0"
           data-aos-duration="cubic-bezier(0.2, 0.8, 0.2, 1)"
           data-aos-once="true"
+          style={{ userSelect: 'none' }}
         >
           그럼 어떤 강의를 들어야 할까요?
         </MainTitle>

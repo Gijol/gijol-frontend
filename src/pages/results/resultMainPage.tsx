@@ -10,7 +10,7 @@ const ResultMainPage = function ResultMainPage({
 }: IProps): JSX.Element {
   const result = _result as Result;
   const majorObj = result.major as BasicResult;
-  console.log(majorObj.getTotalCredits);
+
   return (
     <div>
       <div>결과 페이지 입니다.</div>
