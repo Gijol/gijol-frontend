@@ -10,6 +10,7 @@ const FrameContainer = styled.div`
 
 const MainContainer = styled.div`
   background-color: white;
+  overflow-y: hidden;
   width: 100%;
 `;
 
