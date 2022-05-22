@@ -40,8 +40,11 @@ const Space = styled.div`
   flex: 1 1 0;
 `;
 
-const RightNav = styled(Link)`
-  text-decoration: none;
+const RightNav = styled.div`
+  > a {
+    text-decoration: none;
+    color: black;
+  }
   padding: 12px;
   font-size: 15px;
   letter-spacing: 0px;

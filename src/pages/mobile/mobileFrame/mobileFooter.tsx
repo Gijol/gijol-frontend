@@ -39,29 +39,49 @@ const MobileFooterContainer = function MobileFooterContainer(): JSX.Element {
         <div className="menu-title">서비스</div>
         <ul>
           <li className="sub">
-            <div>공지사항</div>
+            <a
+              href="https://choieungi-project.notion.site/9d6da8d46acb4b4eb35d677c05cae256"
+              rel="noreferrer"
+              target="_blank"
+              style={{
+                color: 'black',
+                textDecoration: 'none',
+              }}
+            >
+              공지사항
+            </a>
           </li>
           <li>
-            <div>자주 묻는 질문</div>
+            <a
+              href="https://choieungi-project.notion.site/Q-A-9e325eabef4e479a8f47e95eb90bb344"
+              rel="noreferrer"
+              target="_blank"
+              style={{
+                color: 'black',
+                textDecoration: 'none',
+              }}
+            >
+              자주 묻는 질문
+            </a>
           </li>
         </ul>
       </MenuDrawer>
-      <MenuDrawer>
-        <div className="menu-title">문의</div>
-        <ul>
-          <li className="sub">
-            <div>Gijol Support</div>
-          </li>
-          <li>
-            <div>피드백</div>
-          </li>
-        </ul>
-      </MenuDrawer>
+
       <MenuDrawer>
         <div className="menu-title">About</div>
         <ul>
           <li className="sub">
-            <div>Team. Gijol</div>
+            <a
+              href="https://choieungi-project.notion.site/Team-Gijol-e5e279e91a0646c2a84b548873601a3f"
+              rel="noreferrer"
+              target="_blank"
+              style={{
+                color: 'black',
+                textDecoration: 'none',
+              }}
+            >
+              Team Gijol
+            </a>
           </li>
         </ul>
       </MenuDrawer>
