@@ -27,6 +27,7 @@ const CourseList = function CourseList({
                 margin: '4px 8px',
                 backgroundColor: '#D1D6D8',
                 borderRadius: '5px',
+                lineHeight: '16px',
               }}
             >
               {courseListSingle.getCourseType}
