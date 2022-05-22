@@ -7,8 +7,11 @@ const MainFrame = function MainFrame(): JSX.Element {
       <Blur />
       <TitleContainer>
         <Title>
-          <span style={{ color: '#1DAA47' }}>졸업요건</span> <br />
-          Gijol에서 간단하게 확인하세요.
+          <span style={{ color: '#1DAA47', userSelect: 'none' }}>졸업요건</span>{' '}
+          <br />
+          <span style={{ userSelect: 'none' }}>
+            Gijol에서 간단하게 확인하세요
+          </span>
         </Title>
         <ButtonContainer />
       </TitleContainer>

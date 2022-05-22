@@ -30,7 +30,7 @@ const CircularProgressWithLabel = function CircularProgressWithLabel({
           trailColor="#f2f4f6"
         />
       </div>
-      <div className="LabelContainer">
+      <div className="LabelContainer" style={{ userSelect: 'none' }}>
         <span>총 이수 학점</span>
         <br />
         <span className="my-score-overall">

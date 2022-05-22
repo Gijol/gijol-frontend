@@ -7,6 +7,7 @@ export const SelectBox = styled.select`
   font-size: 14px;
   border: none;
   background-color: #f2f4f6;
+  cursor: pointer;
 `;
 
 export const OptionInner = styled.option`

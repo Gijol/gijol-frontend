@@ -28,6 +28,7 @@ export const RecommendBoxContainer = styled.div`
   border-radius: 20px;
   background-color: ${(props) => props.color};
   box-shadow: 0 2px 20px -6px gray;
+  user-select: none;
 
   @media (max-width: 1440px) {
     width: 346px;
