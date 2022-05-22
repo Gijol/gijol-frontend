@@ -11,6 +11,7 @@ import Recommend from './results/frameRecommend/Recommend';
 import Footer from './results/frameFooter/Footer';
 
 import { LoadingModal } from './styles';
+import FeedBackContainer from './results/feedBack/feedback';
 
 interface apiProps {
   apiFile: File;
@@ -26,7 +27,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
 
   const redirect = (msg: string) => {
     alert(msg);
-    navigate('/gijol-frontend/');
+    navigate('/');
   };
 
   useEffect(() => {
@@ -36,8 +37,13 @@ const ResultPage = function ResultPgae(): JSX.Element {
         .then((value: any) => {
           setResult(value);
         })
-        .catch(() => {
-          redirect('정확한 성적표를 업로드 해주세요');
+        .catch((error: any) => {
+          if (error.response.status === 500) {
+            redirect('정확한 성적표를 업로드 해주세요');
+          }
+          if (error.response.status === 405) {
+            redirect('지원하지 않는 학번입니다.');
+          }
         });
     } catch {
       redirect('잘못된 접근입니다');
@@ -55,13 +61,16 @@ const ResultPage = function ResultPgae(): JSX.Element {
           </div>
         </LoadingModal>
       ) : (
-        <div>
-          <Header />
-          <Overall result={result} />
-          <Specific result={result} />
-          <Recommend result={result} />
-          <Footer />
-        </div>
+        <>
+          <FeedBackContainer />
+          <div>
+            <Header />
+            <Overall result={result} />
+            <Specific result={result} />
+            <Recommend result={result} />
+            <Footer />
+          </div>
+        </>
       )}
     </div>
   );

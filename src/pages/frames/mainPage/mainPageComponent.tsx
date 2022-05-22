@@ -12,8 +12,7 @@ import ExplanationFrame from '../frameExplain/Explanation';
 SwiperCore.use([Mousewheel, Pagination, Navigation]);
 
 const MainComponent = function MainComponent(): JSX.Element {
-  const viewHeigth = window.innerHeight;
-
+  const viewHeigth = window.innerHeight - 60;
   const pagination = {
     clickable: true,
   };
@@ -21,11 +20,12 @@ const MainComponent = function MainComponent(): JSX.Element {
   return (
     <Swiper
       // controller={{ swiper: swiper }}
-      style={{ width: '100%', height: viewHeigth }}
+      style={{ width: '100%', height: viewHeigth, overflowY: 'hidden' }}
       direction="vertical"
       speed={500}
-      modules={[Navigation, Pagination]}
+      modules={[Pagination]}
       mousewheel
+      autoplay={false}
       pagination={pagination}
       touchRatio={0}
     >
