@@ -14,7 +14,7 @@ interface IProps {
 const Overall = function Overall({ result }: IProps): JSX.Element {
   const [totalCredit, setTotalCredit] = useState<number>(result.totalCredits);
   return (
-    <MainContainer>
+    <MainContainer style={{ height: '800px' }}>
       <div className="title">
         <MainTitle
           data-aos="fade-up"

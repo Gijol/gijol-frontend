@@ -54,7 +54,7 @@ const Specific = function Specific({ result }: IProps): JSX.Element {
     AOS.init();
   });
   return (
-    <MainContainer>
+    <MainContainer style={{ height: '800px' }}>
       <div className="title">
         <MainTitle
           data-aos="fade-up"

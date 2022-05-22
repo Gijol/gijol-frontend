@@ -24,7 +24,7 @@ interface IProps {
 }
 const Recommend = function Recommend({ result }: IProps): JSX.Element {
   return (
-    <MainContainer>
+    <MainContainer style={{ height: '800px' }}>
       <div className="title">
         <MainTitle
           data-aos="fade-up"
