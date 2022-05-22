@@ -12,6 +12,7 @@ const SpecificBarAndLabel = styled.div`
 
 const SpecificLabelOfBar = styled.div`
   font-size: 24px;
+  user-select: none;
 `;
 
 const SpecificCircleContainer = styled.div`
@@ -27,11 +28,13 @@ const SpecificLabelOfCircle = styled.div`
   position: absolute;
   font-size: 24px;
   z-index: 1;
+  user-select: none;
 `;
 
 const ExtraMessage = styled.span`
   font-size: 20px;
   text-align: center;
+  user-select: none;
 `;
 
 export {

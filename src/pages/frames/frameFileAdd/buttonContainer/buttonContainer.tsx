@@ -36,7 +36,7 @@ const MajorButtonContainer = function MajorButtonContainer({
         </div>
       </QuestionContainer>
       <SelectMajor setMajorValueBy={setMajorValueBy} />
-      <UploadButton type="button" onClick={pushBtn}>
+      <UploadButton type="button" onClick={pushBtn} tabIndex={-1}>
         결과 확인하기!
       </UploadButton>
     </Container>

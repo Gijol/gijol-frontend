@@ -5,10 +5,10 @@ const ButtonContainer = function ButtonContainer(): JSX.Element {
   const swiper = useSwiper();
   return (
     <ButtonsContainer>
-      <StandardButton onClick={() => swiper.slideNext()}>
+      <StandardButton onClick={() => swiper.slideNext()} tabIndex={-1}>
         처음 확인해요
       </StandardButton>
-      <StandardButton onClick={() => swiper.slideTo(2)}>
+      <StandardButton onClick={() => swiper.slideTo(2)} tabIndex={-1}>
         확인한 적 있어요
       </StandardButton>
     </ButtonsContainer>

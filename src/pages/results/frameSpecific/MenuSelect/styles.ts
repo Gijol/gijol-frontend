@@ -23,6 +23,7 @@ const SelectElement = styled.button`
   transition: 0.15s linear;
   border: none;
   background-color: white;
+  user-select: none;
   &:hover,
   &:focus {
     background-color: ${(props) => props.color};
@@ -44,6 +45,7 @@ const NonSelect = styled.div`
   justify-content: center;
   font-size: 24px;
   color: #191f28;
+  user-select: none;
 `;
 
 export { SelectContainer, SelectElement, NonSelect };

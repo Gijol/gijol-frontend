@@ -33,12 +33,12 @@ const callGraduateApi = async (
       const takenCourseArray = Object.values(takenCourses);
       const courseArray: Array<Course> = [];
       takenCourseArray.forEach((val: any) => {
-        const { year, semester, cousreType, courseName, courseCode, credit } =
+        const { year, semester, courseType, courseName, courseCode, credit } =
           val;
         const course = new Course(
           year,
           semester,
-          cousreType,
+          courseType,
           courseName,
           courseCode,
           credit,
