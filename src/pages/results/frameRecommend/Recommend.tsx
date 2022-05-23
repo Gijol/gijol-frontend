@@ -24,7 +24,7 @@ interface IProps {
 }
 const Recommend = function Recommend({ result }: IProps): JSX.Element {
   return (
-    <MainContainer style={{ height: '800px' }}>
+    <MainContainer>
       <div className="title">
         <MainTitle
           data-aos="fade-up"
@@ -96,7 +96,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           </SwiperSlide>
           <SwiperSlide className="swiper-box">
             <RecommendBox
-              name="기타필수ㆍ연구"
+              name="기타ㆍ연구"
               result={result.getEtcMandatory}
               colorCode="#9771FB"
             />

@@ -44,9 +44,7 @@ const Select = function Select({
       ) : null}
       {value === 5 ? (
         <SelectElement color={color} tabIndex={-1}>
-          <span>
-            기타필수<span>ㆍ</span>연구
-          </span>
+          <span>기타ㆍ연구</span>
         </SelectElement>
       ) : null}
       {value === 6 ? (

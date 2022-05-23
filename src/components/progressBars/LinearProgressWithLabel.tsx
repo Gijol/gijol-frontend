@@ -139,8 +139,8 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           '기초과학',
           '인문사회',
           '전공',
-          '기타필수ㆍ연구',
-          '기타',
+          '기타ㆍ연구',
+          '자유학점',
         ]}
         tickFormat={(t: any) => `${t}`}
         style={{
