@@ -8,9 +8,12 @@ const FeedBackContainer = function FeedBackContainer(): JSX.Element {
   const [innerClicked, setInnerClicked] = useState<boolean>(false);
   const [data, setData] = useState<string | null>(null);
   const [used, setUsed] = useState<boolean>(false);
+  const [firstClicked, setFirstClick] = useState<boolean>(false);
 
   const clickTrue = () => {
+    console.log(firstClicked);
     setClicked(true);
+    setFirstClick(true);
   };
   const clickFalse = () => {
     setUsed(false);
@@ -30,8 +33,9 @@ const FeedBackContainer = function FeedBackContainer(): JSX.Element {
       return;
     }
     setInnerClicked(false);
+    const BASE_URL = process.env.REACT_APP_API;
     axios
-      .post('https://dev-api.gijol.im/graduation/feedback', { message: data })
+      .post(`${BASE_URL}/graduation/feedback`, { message: data })
       .then(() => {
         setData(null);
       })
@@ -126,6 +130,7 @@ const FeedBackContainer = function FeedBackContainer(): JSX.Element {
           onClick={() => {
             clickTrue();
           }}
+          isClick={firstClicked}
         >
           🎓
         </FeedBackBtn>

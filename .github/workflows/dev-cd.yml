@@ -29,7 +29,8 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Setting .env
         run: |
-          echo "REACT_APP_DEV_GOOGLE_ANALYTICS_TRACKING_ID=${{secrets.REACT_APP_DEV_GOOGLE_ANALYTICS_TRACKING_ID}}" >> .env
+          echo "REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=${{secrets.REACT_APP_DEV_GOOGLE_ANALYTICS_TRACKING_ID}}" >> .env
+          echo "REACT_APP_API=${{secrets.REACT_APP_DEV_API}}" >> .env
           cat .env
       - name: Build
         run: npm run build
