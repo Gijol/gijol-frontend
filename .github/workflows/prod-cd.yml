@@ -43,4 +43,4 @@ jobs:
         run: |
           aws s3 sync ./build s3://gijol-prod
       - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id ${{secrets.DEV_DISTRIBUTION_ID}} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{secrets.PROD_DISTRIBUTION_ID}} --paths "/*"
