@@ -1,0 +1,76 @@
+.Container {
+  position: relative;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 1000px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.OverallResult {
+  width: 1000px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.circular {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 0 20px -6px gray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  width: 576px;
+  height: 400px;
+  box-shadow: 0 0 20px -6px gray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainTitle {
+  margin: 0 0 24px 0;
+  font-size: 40px;
+}
+
+.SubTitle {
+  margin: 0;
+  font-size: 28px;
+}
+
+.overallScore {
+  color: #1da447;
+}
+
+@keyframes Appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

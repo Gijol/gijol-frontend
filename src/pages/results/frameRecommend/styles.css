@@ -1,0 +1,26 @@
+.swiper {
+  /* width: 100%; */
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+}
+
+.swiper-slide {
+  background-position: center;
+
+  background-size: cover;
+  height: 300px;
+}
+.swiper-pagination {
+  /* display: none; */
+}
+.swiper-box {
+  width: 432px;
+  height: 500px;
+}
+
+@media (max-width: 1440px) {
+  .swiper-box {
+    width: 346px;
+    height: 400px;
+  }
+}

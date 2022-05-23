@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { theme } from 'styles/theme';
+import ReactGA from 'react-ga';
+
+import Main from 'pages/main';
+import ResultPage from 'pages/result';
+import Result from 'utils/api/result';
+import MobileMain from 'pages/mobile/mobileMain';
+
+ReactGA.event({
+  category: 'User',
+  action: 'Create an Account',
+});
+ReactGA.exception({
+  description: 'An error ocurred',
+  fatal: true,
+});
 
 function App() {
+  // const location = useLocation();
+  const REENV = process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
+  useEffect(() => {
+    ReactGA.initialize(REENV!);
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route path="" element={<Main />} />
+            <Route path="result" element={<ResultPage />} />
+            <Route path="mobile" element={<MobileMain />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

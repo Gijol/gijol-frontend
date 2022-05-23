@@ -1,0 +1,42 @@
+.CircleContainer {
+  width: 320px;
+  height: 320px;
+}
+
+.LabelContainer {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 1;
+  font-size: 32px;
+  text-align: center;
+}
+
+.CircleAndLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.BarProgress {
+  width: 600px;
+  height: 36px;
+}
+
+.BarContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-score-overall {
+  font-size: 28px;
+}
+
+.my-score {
+  color: #1da447;
+}
