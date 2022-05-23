@@ -64,7 +64,7 @@ const Recommend = function Recommend({ result }: IProps): JSX.Element {
           slidesPerView="auto"
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
-          style={{ width: '100%' }}
+          style={{ width: '100%', paddingBottom: '20px' }}
         >
           <SwiperSlide className="swiper-box">
             <RecommendBox
