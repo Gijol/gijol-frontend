@@ -115,8 +115,7 @@ const LinearProgressWithLabel = function LinearProgressWithLabel({
           {
             x: 6,
             y:
-              result.getOtherClass.getTotalCredits <
-              result.getOtherClass.getMinCredit
+              result.getOtherClass.getTotalCredits < etcScoreLeft
                 ? Math.round(
                     (result.getOtherClass.getTotalCredits * 100) / etcScoreLeft,
                   )
