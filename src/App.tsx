@@ -20,7 +20,7 @@ ReactGA.exception({
 
 function App() {
   // const location = useLocation();
-  const REENV = process.env.REACT_APP_DEV_GOOGLE_ANALYTICS_TRACKING_ID;
+  const REENV = process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
   useEffect(() => {
     ReactGA.initialize(REENV!);
     ReactGA.set({ page: window.location.pathname });

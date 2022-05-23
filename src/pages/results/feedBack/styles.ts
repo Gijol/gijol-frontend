@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 const open = keyframes`
   to{
@@ -33,14 +33,28 @@ const movelarge = keyframes`
   }
 `;
 
+const bounce = keyframes`
+  0%, 20%, 100% {
+    bottom: 50px;
+    animation-timing-function: ease-out;
+  }
+
+  10%{
+    bottom: 60px;
+    animation-timing-function: ease-in; 
+  }
+ `;
+interface IProps {
+  isClick: boolean;
+}
 export const FeedBackBtn = styled.div`
-  width: 3.5em;
-  height: 3.5em;
+  width: 4em;
+  height: 4em;
   z-index: 10;
   border-radius: 1em;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 35px;
+  right: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +62,14 @@ export const FeedBackBtn = styled.div`
   cursor: pointer;
   box-shadow: #495c4f33 0px 4px 6px, #495c4f33 0px 8px 30px,
     #495c4f33 0px 0px 0px 1px inset !important;
+
+  animation: ${({ isClick }: IProps) => {
+    return !isClick
+      ? css`
+          ${bounce} 2.5s cubic-bezier(0.19, 1, 0.22, 1) infinite
+        `
+      : '';
+  }};
 `;
 
 export const FeedBackChannel = styled.div`

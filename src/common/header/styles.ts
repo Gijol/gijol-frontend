@@ -7,7 +7,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   backdrop-filter: blur(50px);
-  border-bottom: 0.7px solid rgba(0, 0, 0, 0.25);
+  /* border-bottom: 0.7px solid rgba(0, 0, 0, 0.25); */
   background-color: white;
 `;
 

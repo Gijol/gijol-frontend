@@ -8,14 +8,12 @@ class HTTPError extends Error {
 }
 
 const getResult = async (courseFile: File, majorValue: string) => {
+  const BASE_URL = process.env.REACT_APP_API;
   const formData = new FormData();
   formData.append('majorType', majorValue);
   formData.append('multipartFile', courseFile);
 
-  const response = await axios.post(
-    'https://dev-api.gijol.im/graduation',
-    formData,
-  );
+  const response = await axios.post(`${BASE_URL}/graduation`, formData);
   if (response.status === 405) {
     throw new HTTPError('지원하지 않는 학번입니다');
   }

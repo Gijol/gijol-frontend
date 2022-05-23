@@ -45,6 +45,7 @@ const ResultPage = function ResultPgae(): JSX.Element {
           } else {
             redirect('시스템 오류입니다.');
           }
+          console.log(error);
         });
     } catch {
       redirect('잘못된 접근입니다');
