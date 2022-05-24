@@ -8,6 +8,7 @@ import Main from 'pages/main';
 import ResultPage from 'pages/result';
 import Result from 'utils/api/result';
 import MobileMain from 'pages/mobile/mobileMain';
+import { createBrowserHistory } from 'history';
 
 ReactGA.event({
   category: 'User',
@@ -21,11 +22,12 @@ ReactGA.exception({
 function App() {
   // const location = useLocation();
   const REENV = process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
-  useEffect(() => {
-    ReactGA.initialize(REENV!);
-    ReactGA.set({ page: window.location.pathname });
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+  ReactGA.initialize(REENV!);
+  const history = createBrowserHistory();
+  history.listen((location: any) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
