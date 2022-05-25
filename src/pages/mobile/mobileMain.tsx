@@ -21,7 +21,7 @@ const MobileMain = function MobileMain(): JSX.Element {
             }}
           >
             <div style={{ marginBottom: '10px' }}>
-              Gijol, <br /> 웹으로 만나보세요!
+              Gijol, <br /> PC에서 만나보세요!
             </div>
             <div className="exit">x</div>
           </ModalContainer>
