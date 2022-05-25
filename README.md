@@ -2,13 +2,13 @@
 
 ---
 
-NOW released ***‘Gijol v1.0.1’***
+NOW released ***‘Gijol v1.0.2’***
 
-[Gijol](https://gijol.im/)
+[Gijol-v1.0.1](https://gijol.im/)<br /> https://gijol.im
 
 development **server**
 
-[Gijol](https://dev.gijol.im/)
+[Gijol-dev](https://dev.gijol.im/) <br />https://dev.gijol.im
 
 ## How to use 🤷‍♂️
 

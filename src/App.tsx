@@ -22,7 +22,7 @@ ReactGA.exception({
 function App() {
   // const location = useLocation();
   const REENV = process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
-  ReactGA.initialize(REENV!);
+  ReactGA.initialize('UA-229540840-3');
   const history = createBrowserHistory();
   history.listen((location: any) => {
     ReactGA.set({ page: location.pathname });

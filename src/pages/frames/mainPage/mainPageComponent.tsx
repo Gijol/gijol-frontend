@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import SwiperCore, { Mousewheel, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -12,17 +13,18 @@ import ExplanationFrame from '../frameExplain/Explanation';
 SwiperCore.use([Mousewheel, Pagination, Navigation]);
 
 const MainComponent = function MainComponent(): JSX.Element {
-  const viewHeigth = window.innerHeight - 50;
   const pagination = {
     clickable: true,
   };
+  const viewHeight = window.innerHeight - 50;
 
   return (
     <Swiper
       // controller={{ swiper: swiper }}
       style={{
         width: '100%',
-        height: viewHeigth,
+        height: viewHeight,
+        minHeight: '800px',
         overflowY: 'hidden',
       }}
       direction="vertical"
