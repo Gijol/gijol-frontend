@@ -2,7 +2,7 @@
 
 ---
 
-NOW released ***‘Gijol v1.0.1’***
+NOW released ***‘Gijol v1.0.2’***
 
 [Gijol-v1.0.1](https://gijol.im/)<br /> https://gijol.im
 

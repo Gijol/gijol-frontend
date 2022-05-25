@@ -57,7 +57,7 @@ const RecommendBox = function RecommendBox({
             <div draggable={false} className="recommend-middle">
               {result.getMessages.length >= 1 ? (
                 <div className="message-container">
-                  <ul className="message-list">
+                  <ul className="message-list" style={{ listStyle: 'none' }}>
                     {' '}
                     {result.getMessages.map(
                       (message: string, index: number) => {
