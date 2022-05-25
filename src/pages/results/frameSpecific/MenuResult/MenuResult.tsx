@@ -35,13 +35,7 @@ const MenuResult = function MenuResult({
     const result = [];
     if (courseList.length > 0) {
       for (let i = 0; i < courseList.length; i += 1) {
-        result.push(
-          <CourseList
-            key={i}
-            courseListSingle={courseList[i]}
-            forHumanities={forHumanities}
-          />,
-        );
+        result.push(<CourseList key={i} courseListSingle={courseList[i]} />);
       }
     } else if (courseList.length === 0) {
       result.push(

@@ -4,12 +4,10 @@ import './styles.css';
 
 interface Props {
   courseListSingle: Course;
-  forHumanities: number;
 }
 
 const CourseList = function CourseList({
   courseListSingle,
-  forHumanities,
 }: Props): JSX.Element {
   return (
     <div className="course-box" style={{ userSelect: 'none' }}>
