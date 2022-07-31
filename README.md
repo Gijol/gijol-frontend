@@ -2,13 +2,21 @@
 
 ---
 
+> | Gijol은 GIST에서 간편하게 졸업요건을 확인할 수 있는 웹서비스입니다. Gijol팀은 GIST에서 생활과 관련된 불편함을 해소하는 것을 목표로 활동을 이어나가고 있습니다.
+
+
+### Overview 
+![](https://drive.google.com/file/d/1uJofBQg4csN2ZEOjDTPSBFQUfl5WRJIU/view?usp=sharing)
+
+
+
 NOW released ***‘Gijol v1.0.2’***
 
-[Gijol-v1.0.1](https://gijol.im/)<br /> https://gijol.im
+[Gijol-v1.0.1](https://gijol.im/) <br/> https://gijol.im
 
-development **server**
+Development **server**
 
-[Gijol-dev](https://dev.gijol.im/) <br />https://dev.gijol.im
+[Gijol-dev](https://dev.gijol.im/) <br/> https://dev.gijol.im
 
 ## How to use 🤷‍♂️
 
@@ -71,5 +79,3 @@ development **server**
 - Gijol **Log-in**
 - Gijol **강의 평가**
 - MAU 1000ㅅ
-
-### Gijol Study
