@@ -6,9 +6,9 @@
 
 
 ### Overview 
-![](https://drive.google.com/file/d/1uJofBQg4csN2ZEOjDTPSBFQUfl5WRJIU/view?usp=sharing)
 
-
+<p align="center"> <img width=600 height=400 src="https://user-images.githubusercontent.com/70755947/182047691-4a6e864b-4763-40a8-ada4-1a400bd204d1.gif"> </p>
+<br>
 
 NOW released ***‘Gijol v1.0.2’***
 
